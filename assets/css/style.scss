@@ -2,3 +2,23 @@
 ---
 
 @import "jekyll-theme-primer";
+
+*{
+    margin:0;
+}
+.primaryHeader{
+    padding: 2vh 4vw;
+    background-color: rgb(247, 247, 247);
+}
+.secondaryHeader{
+    padding: 2vh 4vw;
+    background-color: rgb(61, 64, 129);
+}
+.headerLogos{
+    max-width: 1012px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.breadcrumbs{
+    padding-left: 0;
+}
