@@ -199,7 +199,7 @@ git config --global credential.github.com.useHttpPath true
 
 
 
-### Private repositories do not show up
+### Private repositories do not show up/403 when trying to access an organization repository
 
 If you are authenticating using *OAuth* and you can't see private
 repositories of your GitHub *organization* or pushing to your
