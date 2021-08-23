@@ -31,7 +31,7 @@ email.
 
 # Enabling debug logging for certain keys
 
-To enable debug logging for a certain key `foo.bar`, first decide the
+To enable debug logging for a certain key `log4j.foo.bar`, first decide the
 log-level – whether it should be fine (`DEBUG`) or as fine as
 possible `TRACE`. Usually SmartGit support will tell you. After that add
 the corresponding line to `smartgit.properties` (in the Settings
@@ -67,17 +67,3 @@ After that, restart SmartGit and repeat the operation for which debug
 logging should be collected and shutdown SmartGit again.
 
 Now `logs/log.txt.0` should contain `DEBUG` lines for the specified key.
-
-
-#### Note
-> If asked by support to enable debug logging for key `foo.bar`, always be
-> sure to use `log4j` prefix, i.e. `log4j.foo.bar`.
-
-
-
-  
-
-  
-
-  
-  
