@@ -21,6 +21,9 @@ tracks the remote branch *origin/master*.
 
 ## Working with Branches
 
+To create a branch, you have to decide at which commit to create it. Usually, it is the HEAD, but you can create branches at any other commit.
+To create new commits, you first have to **Check Out** ("switch to") the newly created branch (that's why creating a branch let's you perform the checkout, too).
+
 When you push changes from your local branch to the origin repository,
 these changes will be propagated to the tracked (remote) branch as well.
 Similarly, when you pull changes from the origin repository, these
