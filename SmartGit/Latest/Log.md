@@ -89,14 +89,13 @@ If a commit is selected, it shows details for the selected commit:
 
 ## Log Commands
 
-In the *Log* window, many commands which are known from the *Working
+In the *Log* window, virtually all commands which are known from the *Working
 Tree* window are available as well:
 
--   most of them are available from the main menu bar
--   the context menu on a commit provides certain commands
--   certain items in the **Graph** view, like *local refs* or the
-    *HEAD*-arrow can be modified using drag-and-drop.
-    -   for commit-rewriting commands, refer to the [Journal View](Journal-View.md)
+- most of them are available from the main menu bar
+- the context menu on a commit provides certain commands
+- certain items in the **Graph** view, like *local refs* or the *HEAD*-arrow can be modified using drag-and-drop.
+- for commit-rewriting commands, refer to the [Journal View](Journal-View.md)
 
 ## Compare Commits
 
