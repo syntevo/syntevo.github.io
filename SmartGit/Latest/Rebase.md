@@ -126,12 +126,6 @@ allowing you to either manually resolve the conflicts or to **Abort**
 the rebase. See [Resolving Conflicts](#resolving-conflicts) for
 further information.
 
-## Interactive Rebase
-
-You can start an interactive Rebase in the Journal view by
-right-clicking the first commit that should be changed. For further
-information, please see [Journal View](Journal-View.md).
-
 ## Resolving Conflicts
 
 Core Git rebase conflicts are different to other kinds of merge
@@ -152,4 +146,7 @@ following different behavior (compared to normal merge conflicts):
 -   When invoking **Resolve** and selecting **Ours**, you will see
     staged file content, because your rebase branch `B` is actually
     "theirs"  
-      
+
+## Interactive Rebase
+
+For details on *interactive rebase* refer to [Interactive Rebase](Rebase-Interactive.md).

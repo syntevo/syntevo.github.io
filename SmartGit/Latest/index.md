@@ -10,6 +10,7 @@
         -   [Check Out](Check-Out.md)
         -   [Merge](Merge.md)
         -   [Rebase](Rebase.md)
+            -   [Interactive Rebase](Rebase-Interactive.md) 
         -   [Cherry-Pick](Cherry-Pick.md)
         -   [Revert](Revert.md)
         -   [Manipulating branches/tags](Manipulating-branches-tags.md)

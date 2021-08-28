@@ -94,8 +94,8 @@ Tree* window are available as well:
 
 - most of them are available from the main menu bar
 - the context menu on a commit provides certain commands
-- certain items in the **Graph** view, like *local refs* or the *HEAD*-arrow can be modified using drag-and-drop.
-- for commit-rewriting commands, refer to the [Journal View](Journal-View.md)
+- certain items in the **Graph** view, like *local refs* or the *HEAD*-arrow can be modified using drag-and-drop
+- there are several ways to write commits, for details refer to [Interactive Rebase](Rebase-Interactive.md)
 
 ## Compare Commits
 
