@@ -5,7 +5,7 @@
     -   [Commits](Commits.md)
     -   [The Index](The-Index.md)
     -   [Working Tree States](Working-Tree-States.md)
--   [Important Git Commands](Important-Git-Commands.md)
+-   Important Git Commands
     -   Branch-related
         -   [Check Out](Check-Out.md)
         -   [Merge](Merge.md)
@@ -32,7 +32,7 @@
 -   [Preferences](Preferences.md)
     -   [Example Tools](Example-Tools.md)
 -   [Repository \| Settings](Repository-Settings.md)
--   [Integrations](Integrations.md)
+-   Integrations
     -   [GitHub integration](GitHub-integration.md)
         -   [GitHub Enterprise Integration](GitHub-Enterprise-Integration.md)
     -   [BitBucket Server (Atlassian Stash) integration](BitBucket-Server-Atlassian-Stash-integration.md)
