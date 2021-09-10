@@ -23,20 +23,53 @@
 
 *{
     margin:0;
+
+// Override website components
+
+.page-header {
+  background-color: $light-gray;
+  padding: 16px 0;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none !important;
+  }
+
+  @media (min-width: $breakpoint-tablet-landscape) {
+    padding: 20px 0;
+  }
 }
-.primaryHeader{
-    padding: 2vh 4vw;
-    background-color: rgb(247, 247, 247);
+
+// Override theme styles
+
+.container-md,
+.container-lg,
+.container-xl {
+  @media (min-width: $breakpoint-tablet-portrait) {
+    width: 92%;
+  }
 }
-.secondaryHeader{
-    padding: 2vh 4vw;
-    background-color: rgb(61, 64, 129);
+
+// Add custom styles
+
+*, *:before, *:after { box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  height: 100%;
 }
-.headerLogos{
-    max-width: 1012px;
-    margin-right: auto;
-    margin-left: auto;
+
+html, body {
+  color: $default-font-color;
+  background-color: $white;
 }
-.breadcrumbs{
-    padding-left: 0;
+
+@include responsive-steps(max-width) {
+  .hidden-lte-#{&} { display: none !important; }
+}
+
+.px-outer {
+  padding-left: map-get($default-grid, gutter);
+  padding-right: map-get($default-grid, gutter);
 }
