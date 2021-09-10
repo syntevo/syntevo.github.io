@@ -3,6 +3,24 @@
 
 @import "jekyll-theme-primer";
 
+// Polyfill mixins used in website styles but have no effect
+
+@mixin grid-container {}
+@mixin grid-column($columns, $grid) {}
+@mixin position($position, $dimensions) {}
+
+// Import website styles (drop-in without changes)
+
+@import "website/variables";
+@import "website/mixins";
+
+@import "website/components/page-layout";
+@import "website/components/page-footer";
+@import "website/components/page-body";
+@import "website/components/page-header";
+@import "website/components/product-page-header";
+@import "website/components/product-logo";
+
 *{
     margin:0;
 }
