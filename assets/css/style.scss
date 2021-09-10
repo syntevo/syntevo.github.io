@@ -73,6 +73,22 @@ html, body {
   .hidden-lte-#{&} { display: none !important; }
 }
 
+.page-title {
+  display: block;
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 1;
+  margin-left: 16px;
+  color: $white;
+  background-color: $dark-gray;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+
+  @media (min-width: $breakpoint-tablet-landscape) {
+    font-size: 1.75em;
+  }
+}
+
 .px-outer {
   padding-left: map-get($default-grid, gutter);
   padding-right: map-get($default-grid, gutter);
