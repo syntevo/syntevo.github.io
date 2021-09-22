@@ -22,6 +22,21 @@ command in a Terminal:
 It will prompt for the old passphrase once (if any) and for the new
 passphrase twice.
 
+## Windows 10: Configure OpenSSH Client
+
+- ensure the optional Windows feature **OpenSSH Client** is installed
+- ensure the service **OpenSSH Authentication Agent** has at least the *manual* startup type (by default: *disabled*)
+- start the service, e.g. by invoking `ssh-agent` (if you get the output `unable to start ssh-agent service, error :1058`, the service most likely is in *disabled* state).
+- tell the SSH agent about your private key file:
+
+`$ ssh-add <path-to-private-key-file>`
+
+- if you are using the Git bundled with SmartGit (which contains an SSH executable) or *Git for Windows* installed without the option *Use external OpenSSH*, you will have to tell Git to use the Windows 10 SSH client:
+  - set the environment variable `GIT_SSH` to `C:/Windows/System32/OpenSSH/ssh.exe`
+  - if SmartGit is already started, restart it so it picks up the environment variable change
+- on the SmartGit preferences page *Authentication* select the option *Use system SSH client*.
+
+
 ## Windows: Configure PuTTY and Pageant
 
 ### Create your public/private key pair
