@@ -11,14 +11,21 @@
   {% include head-custom.html %}
 </head>
 
-<body>
-  <header>
+<body class="page-layout">
+  <header class="page-layout__header">
     {% include header.html path=page.path %}
   </header>
-  <div class="container-lg px-3 my-5 markdown-body">
-    {% include breadcrumbs.html path=page.path title=page.title %}
-    {{ content }}
-  </div>
+  <main class="page-layout__body">
+    <div class="page-body px-outer">
+      <div class="container-lg my-5 markdown-body">
+        {% include breadcrumbs.html path=page.path title=page.title %}
+        {{ content }}
+      </div>
+    </div>
+  </main>
+  <footer class="page-layout__footer">
+    {% include footer.html %}
+  </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
     integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
   <script>anchors.add();</script>
