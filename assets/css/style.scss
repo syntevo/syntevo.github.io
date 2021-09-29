@@ -90,3 +90,7 @@ html, body {
   padding-left: map-get($default-grid, gutter);
   padding-right: map-get($default-grid, gutter);
 }
+
+.improve-link {
+  text-align: right;
+}
