@@ -23,27 +23,28 @@ in verifying that everything is set up correctly.
 # Note on hardcoded names
 
 This guide uses the following names/paths that could be changed to your
-liking.  
-But if you change them, please remember to change them accordingly in
+liking. But if you change them, please remember to change them accordingly in
 all steps.
 
--   SERVER  
+-   `SERVER`  
     Name of computer where SVN repository will be hosted.
--   CLIENTName of computer where you will use SmartSVN to access the
+-   `CLIENT`  
+    Name of computer where you will use SmartSVN to access the
     repository.
--   C:\\TestSASL\\subversionFolder where you keep SVN binaries.
--   TestRepository  
+-   `C:\TestSASL\subversion`  
+    Folder where you keep SVN binaries.
+-   `TestRepository`  
     Folder of your test repository.
--   C:\\TestSASL\\SvnRoot\\TestRepository  
+-   `C:\TestSASL\SvnRoot\TestRepository`  
     Full path of your test repository.
--   C:\\TestSASL\\SASL_Config  
+-   `C:\TestSASL\SASL_Config`  
     Folder to keep SASL configuration files.
--   TestRealm  
-    Authentication realm for your repository.SVN repositories assigned
-    to the same realm will share users and passwords.
--   john.smith  
-    Name of the SVN user that will access repository. It doesn't have to
-    match Windows username.
+-   `TestRealm`  
+    Authentication realm for your repository.  
+    SVN repositories assigned to the same realm will share users and passwords.
+-   `john.smith`  
+    Name of the SVN user that will access repository.  
+    It doesn't have to match Windows username.
 
 # Configure and test non-SASL repository
 
@@ -54,13 +55,12 @@ all steps.
         -   Visit <https://www.smartsvn.com/download/>
         -   You will find 'Download SVN Binaries' at the bottom of this
             page
-    2.  Extract to C:\\TestSASL\\subversion
+    2.  Extract to `C:\TestSASL\subversion`
 
 2.  Create a new SVN repository
     -   Run console commands:  
-        mkdir
-        "C:\\TestSASL\\SvnRoot""C:\\TestSASL\\subversion\\svnadmin.exe"
-        create "C:\\TestSASL\\SvnRoot\\TestRepository"
+        `mkdir "C:\TestSASL\SvnRoot"`  
+        `"C:\TestSASL\subversion\svnadmin.exe" create "C:\TestSASL\SvnRoot\TestRepository"`
 
     -   When successful, there will be no output from this command.
 
@@ -72,14 +72,12 @@ all steps.
         want to open a dedicated console window for it.
 
     -   Run console command:  
-        "C:\\TestSASL\\subversion\\svnserve.exe" -d -r
-        "C:\\TestSASL\\SvnRoot"
+        `"C:\TestSASL\subversion\svnserve.exe" -d -r "C:\TestSASL\SvnRoot"`
 
--   -   Make sure that `svnserve.exe` is allowed through your firewall
+    -   Make sure that `svnserve.exe` is allowed through your firewall
         (for Windows Firewall, a prompt will appear after starting it).
     -   When successful, there will be no output from this command.
-    -   Do not close console window, or your SVN server will be stopped
-        as well.
+    -   Do not close console window (doing so will stop SVN server).
 
 #### On `CLIENT` computer
 
@@ -88,11 +86,11 @@ all steps.
 2.  Select `Project | Check Out...`
 
 3.  Use this repository URL  
-    svn://SERVER/TestRepository
+    `svn://SERVER/TestRepository`
 
 4.  Complete the other wizard steps as usual.
 
-5.  If you receive error 'Unable to connect to a repository at URL
+5.  If you receive error 'Unable to connect to a repository at URL'
 
     -   You're having some basic connection problem, and this is beyond
         the scope of this guide.
@@ -100,21 +98,20 @@ all steps.
     -   You might want to check that
         -   `svnserve.exe` is still running on `SERVER`
         -   `svnserve.exe` is allowed through firewall
-        -   CLIENT can ping SERVER
+        -   `CLIENT` can ping `SERVER`
 
 # Prepare SASL
 
-Steps in these section are performed on computer SERVER.
+Steps in these section are performed on computer `SERVER`.
 
 #### Verify that SASL is not configured yet
 
--   It's possible that you have leftover SASL installed along with other
-    SVN client  
+-   It's possible that you have leftover SASL installed along with other SVN client  
     This could cause unexpected failures when you try to run
     `svnserve.exe` with SASL later.
 -   Run console command:  
-    "C:\\TestSASL\\subversion\\pluginviewer.exe"
--   It should only have "EXTERNAL" in all lists  
+    `"C:\TestSASL\subversion\pluginviewer.exe"`
+-   It should only have 'EXTERNAL' in all lists  
     This means SASL doesn't see its plugins yet, even though they're
     located in the same folder.
 
@@ -126,29 +123,25 @@ Steps in these section are performed on computer SERVER.
     -   For 64-bit:  
         `HKEY_LOCAL_MACHINE\SOFTWARE\Carnegie Mellon\Project Cyrus\SASL Library`
 2.  Create `String` values:
-    -   SearchPath = C:\\TestSASL\\subversion  
-        This is the folder where SASL will look for its plugins.  
+    -   `SearchPath` with value `C:\TestSASL\subversion`  
+        This is the folder where SASL will look for its plugins.
         For SmartSVN's SVN package, SASL plugins are located in the same
         folder as SVN itself.
-    -   ConfFile = C:\\TestSASL\\SASL_Config  
-        This is the folder where SASL will look for its configuration
-        file.  
+    -   `ConfFile` with value `C:\TestSASL\SASL_Config`  
+        This is the folder where SASL will look for its configuration file.  
         Note that this is a folder path and not the path to 'svn.conf'
         file that you will create in next step.
 
 #### Create SASL configuration file
 
-1.  Create text file C:\\TestSASL\\SASL_Config\\svn.conf with the
+1.  Create text file `C:\TestSASL\SASL_Config\svn.conf` with the
     following contents:
-
-
-
-        pwcheck_method: auxprop
-        auxprop_plugin: sasldb
-        mech_list: DIGEST-MD5
-        sasldb_path: C:\TestSASL\SASL_Config\sasldb
-
-
+    ```
+    pwcheck_method: auxprop
+    auxprop_plugin: sasldb
+    mech_list: DIGEST-MD5
+    sasldb_path: C:\TestSASL\SASL_Config\sasldb
+    ```
 
     `DIGEST-MD5` is the authentication plugin to be used. There are
     other plugins available, but they are beyond the scope of this
@@ -158,7 +151,7 @@ Steps in these section are performed on computer SERVER.
 
 #### Create user/password database
 
-1.  Run console command:  
+1.  Run console command:   
     `"C:\TestSASL\subversion\saslpasswd2.exe" -c -f "C:\TestSASL\SASL_Config\sasldb" -u TestRealm john.smith`  
     This will create user `john.smith`  
     This will also create the database if it doesn't exist.  
@@ -172,49 +165,34 @@ You will need to edit repository configuration file:
 `C:\TestSASL\SvnRoot\TestRepository\conf\svnserve.conf`
 
 For a newly created repository this file will already contain some
-settings, but these settings will be commented with `#`.  
-Remember to uncomment values as you edit them.
+settings, but these settings will be commented with `#`. Remember to uncomment values as you edit them.
 
 Steps:
-
 1.  Enable SASL:
-
-
-
-        [sasl]
-        use-sasl = true
-
-
-
+    ```
+    [sasl]
+    use-sasl = true
+    ```
     This will enable SASL authentication and also disabled SVN's builtin
     authentication.
 
 2.  Configure realm
-
-
-
-        [general]
-        realm = TestRealm
-
-
-
+    ```
+    [general]
+    realm = TestRealm
+    ```
     SASL needs a realm assigned to repository to be able to match it
     with user/password database.
 
 3.  Disable anonymous read access
-
-
-
-        [general]
-        anon-access = none
-
-
-
+    ```
+    [general]
+    anon-access = none
+    ```
     This disables anonymous read access.  
     This step is not necessary, but convenient for testing.  
     If you skip this, remember that you need to perform a writing
-    operation (such as Commit) to verify that SASL works  
-      
+    operation (such as Commit) to verify that SASL works
 
 4.  Restart `svnserve.exe`  
     Close `svnserve.exe` console you have running from the previous
@@ -225,7 +203,7 @@ Steps:
 
 # Test SASL
 
-Steps in these section are performed on computer `CLIENT.`
+Steps in these section are performed on computer `CLIENT`.
 
 1.  Start SmartSVN if you don't have it running.
 2.  Press 'Update' on SmartSVN's toolbar.
@@ -247,5 +225,3 @@ incompatible versions of libraries.
 
 If you performed all steps correctly, you should be able to access your
 new SASL-based repository.  
-  
-  
