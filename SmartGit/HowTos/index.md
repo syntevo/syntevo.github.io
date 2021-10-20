@@ -47,6 +47,7 @@
         -   [Possibly faulty RAM](Possibly-faulty-RAM.md)
     -   [Why are my files/directories not shown?](Why-are-my-files-directories-not-shown-.md)
     -   [Linux problems](Linux-problems.md)
+    -   [Upgrading SmartGit using HTTP instead of HTTPS](Upgrading-using-plain-http.md)
 -   Workflows
     -   [GitHub: keeping in sync with the upstream repository](GitHub-keeping-in-sync-with-the-upstream-repository.md)
     -   [How to compare two branches/commits?](How-to-compare-two-branches-commits-.md)
