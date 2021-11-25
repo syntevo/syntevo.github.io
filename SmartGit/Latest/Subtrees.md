@@ -16,6 +16,8 @@ a *folder*-symbol in the Log **Graph**.
 To add a new subtree, select the root directory of the repository in the
 **Repositories** view and invoke **Remote\|Subtree\|Add**.
 
+To fetch new (remote) changes from the subtree repository, select the subtree remote in the **Branches** view and invoke **Pull** from the context menu. Alternatively, you can invoke **Remote\|Pull** from the main menu and for **Fetch From** select the subtree remote there.
+
 To merge (or cherry-pick) a subtree use the **Merge**
 (or **Cherry-Pick**) command. SmartGit will understand whether the
 source commit is a subtree and in this case perform a subtree merge (or
