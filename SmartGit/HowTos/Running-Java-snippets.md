@@ -21,8 +21,8 @@ runtime environment:
 
 
 
-    Substitute `{classname`} by the class name we have asked you to run
-    and `{jre`} by the path to SmartGit's JRE. Depending on your
+    Substitute `{classname}` by the class name we have asked you to run
+    and `{jre}` by the path to SmartGit's JRE. Depending on your
     operating system, you will find the JRE at:
 
     1.  **Windows**: \<smartgit-installation>\\jre
