@@ -5,7 +5,7 @@
 Always try to investigate problems with a fresh SmartGit setup:
 
 -   on Windows, use the *Portable* bundle: <https://www.syntevo.com/smartgit/download/>
--   on macOS and Linux, temporary use a new [smartgit.settings](VM-options.md#location-of-the-settings-directory) directory
+-   on macOS and Linux, temporary use a new [smartgit.settings](../Latest/VM-options.md#location-of-the-settings-directory) directory
 
 #### Why?
 > SmartGit has plenty of **Preferences** options and even more **Low-Level
@@ -33,7 +33,7 @@ When sending logs to us, make sure they are **compressed** either with *ZIP* or 
 
 To enable debug logging for a certain key `log4j.foo.bar`, first decide the log-level – whether it should be fine (`DEBUG`) or as fine as possible `TRACE`.
 Usually SmartGit support will tell you.
-After that add the corresponding line to `smartgit.properties` (in the Settings directory, see [Installation and Files](Installation-and-Files.md)).
+After that add the corresponding line to `smartgit.properties` (in the Settings directory, see [Installation and Files](../Latest/Installation-and-Files.md)).
 Depending on the log-level this will be either:
 
 **DEBUG logging**
