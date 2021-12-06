@@ -29,4 +29,4 @@ smartgit.debug=true
 -   Compress all `log.txt.*` files from the settings directory as a
     *zip* or *tar/gzip* archive and send this archive, as well as a
     short description of how to reproduce the problem, to
-    [smartgit@syntevo.com](mailto:support@smartsvn.com.md).
+    [smartgit@syntevo.com](mailto:support@smartsvn.com).

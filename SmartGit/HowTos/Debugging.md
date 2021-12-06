@@ -21,7 +21,7 @@ If the problem is not reproducible with fresh settings, try to copy the settings
 
 Before investigating a problem, restart SmartGit with clean logs:
 
--   locate the [Installation and Files](Installation-and-Files.md)
+-   locate the [Installation and Files](../Latest/Installation-and-Files.md)
     in the **Help\|About** dialog
 -   from sub-directory `logs/` remove all `log.txt*` files
 

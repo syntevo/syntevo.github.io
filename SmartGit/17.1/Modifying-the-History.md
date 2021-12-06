@@ -53,7 +53,7 @@ new one** checked on the Commit dialog.
 Doing the opposite of merging the last two commits, i.e. splitting the
 last commit into two, requires using the Index. SmartGit provides a
 specialized editor for it, called the Index Editor. How it is used is
-explained in another How-To: [Staging, unstaging and the Index Editor](.md#Staging,unstagingandtheIndexEditor-workflows.index)
+explained in another How-To: [Staging-unstaging-and-the-Index-Editor.md#Staging,unstagingandtheIndexEditor-workflows.index)
 
 In essence, the Index allows you to commit only a subset of the changes
 in your working tree, instead of all the changes in it. So, in order to

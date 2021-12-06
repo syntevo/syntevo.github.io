@@ -9,7 +9,7 @@ for example:
 
 When experiencing problems here,  it can be helpful to debug Java's
 networking layer. To do that, first add the following system property to
-the [smartgit.properties](System-Properties.md) file:
+the [smartgit.properties](../Latest/System-Properties.md) file:
 
 -   for SmartGit up to version 18.2:
 

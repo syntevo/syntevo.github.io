@@ -4,7 +4,7 @@ Use **Repository\|Clone** to create a clone of another Git, Mercurial or
 SVN repository.
 
 Specify the repository to clone either as a remote URL (e.g.
-[ssh://user@server:port/path](ssh://user@serverport.md)), or, if the
+ssh://user@server:port/path), or, if the
 repository is locally available on your file system, as a file path. In
 the **Selection** step you can configure whether submodules should be
 fetched as well: usually you will have this option selected, because

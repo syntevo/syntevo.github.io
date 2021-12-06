@@ -12,7 +12,7 @@ branches or how to handle submodules when pulling.
 
 With these settings you can configure what name and email address should
 be used when committing, as well as whether to sign all commits (see
-also [Sign Tags and Commits](Sign-Tags-and-Commits.md)).
+also [Sign Tags and Commits](../HowTos/Sign-Tags-and-Commits.md)).
 
 
 

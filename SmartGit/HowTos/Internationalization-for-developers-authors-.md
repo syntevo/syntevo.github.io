@@ -59,7 +59,7 @@ translations immediately.
     in `ED:\smartgit-translations`.
 
 2.  To put SmartGit into i18n development mode, add following properties
-    to [smartgit.properties](System-Properties.md):
+    to [smartgit.properties](../Latest/System-Properties.md):
 
 
 
