@@ -929,9 +929,9 @@ number of ways to configure Apache server and there's a number of Apache
 modules but here's a couple of examples of such connection limiting
 directives:
 
--   [ProxyPass](http://httpd.apache.org/docs/2.2/mod/mod.md) and
+-   [ProxyPass](https://httpd.apache.org/docs/2.2/mod/mod_proxy.html) and
     ProxyPassReverse when mod_proxy is used
--   [Timeout](.md#timeout)
+-   [Timeout](https://httpd.apache.org/docs/2.2/mod/core.html#timeout)
     directive of core module
 
 Usually the default values of such directives are reasonable enough for

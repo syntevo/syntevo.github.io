@@ -9,7 +9,7 @@ processed. The solution is to specify the `PATH` either in a file which
 will be processed by the system when starting SmartGit (for OSX,
 see [this Stackoverflow answer](https://stackoverflow.com/a/3756686)) or
 by adding `PATH`= to `smartgit.vmoptions`, see
-[VM Options](../Latest/VM-options).
+[VM Options](../Latest/VM-options.md).
 
 Typical failures:
 

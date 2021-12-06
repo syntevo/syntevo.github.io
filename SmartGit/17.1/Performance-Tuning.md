@@ -42,7 +42,7 @@ want to try the following:
 -   **Switch off ctime change detection:** 
     invoke `git config core.trustctime false` in your repository root to
     ignore the files' ctimes changes when scanning for modified files.
-    For details, refer to the [git-config man page](.md).
+    For details, refer to the git-config man page.
 -   **Inefficient .gitignore:** if you have a large amount of ignored
     files, be sure they will be located in a directory which itself is
     marked as ignored, not just the contained files. Also, be sure that
@@ -70,7 +70,7 @@ one of its subdirectories, the ignore-processing will be *inefficient*.
 
 Large amounts of tags (or branches) may slow down Logs, but also the
 Working Tree window. You can tell SmartGit to exclude certain tags or
-remote branches from loading by using [Java regular expressions](.md)
+remote branches from loading by using Java regular expressions
 with following options in `.git/config`:
 
     [smartgit "refLimit"]

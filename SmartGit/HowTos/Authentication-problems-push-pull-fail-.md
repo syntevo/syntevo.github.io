@@ -63,7 +63,7 @@ authentication.
     -   If the command does not work without the hosting provider
         configured, continue below.
 -   If your repository is connected to GitHub, check whether this
-    problem might be related to [organization access](GitHub-integration.md#private-repositories-do-not-show-up).
+    problem might be related to [organization access](../Latest/GitHub-integration.md#private-repositories-do-not-show-up).
 -   If you are not connected to a hosting provider  
     -   if you are on Windows, continue with the next step.
     -   continue with step "Check Firewalls/Antivirus tools".

@@ -74,4 +74,4 @@ directory `install-dir`.
 or *tar/gzip* archive, and also include the file `log.txt` from
 DeepGit's settings directory. Send this archive, as well as a short
 description of how to reproduce the problem, to
-[deepgit@syntevo.com](mailto:smartgit@syntevo.com.md).
+[deepgit@syntevo.com](mailto:smartgit@syntevo.com).

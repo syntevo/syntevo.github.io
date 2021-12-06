@@ -140,8 +140,8 @@ changes, in addition to the plain *modified* state which Git reports (in
 either case, files which Git considers as *modified* will be reported).
 If you do not want Git to care about EOLs at all (that's usually the
 case if you are on Windows), you might want to use
-[core.autocrlf](.md)
-or [text and eol attributes](.md).
+core.autocrlf
+or text and eol attributes.
 
 ### smartgit.storeProjectPathRelativeToApplicationRoot
 
