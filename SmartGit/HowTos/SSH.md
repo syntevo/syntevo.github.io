@@ -5,17 +5,15 @@
 To create a private/public key pair, execute following command in a
 Terminal:
 
-`$ ssh-keygen -t rsa -b 4096 -m PEM`
+`$ ssh-keygen -t ed25519`
 
-The parameters `-m PEM` are necessary, because some newer SSH
-implementations, e.g. on macOS 10.14+, use a different format of the
-private key file that is not (yet) supported by the SSH library SmartGit
-is using.
+If you have connection problems, try with this command instead:
+
+`$ ssh-keygen -t rsa -b 4096 -m PEM`
 
 ### Converting an existing private key to PEM-format
 
-If you have a private key file which is not supported, please try this
-command in a Terminal:
+If you have a private key file with an unsupported format, use this command in a Terminal to convert it:
 
 `$ ssh-keygen -f <private_key_file> -p -m PEM`
 
