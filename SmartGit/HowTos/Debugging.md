@@ -13,10 +13,6 @@ Always try to investigate problems with a fresh SmartGit setup:
 > non-obvious ways. This is especially true if the behavior you are
 > experiencing is unexpected and/or looks like a bug.
 
-### Strip down settings
-
-If the problem is not reproducible with fresh settings, try to copy the settings from your main installation over to the new settings area. This should make the problem reproducible again. Now start to strip down the settings as much as necessary (e.g. to get rid of possibly sensitive information, especially the `passwords` file). Most crashes will be preserved as long as `preferences.yml` is left untouched. Once the settings are stripped down enough, compress them and include them with the logs (see below).
-
 ### Clean Logs
 
 Before investigating a problem, restart SmartGit with clean logs:
@@ -28,6 +24,10 @@ Before investigating a problem, restart SmartGit with clean logs:
 ### Send results
 
 When sending logs to us, make sure they are **compressed** either with *ZIP* or *7z*. This prevents the logs from becoming inlined into the email. Include the stripped down settings (see above), if the problem isn't reproducible with clean settings.
+
+### Strip down settings
+
+If the problem is not reproducible with fresh settings, try to copy the settings from your main installation over to the new settings area. This should make the problem reproducible again. Now start to strip down the settings as much as necessary (e.g. to get rid of possibly sensitive information, especially the `passwords` file). Most crashes will be preserved as long as `preferences.yml` is left untouched. Once the settings are stripped down enough, compress them and include them with the logs (see below).
 
 ## Enabling debug logging for certain keys
 
