@@ -13,7 +13,7 @@ Provider** dialog, have **Bitbucket** selected and invoke **Generate API
 token**. This should open up your default web browser where you will
 have to confirm by **Grant**.
 
-![](attachments/53215458/53215460.png)
+![](attachments/bitbucket-oauth-grant.png)
 
 Once you have confirmed this page, you will be redirected to
 *[syntevo.com](http://syntevo.com)* , where the generated access code
@@ -28,7 +28,7 @@ Once you have authorized SmartGit, it will show up in your GitHub
 Authorization process outlined above, you have to **Revoke** access
 there first and start over.
 
-![](attachments/53215458/53215459.png)
+![](attachments/bitbucket-oauth-overview.png)
 
 ## Possible Problems & Solutions
 
