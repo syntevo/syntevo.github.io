@@ -11,6 +11,13 @@ Only select the **Allow modifying pushed commits (e.g. forced-push)** if
 you are sure you know Git well enough to understand the consequences of
 forced push.
 
+## Log and Working Tree window
+
+Select **Automatically save stash on common commands** to have SmartGit retry the execution of a Git command, if this failed and the working tree contains local changes.
+
+#### Info
+> If you encounter problems with auto-stashing, because SmartGit does not ask anymore, you may try to **Restore all confirmation dialogs** in section **User Interface**.
+
 ## Git Executable
 
 You can specify which **Git Executable** should be used by SmartGit.
