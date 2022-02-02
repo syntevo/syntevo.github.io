@@ -1,13 +1,14 @@
 # SmartGit documentation
 
 - [Manual: Latest Version](Latest/index.md)
-- [Manual: 21.1](21.1/index.md)
+- [Manual: 21.2](21.2/index.md)
 - [How Tos](HowTos/index.md)
 
 ## Manuals of outdated versions
 
 The documentation for outdated SmartGit versions is just given for your convenience. Layout may not be perfect and links may not work properly.
 
+- [21.1](21.1/index.md)
 - [20.2](20.2/index.md)
 - [20.1](20.1/index.md)
 - [19.1](19.1/index.md)
