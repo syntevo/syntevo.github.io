@@ -30,6 +30,17 @@ there first and start over.
 
 ![](attachments/bitbucket-oauth-overview.png)
 
+### Setup using App Password (only basic repository access)
+
+If you are only interested in accessing your Bitbucket repositories but don't care about the enhanced integration, including pull requests, you may connect to Bitbucket using [App Passwords](https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/).
+
+For the App Password, only **Repositories** **Read** and **Write** access will be required.
+
+![](attachments/bitbucket-app-password.png)
+
+Once you have created the App Password, just use it as **Password** when SmartGit asks you for credentials (e.g. on Pull or Push). 
+
+
 ## Possible Problems & Solutions
 
 ### Authenticating with two or more accounts
