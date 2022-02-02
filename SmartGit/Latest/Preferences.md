@@ -11,13 +11,6 @@ Only select the **Allow modifying pushed commits (e.g. forced-push)** if
 you are sure you know Git well enough to understand the consequences of
 forced push.
 
-### Log
-
-When **Contact gravatar.com to show images for the users** is selected,
-a hash of the email address is generated and then gravatar.com is
-contacted to request the belonging graphic which the user first has to
-configure there.
-
 ## Git Executable
 
 You can specify which **Git Executable** should be used by SmartGit.
@@ -287,6 +280,13 @@ It will also be used for Git HTTP and HTTPs under certain conditions:
     your `.gitconfig` and Git's system `config` and
 -   the neither of following system environment variables is
     set: `HTTP_PROXY`, `HTTPS_PROXY`, `NO_PROXY`
+
+## Privacy
+
+When **Contact gravatar.com to show images for the users** is selected,
+a hash of the email address is generated and then gravatar.com is
+contacted to request the belonging graphic which the user first has to
+configure there.
 
   
 
