@@ -158,8 +158,6 @@ to <smartgit@syntevo.com>
 
 # Error: Could not read from remote repository, GitLab: the project you were looking for could not be found
 
-#### Step "Check GitLab Configuration"
-
 Go to your GitLab server configuration page (or ask your administrator
 to do so) and make sure that you have been granted all necessary access
 rights. You may start off with granting all possible rights and
@@ -170,8 +168,6 @@ and **push** to the offending repository.
     "[Contact Support](#step-contact-support)".
 
 # Error (Bitbucket): Server returned HTTP response code: 400 for URL: <https://bitbucket.org/site/oauth2/access_token>
-
-#### Step "Check Bitbucket Configuration"
 
 On the setup of the Bitbucket hosting provider, SmartGit has retrieved a
 "refresh" token which it is using subsequently to request short-lived
@@ -186,8 +182,6 @@ hosting provider.
 
 # Error (GitHub): Repository not found
 
-#### Step "Check Command"
-
 Check the **Output** view or the `log`-directory for the exact command
 which fails and try to invoke the command from an *independently opened*
 terminal/shell.
@@ -198,8 +192,6 @@ terminal/shell.
     delete the credentials there.
 
 # SmartGit only stores one pair of credentials for a single domain (e.g. github.com)
-
-#### Step "Check Credentials Helper"
 
 If:
 
