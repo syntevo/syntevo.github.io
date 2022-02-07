@@ -156,7 +156,7 @@ Send us a detailed description of the problem, including:
 
 to <smartgit@syntevo.com>
 
-# Error: Could not read from remote repository, GitLab: the project you were looking for could not be found
+# Error (GitLab): Could not read from remote repository: the project you were looking for could not be found
 
 Go to your GitLab server configuration page (or ask your administrator
 to do so) and make sure that you have been granted all necessary access
