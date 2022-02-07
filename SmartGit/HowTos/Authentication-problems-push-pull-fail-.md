@@ -191,6 +191,10 @@ terminal/shell.
     If you want SmartGit to authenticate using OAuth, make sure to
     delete the credentials there.
 
+# Error: credential-cache unavailable; no unix socket support
+
+This indicates a problem with the "manager" credential helper. You may try to disable the credential helper by executing `git config --global --unset credential.helper` from a command shell. Then invoke the pull/push again. See also **Step "Check Credential Manager"**, above.
+
 # SmartGit only stores one pair of credentials for a single domain (e.g. github.com)
 
 If:
