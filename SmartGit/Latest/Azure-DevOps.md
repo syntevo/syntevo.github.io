@@ -50,4 +50,6 @@ you just have a single organization). The scopes can be limited to
 
 ![](attachments/53215478/53215481.png)
 
+### Repository access using "Generate Git Credentials"
 
+If you are just interested in accessing your Azure DevOps Git repositories, but you don't need the additional *Azure DevOps Hosting Provider functionality* (like managing pull requests in SmartGit), you may open the Azure website, navigate to your Azure DevOps repository, invoke **Clone** and then **Generate Git Credentials**. When SmartGit asks you for **User Name** and **Password** enter these credentials.
