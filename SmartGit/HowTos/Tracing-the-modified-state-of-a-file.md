@@ -8,7 +8,7 @@ unclear, following procedure allows to debug details for this file.
 Give `git status` a try and see whether the same modification is present
 there. If so, you may still run through this procedure, but likely the
 answer to this question is found elsewhere (reason may be a wrong
-`.git/config` or EOL-related issues).
+`.git/config`, EOL-related issues or [Git-LFS issues](#git-lfs-issues)).
 
 If invoking `git status` does not show the same modification or even
 resets the modification in SmartGit, the resulting debug information
@@ -61,4 +61,36 @@ to [smartgit.properties](../Latest/System-Properties.md)
 smartgit.status.index.dump.level=FINEST
 ```
 
+### Git-LFS Issues
 
+If executing `git status` also shows the files as modified, try invoking `git lfs status`:
+
+```
+$ git lfs status
+On branch master
+Objects to be pushed to origin/master:
+
+
+Objects to be committed:
+
+
+Objects not staged for commit:
+
+        _img/screenshots/android_auto/de/11_android_auto_map.png (Git: 0731d28 -> File: 0731d28)
+...
+```
+Then [this stackoverflow article](https://stackoverflow.com/questions/46704572/#answer-54804224) might help you:
+```
+git lfs uninstall
+git reset --hard
+git lfs install
+git lfs pull
+```
+or, if it didn't help:
+```
+git rm --cached -r .
+git reset --hard
+git rm .gitattributes
+git reset .
+git checkout .
+```
