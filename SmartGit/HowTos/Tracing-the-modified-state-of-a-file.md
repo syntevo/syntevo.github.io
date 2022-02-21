@@ -79,18 +79,4 @@ Objects not staged for commit:
         _img/screenshots/android_auto/de/11_android_auto_map.png (Git: 0731d28 -> File: 0731d28)
 ...
 ```
-Then [this stackoverflow article](https://stackoverflow.com/questions/46704572/#answer-54804224) might help you:
-```
-git lfs uninstall
-git reset --hard
-git lfs install
-git lfs pull
-```
-or, if it didn't help:
-```
-git rm --cached -r .
-git reset --hard
-git rm .gitattributes
-git reset .
-git checkout .
-```
+Then [this stackoverflow article](https://stackoverflow.com/questions/46704572) might help you.
