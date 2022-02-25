@@ -20,6 +20,12 @@ Once you have confirmed this page, you will be redirected to
 Copy&paste this code into SmartGit's **Generate API Token** dialog and
 invoke **Authenticate**. The code will be used to create an *application
 access token* which will be used to populate the **Token** field.
+
+By default, **Use OAuth token for repository authentication** will be selected. This will return the generated OAuth-token when Git asks for credentials (username + password) when connecting to your GitHub repository. Using the OAuth-token has following advantages:
+
+* its scope is more limited than plain password or possibly more powerful personal access tokens
+* it will not require to create/enter a second set of credentials to SmartGit
+
 Finally, confirm the **Add Hosting Provider** dialog using **Add**.
 
 
