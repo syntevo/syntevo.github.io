@@ -113,36 +113,29 @@ look like:
 > <version>  
 >     <major-version>17.1</major-version>  
 >     <major-date>2017-10-12</major-date>  
->     <build>11190\</build>  
->     <name>17.1.2\</name>  
->     <date>2017-11-14\</date>  
->     <location>http://updateserver/smartgit/info\</location>         
->     <update-url>http://updateserver/smartgit/updates/control-11190\</update-url>  
->     <update-delay>3600\</update-delay>  
->     <update-density>100\</update-density>  
->     <update-density-max>100\</update-density-max>  
+>     <build>11190</build>  
+>     <name>17.1.2</name>  
+>     <date>2017-11-14</date>  
+>     <location>http://updateserver/smartgit/info</location>         
+>     <update-url>http://updateserver/smartgit/updates/control-11190</update-url>  
+>     <update-delay>3600</update-delay>  
+>     <update-density>100</update-density>  
+>     <update-density-max>100</update-density-max>  
 > </version>
 > ```
 
 
-The important URL is `<update-url>` which specifies the URL-**prefix**
-for the update "control"-files. The `<location>`-URL is of minor
-importance and will just be displayed by SmartGit if an automatic
-upgrade is not possible (which should almost never be the case).
+The important URL is `<update-url>` which specifies the URL-**prefix** for the update "control"-files.
+The `<location>`-URL is of minor importance and will just be displayed by SmartGit if an automatic upgrade is not possible (which should almost never be the case).
 
-Depending on the operating system, the URL-prefix will be completed to a
-full URL by appending:
+Depending on the operating system, the URL-prefix will be completed to a full URL by appending:
 
--   `win` for Windows
--   `gen` for Linux/Unix
--   `osx` for MacOS
-
+-   `-win` for Windows
+-   `-gen` for Linux
+-   `-macos-aarch64` or `-macos-x86_64` for MacOS
 
 
 #### Example
->
->
->
 >The complete URL for the Windows update control file will look like:
 >
 >    http://updateserver/smartgit/updates/control-11190-win
