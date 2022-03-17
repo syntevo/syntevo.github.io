@@ -39,7 +39,7 @@ and it offers following endpoints:
 
 -   `http://updateserver/smartgit/autoupdate` and
 -   `http://updateserver/smartgit/updates`
--   `       http://updateserver/smartgit/info     `
+-   `http://updateserver/smartgit/info`
 
 
 #### Info
