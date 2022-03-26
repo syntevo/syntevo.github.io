@@ -65,14 +65,9 @@ git:
 
 ### System properties vs. VM options
 
-From a technical perspective, [system properties](System-Properties.md)  
-and [VM options](VM-options.md) are the same thing, they are just specified
-in different files. System properties are specified in
-`smartgit.properties` in the [SmartGit's Settings Directory](Installation-and-Files.md#default-path-of-smartgits-settings-directory),
-VM options are specified in the `smartgit.vmoptions` file. From an
-administrative perspective, it's recommended to configure all system
-properties in the `smartgit.vmoptions` file and leave individual user
-`smartgit.properties` files untouched.
+From a technical perspective, [system properties](System-Properties.md) and [VM options](VM-options.md) are the same thing, they are just specified in different files.
+System properties are specified in `smartgit.properties` in the [SmartGit's Settings Directory](Installation-and-Files.md#default-path-of-smartgits-settings-directory), VM options are specified in the `smartgit.vmoptions` file.
+From an administrative perspective, it's recommended to configure all system properties in the `smartgit.vmoptions` file and leave individual user `smartgit.properties` files untouched.
 
 
 #### Note
