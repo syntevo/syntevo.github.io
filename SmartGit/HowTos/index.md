@@ -13,6 +13,7 @@
     -   [SVN: cloning with a custom branch layout](SVN-cloning-with-a-custom-branch-layout.md)
     -   [Using the Git credentials manager](Using-the-Git-credentials-manager.md)
     -   [What do I do if I want to rename/move files or directories?](What-do-I-do-if-I-want-to-rename-move-files-or-directories-.md)
+	-   [Running on WSLg](Running-on-WSLg.md)
 -   [Debugging](Debugging.md)
     -   [Creating Thread Dumps](Creating-Thread-Dumps.md)
         -   [Periodical Thread Dumps](Periodical-Thread-Dumps.md)
