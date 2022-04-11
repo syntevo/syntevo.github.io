@@ -39,7 +39,7 @@
     -   [Authentication problems (push/pull fail)](Authentication-problems-push-pull-fail-.md)
     -   [git: '...' is not a git command](git-...-is-not-a-git-command.md)
     -   [How to fix an Index which contains the same file name multiple times, but with different encodings](How-to-fix-an-Index-which-contains-the-same-file-name-multiple-times-but-with-different-encodings.md)
-    -   [My files are displayed with invalid characters, what can I do?](My-files-are-displayed-with-invalid-characters-what-can-I-do-.md)
+    -   [My text files are displayed with invalid characters, what can I do?](invalid-encoding.md)
     -   [Native crashes: Known external causes](Native-crashes-Known-external-causes.md)
         -   [Your system ran out of virtual memory](Your-system-ran-out-of-virtual-memory.md)
         -   [Your pagefile size is limited to a low value](Your-pagefile-size-is-limited-to-a-low-value.md)
