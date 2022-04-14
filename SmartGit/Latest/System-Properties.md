@@ -126,7 +126,7 @@ manually fetch the latest build using **Help\|Check for Latest Builds**.
 
 Set to `false` to hide **Help\|Check for Latest Build**.
 
-### smartgit.updater.directory
+### smartgit.installation.update.workingArea
 
 Use this property to customize the [program updater](Installation-and-Files.md)'s
 temporary directory, which is by default located in your home
