@@ -124,6 +124,43 @@ attributes:
 
 The configuration of your JIRA connections are stored in `bugtracker.yml`, in the [Settings directory](Installation-and-Files.md). Referenced passwords are stored in `passwords`.
 
-  
+## Possible problems and solutions
 
+### "No project could be found with key '...'" or "The value '...' does not exist for the field 'project'"
 
+JIRA cloud may stop returning proper HTTP error `401` once an authentication with a token has been successful (for the first time) and the token is removed later on. This can been seen using curl:
+
+Initially, the authentication with an invalid token fails with HTTP error code 401, which can be detected by SmartGit:
+
+```
+$ curl -I -H "Authorization: Basic bWFyYy5zdHJhcGV0ekBzeW50ZXZvLmNvbTpYcVF6ZFdFMGUxRUw1VmM2ZjRmWDY0MjQ=" https://yoursite.atlassian.net/rest/api/2/project/PROJECT/versions
+HTTP/1.1 401 Unauthorized
+```
+
+Once the token has been created, the authentication succeeds, as expected:
+
+```
+$ curl -I -H "Authorization: Basic bWFyYy5zdHJhcGV0ekBzeW50ZXZvLmNvbTpIZk9rdjhHNDdZMjlLZEl0ZmczYkYxQ0I=" https://yoursite.atlassian.net/rest/api/2/project/PROJECT/versions
+HTTP/1.1 200 OK
+```
+
+After the token is removed from JIRA's security settings, authentication may continue to succeed for a while (it seems to remain cached for a couple of minutes):
+
+```
+$ curl -I -H "Authorization: Basic bWFyYy5zdHJhcGV0ekBzeW50ZXZvLmNvbTpIZk9rdjhHNDdZMjlLZEl0ZmczYkYxQ0I=" https://yoursite.atlassian.net/rest/api/2/project/PROJECT/versions
+HTTP/1.1 200 OK
+```
+
+Later, JIRA will start returning HTTP error code `404` which indicates to SmartGit that the token is good, but a non-existing project has been accessed:
+
+```
+$ curl -I -H "Authorization: Basic bWFyYy5zdHJhcGV0ekBzeW50ZXZvLmNvbTpIZk9rdjhHNDdZMjlLZEl0ZmczYkYxQ0I=" https://yoursite.atlassian.net/rest/api/2/project/PROJECT/versions
+HTTP/1.1 404 Not Found
+``` 
+
+#### Solution
+
+* Shutdown SmartGit
+* Get rid of the corresponding configuration from `bugtracker.yml` (see above)
+* Restart SmartGit
+* Now SmartGit will ask for new credentials
