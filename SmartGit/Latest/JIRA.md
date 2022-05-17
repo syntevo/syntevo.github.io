@@ -120,7 +120,9 @@ attributes:
 -   `%BUGSUMMARY%`
 -   `%BUGDESCRIPTION%`
 
-  
+## Miscellaneous
+
+The configuration of your JIRA connections are stored in `bugtracker.yml`, in the [Settings directory](Installation-and-Files.md). Referenced passwords are stored in `passwords`.
 
   
 
