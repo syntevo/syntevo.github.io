@@ -1,6 +1,23 @@
 # Example Tools
 
-# Open top-most Visual Studio solution from current repository
+## Format Patch
+
+Save this content to a file `format-patch.yml` and use the *Import* button on the Tools page of the preferences to restore the *Format Patch* feature from SmartGit versions < 22.1.
+``` yml
+tools:
+- name: Format Patch
+  fileStarter: {command: '${git}', parameters: 'format-patch -o "${dirSelect}" -1 ${commit}'}
+  useForOpen: false
+  waitUntilFinished: true
+  filePattern: '*'
+- name: Format Patch
+  fileStarter: {command: '${git}', parameters: 'format-patch -o "${dirSelect}" ${commit}..${commit2}'}
+  useForOpen: false
+  waitUntilFinished: true
+  filePattern: '*'
+```
+
+## Open top-most Visual Studio solution from current repository
 
 This powershell script can be used to open a solution file .sln inside a
 repository, in Visual Studio. The script iterates through the repository
@@ -40,7 +57,3 @@ $devenv = Get-VSSetupInstance | Select-VSSetupInstance -Version $ver -Latest | S
 $devenv = $devenv + "\Common7\IDE\devenv.exe"
 Start-Process -FilePath $devenv -ArgumentList $slnname
 ```
-
-
-
-
