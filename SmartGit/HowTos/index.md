@@ -2,8 +2,8 @@
 -   Configuration
     -   [Changing the Folder Watch Limit (Linux)](Changing-the-Folder-Watch-Limit-Linux-.md)
     -   [Enabling the "cherry picked from commit ..." message](Enabling-the-cherry-picked-from-commit-...-message.md)
+    -   [External Diff: configuring Microsoft Excel spreadsheet diffs](Microsoft-Excel-spreadsheet-diffs.md)
     -   [External Tools: configuring a 3-way diff](External-Tools-configuring-a-3-way-diff.md)
-    -   [External Tools: configuring Microsoft Excel spreadsheet diffs](External-Tools-configuring-Microsoft-Excel-spreadsheet-diffs.md)
     -   [Fixing the Git configuration for a local repository shared between different operating systems](Fixing-the-Git-configuration-for-a-local-repository-shared-between-different-operating-systems.md)
     -   [https: Remember different passwords for same server](https-Remember-different-passwords-for-same-server.md)
     -   [Linux: upgrade to Java 1.8 (to upgrade SmartGit)](Linux-upgrade-to-Java-1.8-to-upgrade-SmartGit-.md)

@@ -1,4 +1,4 @@
-# External Tools: configuring Microsoft Excel spreadsheet diffs
+# External Diff: configuring Microsoft Excel spreadsheet diffs
 
 If one has Microsoft Office installed, a tool called "SpreadSheet
 Compare" exists which is usually located at
