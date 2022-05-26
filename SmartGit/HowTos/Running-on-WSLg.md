@@ -30,8 +30,13 @@ and reboot when suggested. After the reboot, find new `Ubuntu on Windows` item i
    * `tar xvzf smartgit-linux-21_2_2.tar.gz`<br>
      Replace filename with the one you downloaded.<br>
      This will extract `smartgit` folder from the archive.
+   * `sudo apt update`<br>
+     A preparation for next step.
    * `sudo apt install xdg-utils`<br>
      A package necessary for next step. Installed by default on most Linux distros. For some reason, not present by default on WSL.
+   * `sudo mkdir /usr/share/desktop-directories`<br>
+     A workaround for Linux bug, see [https://askubuntu.com/questions/405800](https://askubuntu.com/questions/405800).
+	 Without it, you might have error `No writable system menu directory found` in next step.
    * `sudo ./smartgit/bin/add-menuitem.sh`<br>
      This will let Windows know about SmartGit. Right after running this command, your Windows Start menu will get new entry `SmartGit (Ubuntu)`.
      Note that you need to run it with `sudo`, because Windows only picks up info from system `/usr/share/applications` and ignores user `~/.local/share/applications`.
