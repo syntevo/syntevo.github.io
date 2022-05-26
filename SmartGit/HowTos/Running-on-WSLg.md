@@ -20,25 +20,25 @@ and reboot when suggested. After the reboot, find new `Ubuntu on Windows` item i
    * Click `Download for Linux`
    * Start `Ubuntu on Windows` from Windows Start menu. This will open a console, you'll use it later.
    * In your Windows Explorer, notice `Linux` item on side panel.
-   * Navigate to location where you want to install SmartGit on Linux, such as
-      `Ubuntu\home\user`
+   * Navigate to location where you want to install SmartGit on Linux, such as<br>
+      `Ubuntu\home\user`<br>
       (replace `user` with your username)
    * Copy the `.tar.gz` file you downloaded to this folder in Windows Explorer
-2. In `Ubuntu on Windows`, run these commands:
-   * `cd ~`
+2. In `Ubuntu on Windows`, run these commands:<br>
+   * `cd ~`<br>
      If you downloaded SmartGit to a different folder, adjust this step.
-   * `tar xvzf smartgit-linux-21_2_2.tar.gz`
-     Replace filename with the one you downloaded.
+   * `tar xvzf smartgit-linux-21_2_2.tar.gz`<br>
+     Replace filename with the one you downloaded.<br>
      This will extract `smartgit` folder from the archive.
-   * `sudo apt install xdg-utils`
+   * `sudo apt install xdg-utils`<br>
      A package necessary for next step. Installed by default on most Linux distros. For some reason, not present by default on WSL.
-   * `sudo ./smartgit/bin/add-menuitem.sh`
+   * `sudo ./smartgit/bin/add-menuitem.sh`<br>
      This will let Windows know about SmartGit. Right after running this command, your Windows Start menu will get new entry `SmartGit (Ubuntu)`.
      Note that you need to run it with `sudo`, because Windows only picks up info from system `/usr/share/applications` and ignores user `~/.local/share/applications`.
 3. Run and set up SmartGit
    * Find `SmartGit (Ubuntu)` in Windows Start menu and run it.
    * When asked for license, know that you can pick your Windows license from inside WSLg. To do that, navigate to
-     `/mnt/c/Users/win-user/AppData/Roaming/syntevo/SmartGit/22.1/license`
+     `/mnt/c/Users/win-user/AppData/Roaming/syntevo/SmartGit/22.1/license`<br>
      (here, `win-user` is your Windows username, and `22.1` with your SmartGit version. Just use directory browser button)
    * From this point, you can use SmartGit as usual.
 
@@ -46,11 +46,11 @@ and reboot when suggested. After the reboot, find new `Ubuntu on Windows` item i
 
 We plan to investigate and fix what we can.
 
-1. SmartGit fails to check for updates
+1. SmartGit fails to check for updates<br>
    Disabling Windows Firewall seems to help. But see next problem.
-2. SmartGit fails to install updates
+2. SmartGit fails to install updates<br>
    Current workaround is to re-install new version manually (see `SmartGit installation` chapter above).
-3. SmartGit windows do not have minimize/maximize buttons
+3. SmartGit windows do not have minimize/maximize buttons<br>
    This is due to how WSLg is configured by default. You can change that:
    * In WSL commandline, run commands:
      ```
