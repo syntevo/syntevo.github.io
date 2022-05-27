@@ -170,4 +170,8 @@ selected directory show up in the **Files** view. When selecting
 not *all* directories and files will be shows, but only those which are
 part of the directory for which the Revision Graph had been invoked
 
- 
+## Possible problems and solutions
+
+#### Error "<...> is not beyond cache root <...>"
+
+This error may show up if the [Log Cache](Log-Cache.md) has been limited to a sub-directory of the repository and for building the Revision Graph some Log-data outside of this directory is required. To resolve the problem, open **Project|Manage Log Caches**, delete the corresponding cache and re-invoke the Revision Graph. Now, when asked for the Log Cache remote location, select **Create cache for whole repository at**.
