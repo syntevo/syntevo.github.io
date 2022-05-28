@@ -31,7 +31,38 @@ and reboot when suggested. After the reboot, find new `Ubuntu on Windows` item i
      Replace filename with the one you downloaded.<br>
      This will extract `smartgit` folder from the archive.
    * `sudo apt update`<br>
-     A preparation for next step.
+     A preparation for `sudo apt install` steps.
+   * `sudo apt install libgtk-3-0`<br>
+     SmartGit is a GTK based program. GTK is installed in most GUI based Linux, but not on WSL. Without GTK installed, SmartGit will fail to start with error like
+	 ```
+	 java.lang.reflect.InvocationTargetException
+	     at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	     at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	     at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	     at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	     at com.syntevo.QBootLoader.main(SourceFile:115)
+	 Caused by: java.lang.UnsatisfiedLinkError: Could not load SWT library. Reasons:
+	     Can't load library: /home/user/.smartgit/21.2/swt.tmp/libswt-pi4-gtk-4946r10.so
+	     Can't load library: /home/user/.smartgit/21.2/swt.tmp/libswt-pi4-gtk.so
+	     Can't load library: /home/user/.smartgit/21.2/swt.tmp/libswt-pi4.so
+	     no swt-pi4-gtk-4946r10 in java.library.path: [/usr/java/packages/lib, /usr/lib64, /lib64, /lib, /usr/lib]
+	     no swt-pi4-gtk in java.library.path: [/usr/java/packages/lib, /usr/lib64, /lib64, /lib, /usr/lib]
+	     no swt-pi4 in java.library.path: [/usr/java/packages/lib, /usr/lib64, /lib64, /lib, /usr/lib]
+
+	     at org.eclipse.swt.internal.Library.loadLibrary(Library.java:348)
+	     at org.eclipse.swt.internal.Library.loadLibrary(Library.java:257)
+	     at org.eclipse.swt.internal.gtk.OS.<clinit>(OS.java:96)
+	     at org.eclipse.swt.internal.Converter.wcsToMbcs(Converter.java:209)
+	     at org.eclipse.swt.internal.Converter.wcsToMbcs(Converter.java:155)
+	     at org.eclipse.swt.widgets.Display.<clinit>(Display.java:165)
+	     at smartgit.IV.a(SourceFile:63)
+	     at smartgit.abZ.a(SourceFile:161)
+	     at com.syntevo.smartgit.p.a(SourceFile:384)
+	     at com.syntevo.smartgit.p.a(SourceFile:283)
+	     at smartgit.acE.b(SourceFile:68)
+	     at com.syntevo.smartgit.SmartGit.main(SourceFile:11)
+	     ... 5 more
+	 ```
    * `sudo apt install xdg-utils`<br>
      A package necessary for next step. Installed by default on most Linux distros. For some reason, not present by default on WSL.
    * `sudo mkdir /usr/share/desktop-directories`<br>
