@@ -4,14 +4,25 @@ This page is dedicated to running SmartGit on Windows Subsystem for Linux with G
 WSLg allows running GUI based Linux applications, such as SmartGit, in emulated Linux environment on Windows.
 This is convenient if you need to mix Windows and Linux development and prefer Windows as main OS.
 
+Note that you need **Win11 or higher**, because WSLg is not supported on Win10 (it only has plain WSL).
+
 # WSLg installation
 
-If you're running Windows 11 21H2 or higher, then run this command in administrator commandline:
+Run this command in administrator commandline:
 ```
 wsl --install -d Ubuntu
 ```
 
 and reboot when suggested. After the reboot, find new `Ubuntu on Windows` item in Start menu and launch it.
+
+Run these commands in WSL terminal to make sure that WSLg works as intended:
+```
+sudo apt update
+sudo apt install gedit
+gedit
+```
+
+You should see `gedit` window open in your Windows. If this doesn't happen, then either you don't have WSLg or it's broken in some way.
 
 # SmartGit installation
 
