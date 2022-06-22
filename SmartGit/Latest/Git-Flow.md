@@ -322,3 +322,24 @@ should,
 the corresponding commits into the latest `hotfix/5.0.x` branch. There
 should be one such branch only, anyway. In this way, the changes will
 make it to `master` and `develop` later, when the hotfix is 'finished'.
+
+### Customizing Git-Flow behavior
+
+Git-Flow's behavior can be customized in various ways. The best reference of all available options is the [source code](https://github.com/petervanderdoes/gitflow-avh). You will frequently find calls to `gitflow_override_flag_boolean` there, for example:
+
+```
+gitflow_override_flag_boolean   "release.finish.nodevelopmerge" "nodevelopmerge"
+```
+
+To set this config option, you can use Git command line:
+
+```
+git config gitflow.release.finish.nodevelopmerge 1
+```
+
+or - equivalently - adjust the `.git/config`:
+
+```
+[gitflow "release.finish"]
+	nodevelopmerge = 1
+```
