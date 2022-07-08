@@ -183,11 +183,6 @@ a graphic viewer for `.png` files.
 
 This tool will open the selected directory in the terminal application.
 
-### Format Patch
-
-This tool will create a patch between either the selected commit/ref and
-the working tree or the selected two commits/refs.
-
 ### Apply Patch
 
 This tool will show a file open dialog and then apply the selected
