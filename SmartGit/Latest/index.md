@@ -34,6 +34,7 @@
 -   [Repository \| Settings](Repository-Settings.md)
 -   Integrations
     -   [GitHub integration](GitHub-integration.md)
+        -   [GitHub Actions](GitHub-Actions.md)
         -   [GitHub Enterprise Integration](GitHub-Enterprise-Integration.md)
     -   [BitBucket Server (Atlassian Stash) integration](BitBucket-Server-Atlassian-Stash-integration.md)
     -   [Bitbucket integration](Bitbucket-integration.md)
