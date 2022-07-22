@@ -44,6 +44,7 @@
     -   [Git-LFS](Git-LFS.md)
     -   [Azure DevOps](Azure-DevOps.md)
     -   [TeamCity](TeamCity.md)
+    -   [Jenkins](Jenkins.md)
 -   [Advanced Settings](Advanced-Settings.md)
     -   [System Properties](System-Properties.md)
     -   [VM options](VM-options.md)
