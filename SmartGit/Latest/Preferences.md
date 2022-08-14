@@ -249,47 +249,34 @@ an **External Conflict Solver**:
 -   `${rightFile}` represents Git's "theirs" version of the file
 -   `${baseFile}` represents Git's "common" version of the file
 
-For details on how Git is managing these file versions, refer to the
-[Git manual](https://git-scm.com/book/en/v2/Git-Tools-Advanced-Merging).
+For details on how Git is managing these file versions, refer to the [Git manual](https://git-scm.com/book/en/v2/Git-Tools-Advanced-Merging).
 
+**Example: VSCode**
 
+To configure VSCode 1.70 or higher as conflict solver, use `--wait --merge ${leftFile} ${rightFile} ${baseFile} ${mergedFile}` as **Arguments**.
+
+![](attachments/conflict-solver-vscode.png)
 
 **Example: Unity Smart Merge Tool**
 
-
-
-To configure the UnityYAMLMerge, use
-`merge -p ${baseFile} ${rightFile} ${leftFile} ${mergedFile}` as
-**Arguments**. An example configuration could look like:
-
+To configure the UnityYAMLMerge, use `merge -p ${baseFile} ${rightFile} ${leftFile} ${mergedFile}` as **Arguments**.
+An example configuration could look like:
   
 ![](attachments/53215433/53215434.png)
 
-Note, that a compatible 3-way merge tool has to be configured as
-"fallback" for the Unity merge tool in order to complete the merge if
-the automatic merging is not successful.
-
+Note, that a compatible 3-way merge tool has to be configured as "fallback" for the Unity merge tool in order to complete the merge if the automatic merging is not successful.
 
 
 ## Proxy
 
-On this page you can configure the proxy to be used by SmartGit. The
-proxy will be used exactly as configured for the check for new versions.
+On this page you can configure the proxy to be used by SmartGit.
+The proxy will be used exactly as configured for the check for new versions.
 It will also be used for Git HTTP and HTTPs under certain conditions:
 
 -   **Use following proxy** has been selected and
--   there is no `http.proxy` and no `https.proxy` configuration found in
-    your `.gitconfig` and Git's system `config` and
--   the neither of following system environment variables is
-    set: `HTTP_PROXY`, `HTTPS_PROXY`, `NO_PROXY`
+-   there is no `http.proxy` and no `https.proxy` configuration found in your `.gitconfig` and Git's system `config` and
+-   the neither of following system environment variables is set: `HTTP_PROXY`, `HTTPS_PROXY`, `NO_PROXY`
 
 ## Privacy
 
-When **Contact gravatar.com to show images for the users** is selected,
-a hash of the email address is generated and then gravatar.com is
-contacted to request the belonging graphic which the user first has to
-configure there.
-
-  
-
-
+When **Contact gravatar.com to show images for the users** is selected, a hash of the email address is generated and then gravatar.com is contacted to request the belonging graphic which the user first has to configure there.
