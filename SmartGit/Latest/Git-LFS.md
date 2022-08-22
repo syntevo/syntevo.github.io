@@ -63,7 +63,7 @@ repositories. A corresponding `.git/config` might look like:
 
 
 
-Furthermore, you have to enable property `pull.queryRemoteLfsLocks` in
+Furthermore, you have to enable property `status.lfs.locks` in
 the **Preferences**, section **Low-level Properties**. This will make
 SmartGit invoke additional commands:
 
