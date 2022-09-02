@@ -161,7 +161,7 @@ rerun the *OAuth* setup from scratch:
         section **Authentication**
     2.  get rid of the GitHub hosting provider from **Preferences**,
         section **Hosting Providers**
-2.  In GitHub, open your profile **Settings**, **Applications**,
+2.  In GitHub, open the [SmartGit application](https://github.com/settings/connections/applications/d9f33087e985e76e9029) from your profile **Settings**, **Applications**,
     tab **Authorized OAuth Apps**:
     1.  Select "SmartGit" there:  
         ![](attachments/53215440/53215441.png)
@@ -217,7 +217,7 @@ is **Approved**. Your organization settings might look like this:
 
 Note that the screenshot above shows the interface of the organization's
 manager. If you are not the manager, but just a member of the
-organization, you can request access for SmartGit to this organization
+organization, you can request access for the [SmartGit application](https://github.com/settings/connections/applications/d9f33087e985e76e9029) to this organization
 from your **Settings - Applications**, tab **Authorized OAuth Apps**:
 select **SmartGit** here and check for which organizations you may
 request access. The screenshot below shows `syntdev2` for which access
