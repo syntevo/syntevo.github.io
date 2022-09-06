@@ -5,7 +5,7 @@
     -   [Commits](Commits.md)
     -   [The Index](The-Index.md)
     -   [Working Tree States](Working-Tree-States.md)
--   Important Git Commands
+-   Git Commands
     -   Branch-related
         -   [Check Out](Check-Out.md)
         -   [Merge](Merge.md)
@@ -21,6 +21,7 @@
     -   [Submodules](Submodules.md)
     -   [Managing Remotes](Managing-Remotes.md)
     -   [Subtrees](Subtrees.md)
+    -   [Bisect](Bisect.md)
 -   [Repositories, Directories and Files](Repositories-Directories-and-Files.md)
 -   [Log](Log.md)
     -   [Bugtraq (links to issue trackers)](Bugtraq-links-to-issue-trackers-.md)
