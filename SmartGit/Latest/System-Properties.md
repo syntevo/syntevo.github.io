@@ -151,19 +151,6 @@ to hide the corresponding page from the **Preferences**, see
 > users to report SmartGit bugs to you, otherwise they will go unnoticed.
 
 
-
-## License user/seat tracking
-
-For licenses with a large number of users, it can be helpful to track
-the number of active SmartGit users over time. For this purpose,
-SmartGit can optionally access ("ping") a configurable URL which can be
-used to collect these user statistics on the server side. This requires
-customer-specific configuration because in different companies different
-means define a person (user), e.g. by a user-specific unique environment
-variable value. A simple implementation on the server-side would just be
-a virtual host logging to a separate access log file. The resulting log
-files can be analyzed, e.g. using `grep`.
-
 ### smartgit.license.defaultPath
 
 By default, SmartGit will look for a "default" license file in the
