@@ -15,21 +15,18 @@ the history:
 - To change the commit message, select the commit and invoke **Edit Commit Message**.
 - To change the author, select the commit and invoke **Edit Author**.
 
-## Modify or Split Commit
-
-To modify or split a commit, select the commit and invoke **Modify or Split Commit** from the context menu.
-
 ### Modify
 
-To amend something to a selected (unpushed) commit, use the **Modify** option.
+To modify (or amend) a commit, select the commit and invoke **Modify** from the context menu.
 This will start an interactive rebase and stop after the selected commit.
 Perform the modification, then **Commit** (optionally using **Amend**).
-Finally, click **Continue** (in the banner).
+Finally, click **Step** (in the banner) to let the rebase advance only to the next commit which then can be modified again.
+Or click **Continue** (in the banner) to let the rebase run through completely.
 To abort the Modify command and go back to the previous state, click **Abort**.
 
 ### Split
 
-To split one selected (unpushed) commit into 2 commits (with the same message), use the **Split** option.
+To split a commit, select the commit and invoke **Split** from the context menu.
 This will start an interactive rebase and stop with the commit's changes in the Index.
 **Unstage** or **Discard** all changes that you don't want to have in the first commit, and click **Continue** (in the banner).
 After the first commit has been created, you can continue staging changes for the second commit and click **Continue** again, ...
