@@ -188,7 +188,7 @@ If the local file in the working tree is already missing,
 effect, but the Remove command also allows you to remove files from the
 repository while keeping them locally.
 
-## Moving/Renaming Files#movingrenaming-files">
+## Moving/Renaming Files
 
 In general, Git's move/rename tracking happens always on-the-fly, e.g.
 when logging or blaming a file. Hence, there is no need for an explicit
