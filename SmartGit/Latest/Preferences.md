@@ -183,17 +183,6 @@ a graphic viewer for `.png` files.
 
 This tool will open the selected directory in the terminal application.
 
-### Apply Patch
-
-This tool will show a file open dialog and then apply the selected
-patch.
-
-### Fast-Forward Merge
-
-This tool allows to right-click local, tracked branches in the
-**Branches** view to perform a fast-forward merge for purely remote
-changes, especially if you want to avoid having to check out the branch.
-
 ## Diff Tools
 
 
