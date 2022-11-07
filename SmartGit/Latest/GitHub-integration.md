@@ -84,7 +84,7 @@ on related *Pull Requests* from the GitHub server:
 SmartGit learns about them only by calling a GitHub REST API and displays
 the retrieved information in the **Branches**.
 To work with these pull requests (e.g. to review their commits, or **Merge** or **Reject** them),
-you first have to fetch them by invoking **Fetch Pull Request** from the context menu of the pull request.
+you first have to fetch them by invoking **Fetch** from the context menu of the pull request.
 This will fetch all commits from the remote repository to a special
 branch in your local repository and will create an additional, virtual *merge*
 commit between the *base* commit from which the pull request has been
