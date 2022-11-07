@@ -5,7 +5,7 @@ other *refs* from your repository and offers operations on these
 *refs*. *Remotes* will also be displayed and used to group the *remote
 branches*.
 
-![branches-view](images/branches-view.png)
+![branches-view](attachments/branches-view.png)
 
 The current branch is shown with the filled triangle and bold text.
 Any other tag or branch that points to the same commit as HEAD (the current branch) is shown with a non-filled triangle.
