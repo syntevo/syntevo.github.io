@@ -199,7 +199,7 @@ Still, Git offers a `git move` command for convenience which performs a
 normal file system move and then stages the removed and the newly added
 file to the *Index*. For a GUI client like SmartGit, providing such an
 operation is not necessary. Still, because users are frequently confused
-about the missing move operation, SmartGit provides **Local\|Rename**.
+about the missing move operation, SmartGit provides **Local\|Move or Rename**.
 
 ## Delete
 
