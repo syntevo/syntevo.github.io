@@ -109,10 +109,10 @@ request back, use **Reject**.
 For a pull request which had been fetched once, there was a special
 *ref* created which will make it show up in the **Pull Requests**
 category, even if it is not present on the server anymore. In this case,
-you may use **Drop Local Data** on such a pull request to get rid of the
+you may use **Drop Local** on such a pull request to get rid of the
 corresponding ref, the local merge commit, all other commits of the pull
 request and the entry in **Pull Requests** as well. It's safe to use
-**Drop Local Data**, as it will only affect the local repository and you
+**Drop Local**, as it will only affect the local repository and you
 can re-fetch a pull request anytime you like using **Fetch** again.
 
 You can invoke **Review\|Sync** to manually update the displayed
