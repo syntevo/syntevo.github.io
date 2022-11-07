@@ -36,3 +36,10 @@ cherry-pick:
     from the context-menu.
 -   From the Log's **Files** view context-menu, you can cherry-pick a
     subset of files.
+
+In case of a conflict, the Cherry-Pick may stop in "cherry-picking" state for which you can either:
+
+- Fix the conflict and **Continue** (from the banner); or
+- **Abort** the Cherry-Pick (from the banner) and go back to the previous repository state
+
+See [Resolving Conflicts](Merge.md#resolving-conflicts) for further information on how to deal with conflicts.
