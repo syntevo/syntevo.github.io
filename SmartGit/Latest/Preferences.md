@@ -183,6 +183,8 @@ a graphic viewer for `.png` files.
 
 This tool will open the selected directory in the terminal application.
 
+See [Example Tools](Example-Tools.md) for example tool definitions.
+
 ## Diff Tools
 
 
