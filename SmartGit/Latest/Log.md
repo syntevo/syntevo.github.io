@@ -119,3 +119,54 @@ In the **Branches** view, you can toggle **Recyclable Commits** to get
 back obsolete heads which are not reachable anymore from any ref.
 Technically, SmartGit will include all commits which are found in the
 reflogs (`.git/logs`-files).
+
+## Skip merge optimization when filtering
+
+By default, SmartGit will "optimize" the display of merge commits when filtering the Log Graph.
+To skip the merge optimization, in the Preferences, section **Low-Level Property** you may set `log.graph.topoFilter.alwaysIncludeContainingMerges` to `true`.
+For example, for following unfiltered Graph:
+
+```                                                                                  
+0 : 57d # [b6][*master] commit 6
+     |\                                                                                 
+     | \                                                                                
+1 : b52 |  # [b5] commit 5
+     |  |                                                                               
+     |  |                                                                               
+2 :  | 8e8 # [b4] commit 4
+     | /|                                                                               
+     |/ |                                                                               
+3 :  | fe0 # [b3] commit 3
+     |  |                                                                               
+     |  |                                                                               
+4 : 722 |  # [b2] commit 2         
+     | /                                                                                
+     |/                                                                                 
+5 : dd2 # [b1] commit 1          
+```
+
+Filtering for "commit 1" and "commit 3" will by default give:
+
+```
+0: 57d # [6] [b6][*master] commit 6
+    |\                                     
+    | \                                    
+1:  | fe0 # [6] [b3][b4] commit 3
+    | /                                    
+    |/                                     
+2: dd2 # [6] [b1][b2][b5]<b4> commit 1
+```
+
+And with `log.graph.topoFilter.alwaysIncludeContainingMerges=true` it will give:
+```
+0 : 57d # [6] [b6][*master] commit 6
+     |\                                                                       
+     | \                                                                      
+1 :  | 8e8 # [6] [b4] commit 4
+     | /|                                                                     
+     |/ |                                                                     
+2 :  | fe0 # [6] [b3] commit 3
+     | /                                                                      
+     |/                                                                       
+3 : dd2 # [6] [b1][b2][b5] commit 1
+```
