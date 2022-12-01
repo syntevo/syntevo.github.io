@@ -151,39 +151,8 @@ but can be more resource-hungry.
 
 ## Tools
 
-On this page you can define external tools which can operate on certain
-selections.
+Refer to the [Tools](Tools.md) for more details.
 
-
-
-The **Tools** configuration is stored in `tools.xml` file in the
-[settings directory](Installation-and-Files.md) and can handed over to
-other developers/machines to share the tools configuration with them.
-
-
-
-The *working directory* set when launching the tool will be the root
-directory of the corresponding repository (which may also be a
-submodule). When launching a tool on a set of files which belong to
-different repositories, it will be the closest common directory of all
-affected repositories.
-
-When selecting **Can be used by the Open command**, SmartGit will
-consider to use this tool when invoking **Open** (or **Open from Working
-Tree**) in the **Files** view.
-
-A couple of default tools are already preconfigured:
-
-### Open File
-
-This tool will invoke the system's default open command, e.g. to launch
-a graphic viewer for `.png` files.
-
-### Open in Terminal
-
-This tool will open the selected directory in the terminal application.
-
-See [Example Tools](Example-Tools.md) for example tool definitions.
 
 ## Diff Tools
 

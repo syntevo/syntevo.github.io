@@ -31,7 +31,7 @@
 -   [Branches view](Branches-view.md)
 -   [Journal View](Journal-View.md)
 -   [Preferences](Preferences.md)
-    -   [Example Tools](Example-Tools.md)
+    -   [Tools](Tools.md)
 -   [Repository \| Settings](Repository-Settings.md)
 -   Integrations
     -   [GitHub integration](GitHub-integration.md)
