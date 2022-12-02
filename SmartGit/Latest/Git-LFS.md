@@ -70,7 +70,9 @@ SmartGit invoke additional commands:
 -   `git lfs locks --local`
 -   `git lfs locks --remote`
 
-after every fetch for which the output will be written to:
+after every **Pull**, **Fetch** and after every background **Fetch** (if enabled in the **Preferences**, section **Background Commands**).
+
+The output of these `git lfs locks` commands will be written to:
 
 -   `./git/smartgit/lfs-locks-local`
 -   `./git/smartgit/lfs-locks-remote`
