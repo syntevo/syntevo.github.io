@@ -36,18 +36,27 @@ debug log sent and received JSON objects. To do so:
 	> credentials. Thus, be sure to remove the debug output files from
 	> your disk as soon as you have finished the debugging.
 
-4.  restart SmartGit to have the changes take effect
+4.  shutdown SmartGit
 
-5.  invoke the problematic operation:
+5.  get rid of `logs/log.txt*` from [SmartGit's Settings](../Latest/System-Properties.md) directory (it's the same directory where `smartgit.properties` is located)
+
+6.  restart SmartGit to have the changes take effect
+
+7.  invoke the problematic operation:
     -   in case of parsing problems, SmartGit will report the debug
         output file for the failed operation in the error message
 
-6.  check the debug output directory for sent and received JSON objects:
-    -   there will be one `in` file containing the received content, an
-        optional `out` file containing the sent content and an
-        optional `err` file containing the received error
+8.  check the debug output directory for sent and received JSON objects:
+    -   for a single request, there may be `in.pretty` and `in.raw` files containing the received content,
+        an `out` file containing the sent content and an `err` file containing the received error;
+	there may also be several `graphql.*`-files
     -   all files belonging to the same request will be labeled by a
         unique timestamp  
+    -   depending on the server side and error, not all of these files may be present
+	
+9.  if asked so, send all files compressed to smartgit@syntevo.com, be sure to also include SmartGit's log files!
+    -   copy over `logs/log.txt*` from the Settings directory to the temporary debug output directory
+    -   compress all files into a single archive using either ZIP, 7z or TAR-GZ
 
 # Replicating problems with curl from command line: example "Debug why Create GitHub Pull Request fails"
 
