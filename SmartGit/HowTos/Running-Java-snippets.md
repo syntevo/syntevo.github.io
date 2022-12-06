@@ -27,7 +27,7 @@ runtime environment:
     **Example**
 
     ``` java
-    "C:\Program Files (x86)\SmartGit\jre\bin\java.exe" -classpath . NioFileSystemWalk c:\temp\repo true > out.txt 
+    "C:\Program Files\SmartGit\jre\bin\java.exe" -classpath . NioFileSystemWalk "c:\temp\repo" true > out.txt 
     ```
 
 3.  If there is an error printed which is not related to a wrong command
