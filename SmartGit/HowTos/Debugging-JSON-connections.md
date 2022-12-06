@@ -13,43 +13,28 @@ debug log sent and received JSON objects. To do so:
     directory's path (on Windows, be sure to use forward-slashes instead
     of back-slashes)
 
-
-
     ``` java
     smartgit.json.debugDir=<absolute-path-to-debug-directory>
     ```
 
-
-
     Example:
-
-
 
     ``` java
     smartgit.json.debugDir=c:/temp/json
     ```
 
-
-
 3.  optionally, you can also specify to log *sent* and *received* HTTP
     headers to the debug output file:
-
-
 
     ``` java
     smartgit.json.debugHeaders=true
     ```
-
-
-
 
 	#### Note
 	> The debug log of *sent* headers will also include `Authorization`
 	> and similar headers which contain your username/password or similar
 	> credentials. Thus, be sure to remove the debug output files from
 	> your disk as soon as you have finished the debugging.
-
-
 
 4.  restart SmartGit to have the changes take effect
 
@@ -63,7 +48,6 @@ debug log sent and received JSON objects. To do so:
         optional `err` file containing the received error
     -   all files belonging to the same request will be labeled by a
         unique timestamp  
-          
 
 # Replicating problems with curl from command line: example "Debug why Create GitHub Pull Request fails"
 
@@ -88,47 +72,31 @@ debug log sent and received JSON objects. To do so:
 7.  Open SmartGit and retry to **Create Pull Request**; this should
     result in an ".out.json" file like:
 
-
-
     ``` java
     https://api.github.com/repos/someone/priv/pulls
     {"head":"someone:feature\/XYZ-123","title":"file added","body":"","base":"master"}
     ```
 
-
-
 8.  Copy this file to another temporary directory and rename it to
     `body.json`, like `c:/temp/curl/body.json` and remove the first line
     which is the actual URL to be opened:
-
-
 
     ``` java
     {"head":"someone:feature\/XYZ-123","title":"file added","body":"","base":"master"}
     ```
 
-
-
 9.  From command line, `cd` to this directory and invoke:
-
-
 
     ``` java
     curl -k -H "Authorization: token <token>" -H "Content-Type: application/json" --data @body.json <url> > out.log
     ```
 
-
-
     For the above command, replace `<token>` by your personal access
     token and `<url>` by the URL you had removed from the JSON file
     before. For example, a real call might look like:
 
-
-
     ``` java
     curl -k -H "Authorization: token 69460770e6251fea183b229c9a89fac616c641f9" -H "Content-Type: application/json" --data @body.json https://api.github.com/repos/someone/priv/pulls > out.log 2> err.log
     ```
-
-
 
 10. Check `out.log` and `err.log` to see the results.
