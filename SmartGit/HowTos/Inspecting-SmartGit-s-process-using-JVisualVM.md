@@ -7,14 +7,11 @@ helpful to diagnose various problems.
     [http://www.oracle.com/technetwork/java/javase/downloads/index.html](index.md)
     (unless you already have a JDK installed).
 
-
 	#### Warning
 	> Be sure to download the JDK with the correct processor architecture
 	> (x86/x64) for your running SmartGit instance. Prior to version 18.1,
 	> SmartGit was using an x86 JRE by default. Starting with version
 	> 18.1, it's using an x64 JRE by default.
-
-
 
 -   Run JVisualVM by invoking `bin/jvisualvm.exe` (on Windows). On Linux
     and Mac, locate `jvisualvm` which should be in the same directory as
@@ -26,7 +23,6 @@ helpful to diagnose various problems.
     If a SmartGit upgrade is in progress, there will be an additional VM
     (on Windows showing up as `SmartGitUpdater`). If SSH connections are
     currently in progress, there may be more VMs.
-
 
 #### Note
 >
@@ -63,7 +59,6 @@ Heap dumps are useful to investigate memory-related problems.
 
 -   To take a full heap dump for debug purposes, select the **Monitor**
     section and hit the **Heap Dump** button there.
-
 
 #### Note
 >
