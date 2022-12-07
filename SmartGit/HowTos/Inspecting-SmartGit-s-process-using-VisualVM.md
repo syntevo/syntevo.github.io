@@ -1,23 +1,22 @@
-# Inspecting SmartGit's process using JVisualVM
+# Inspecting SmartGit's process using VisualVM
 
-*JVisualVM* is a Java Profiler which is part of the JDK and can be
-helpful to diagnose various problems.
+*VisualVM* is a free Java Profiler. This document is written for running VisualVM on Windows. For Linux and macOS, paths have to be adjusted accordingly.
 
--   Install the latest *JDK* from
-    [http://www.oracle.com/technetwork/java/javase/downloads/index.html](index.md)
-    (unless you already have a JDK installed).
+-   Download *JDK 17 (LTS)*, e.g. from [azul.com](https://www.azul.com/downloads/?package=jdk)
+    (unless you already have a JDK 17 installed) and uncompress to e.g. `C:/temp/jdk`.
 
 	#### Warning
-	> Be sure to download the JDK with the correct processor architecture
-	> (x86/x64) for your running SmartGit instance. Prior to version 18.1,
-	> SmartGit was using an x86 JRE by default. Starting with version
-	> 18.1, it's using an x64 JRE by default.
+	> Be sure to select the correct platform, architecture (x86/x64 for Windows) and bundle: *.zip* for Windows, *.tar.gz* for Linux and *.deb* for macOS.
 
--   Run JVisualVM by invoking `bin/jvisualvm.exe` (on Windows). On Linux
-    and Mac, locate `jvisualvm` which should be in the same directory as
-    `javac`.
+-   Download VisualVM from [visualvm.github.io](https://visualvm.github.io/download.html)
+    and uncompress to e.g. `C:/temp/visualvm`
 
--   Once JVisualVM has started up, locate the *SmartGit*-related VMs:
+-   Run VisualVM:
+    -  open a terminal
+    -  `cd` to `C:/temp/visualvm/bin`
+    -  start `visualvm --jdkhome c:\temp\jdk`
+
+-   Once VisualVM has started up, locate the *SmartGit*-related VMs:
     there will be one *main* VM, if SmartGit is running (on Windows
     showing up as `SmartGit`, on Mac/Linux showing up as `QBootLoader`).
     If a SmartGit upgrade is in progress, there will be an additional VM
@@ -28,7 +27,7 @@ helpful to diagnose various problems.
 >
 >
 >If you can't connect to *SmartGitUpdater* VM, try again running
->JVisualVM as administrator, because SmartGitUpdater is usually invoked
+>VisualVM as administrator, because SmartGitUpdater is usually invoked
 >with administrative privileges, too.
 >
 >
