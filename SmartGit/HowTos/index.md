@@ -6,7 +6,6 @@
     -   [External Tools: configuring a 3-way diff](External-Tools-configuring-a-3-way-diff.md)
     -   [Fixing the Git configuration for a local repository shared between different operating systems](Fixing-the-Git-configuration-for-a-local-repository-shared-between-different-operating-systems.md)
     -   [https: Remember different passwords for same server](https-Remember-different-passwords-for-same-server.md)
-    -   [Linux: upgrade to Java 1.8 (to upgrade SmartGit)](Linux-upgrade-to-Java-1.8-to-upgrade-SmartGit-.md)
     -   [Setting up an SSH tunnel (Windows)](Setting-up-an-SSH-tunnel-Windows-.md)
     -   [Setting up Multiple URLs per Remote](Setting-up-Multiple-URLs-per-Remote.md)
     -   [Sign Tags and Commits](Sign-Tags-and-Commits.md)
