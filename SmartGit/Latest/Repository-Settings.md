@@ -18,6 +18,7 @@ Configure what should happen with submodules if you push a submodule change.
 ## Signing
 
 Configure the GPG program and your signing key to Sign Tags and Commits.
+See [Signing](../HowTos/Sign-Tags-and-Commits.md).
 
 #### Info
 > You need to ensure the specified GPG program is configured to use an agent that can ask you for your key's passphrase using a GUI.
