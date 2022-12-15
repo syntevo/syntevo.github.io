@@ -55,12 +55,9 @@ as well as repositories of your *organization* (*org*).
 The main window contains a light-weight GitHub integration which just
 indicates incoming pull requests in the title of the **Branches** view.
 
-
 #### Note
 > Detailed pull request information and operations on pull requests are
 > only available in the **Log** (see below).
-
-
 
 ## Log
 
@@ -178,15 +175,12 @@ rerun the *OAuth* setup from scratch:
 
 ### Authenticating with two or more accounts
 
-
 #### Info
 > SmartGit currently does not support having two **Hosting Providers**
 > configured for "github.com", hence for the extended integration
 > discussed above, you have to decide for one of your accounts. It's
 > however possible to access repositories of multiple GitHub accounts, as
 > explained below.
-
-
 
 If you want to authenticate to your GitHub repositories, using two or
 more accounts, open **Preferences**, section **Hosting Providers**, open
@@ -201,13 +195,9 @@ scope needs to be selected).
 Depending on your Git configuration, Git might request credentials only
 *per-domain* instead of *per-repository*. If so, try to reconfigure:
 
-
-
 ``` java
 git config --global credential.github.com.useHttpPath true
 ```
-
-
 
 ### Private repositories do not show up/403 when trying to access an organization repository
 
@@ -230,14 +220,9 @@ notification and may confirm.
 
 ![](attachments/53215440/53215442.png)
 
-  
-
-
 #### Note
 > If your GitHub hosting provider is already set up in the Preferences and
 > you need to rerun through the *OAuth* setup, [as explained above](#re-setup-oauth).
-
-
 
 ### Git-Flow Pull Requests will be closed on Finish Feature
 
@@ -261,7 +246,6 @@ From time to time, GitHub may introduce new or change existing *OAuth
 permission scopes.* In this case, SmartGit's OAuth token may stop
 working. The solution is usually to rerun through the *OAuth* setup, [as explained above](#re-setup-oauth).
 
-
 #### Note
 > Be sure to always try with the [latest SmartGit release](https://www.syntevo.com/smartgit/download/) because we are
 > regularly adjusting required *scopes* for the latest version. If you
@@ -270,18 +254,10 @@ working. The solution is usually to rerun through the *OAuth* setup, [as explain
 > the **Preferences**, **Low-Level Properties**, property
 > "github.oauth.scopes".
 
-
-
 Typical Git error messages hinting to this kind of problem:
 
-
-
-``` java
-> ! refs/heads/some-branch:refs/heads/some-branch [remote rejected]
-> (refusing to allow an OAuth App to create or update workflow
-> `.github/workflows/some-workflow.yml` without `workflow` scope)
 ```
-
-
-
-
+! refs/heads/some-branch:refs/heads/some-branch [remote rejected]
+(refusing to allow an OAuth App to create or update workflow
+`.github/workflows/some-workflow.yml` without `workflow` scope)
+```
