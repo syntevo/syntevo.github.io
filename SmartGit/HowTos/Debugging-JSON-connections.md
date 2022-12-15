@@ -118,7 +118,18 @@ SmartGit (since version 22.1) is using GitHub's GraphQL API to access metadata f
 {"query":"query {
   viewer {
     id
+  }
+}
 "}
 ```
 
-You can now log into [GitHub's GraphQL Explorer](https://docs.github.com/en/graphql/overview/explorer) and run the query there to see whether the error is reproducible.
+You can now log into [GitHub's GraphQL Explorer](https://docs.github.com/en/graphql/overview/explorer) and run the query there to see whether the error is reproducible. For that, you will have to only copy over the actual query term of the JSON logging, or with other words drop the leading `{"query":"` and trailing `"}`. For the above example, this is what you will enter into the GraphQL Explorer:
+
+```
+query {
+  viewer {
+    id
+  }
+}
+```
+
