@@ -109,3 +109,16 @@ debug log sent and received JSON objects. To do so:
     ```
 
 10. Check `out.log` and `err.log` to see the results.
+
+# GitHub: replicating problems with the GraphQL explorer
+
+SmartGit (since version 22.1) is using GitHub's GraphQL API to access metadata from GitHub. The JSON `out`-file (see above) will contain the sent GraphQL query. For example:
+
+```
+{"query":"query {
+  viewer {
+    id
+"}
+```
+
+You can now log into [GitHub's GraphQL Explorer](https://docs.github.com/en/graphql/overview/explorer) and run the query there to see whether the error is reproducible.
