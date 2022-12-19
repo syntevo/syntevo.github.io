@@ -168,7 +168,7 @@ rerun the *OAuth* setup from scratch:
         ![](attachments/53215440/53215441.png)
     2.  Invoke **Revoke Access**
 3.  In SmartGit, rerun through the *OAuth* setup again:
-    1.  open **Preferences**, section **Authentication**
+    1.  open **Preferences**, section **Hosting Providers**
     2.  **Add** a new **GitHub** hosting provider, as described above
 
 ## Possible Problems & Solutions
