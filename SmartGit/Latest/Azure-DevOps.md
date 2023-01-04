@@ -44,6 +44,20 @@ above procedure for each of your accounts. This requires to login for
 every account in your web browser before invoking **Generate API
 Token**.
 
+To have the **OAuth** token to work for multiple accounts, Git has to request credentials per-repository. To check if the proper configuration is already set, invoke:
+
+```
+git pull
+```
+
+in your repository. If Git request credentials only for `dev.azure.com`, try to configure:
+
+```
+git config --global credential.dev.azure.com.useHttpPath true
+```
+
+Then run `git pull` again to confirm that Git will now ask for the complete repository URL.
+
 ### Alternative setup using a personal access token
 
 If OAuth is no feasible option for you, the Azure DevOps integration can
