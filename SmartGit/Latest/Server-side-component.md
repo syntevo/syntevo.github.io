@@ -12,13 +12,10 @@ will be `/opt/reviewserver`. Make sure that `post-receive.sh` is
 executable – if not, make it executable
 using `chmod +x post-receive.sh`.
 
-
 #### Note
 > If the selected directory is not writable by the *system Git account*,
 > i.e. the account which will be used to write to the Git repositories,
 > the log file location in `log4j.properties` must be adjusted.
-
-
 
 Adjust the configuration file `/opt/reviewserver/config.email` for your
 environment. All **mandatory** parameters have to be supplied.
@@ -26,14 +23,10 @@ environment. All **mandatory** parameters have to be supplied.
 Finally, following `post-receive` hook has to be set up for all
 repositories which should be tracked:
 
-
-
-``` java
+```
 #!/bin/bash
 /opt/reviewserver/post-receive.sh "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ```
-
-
 
 # Notifications
 
@@ -92,13 +85,9 @@ to which kinds of users (*roles*):
 The user mapping `config.users` specifies one or more *curators* for a
 specific repository using lines like:
 
-
-
-``` java
+```
 curator.<repo>: curator1@domain1 [,curator2@domain2 ...]
 ```
-
-
 
 where `<repo>` is the path name of the repository (as present in the
 file system).
@@ -106,25 +95,20 @@ file system).
 In addition to *repository-specific* curators, *global* curators can be
 defined by a trailing line like:
 
-
-
-``` java
+```
 curator: curator1@domain1 [,curator2@domain2 ...]
 ```
-
-
 
 ## (Debug) Logging
 
 The server component's log can be found in `log.txt.0` files. The
 (debug) log level can be configured in `logger.properties`.
 
-
 #### Example
 >
 >
 >
->``` java
+>```
 >...
 ># Root level:
 >.level= INFO
@@ -133,10 +117,4 @@ The server component's log can be found in `log.txt.0` files. The
 >...
 >```
 >
->
 
-  
-
-  
-
-  
