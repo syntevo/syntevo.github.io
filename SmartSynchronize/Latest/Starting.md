@@ -1,14 +1,33 @@
 # Starting SmartSynchronize
 
-## Using the Welcome Dialog
+## Using the GUI
 
-When you click the SmartSynchronize icon, the Welcome dialog occurs.
-Here you can select what to do: compare files, perform a 3-way merge or compare directories.
-For directory comparison you have the choice between comparing two arbitrary directories or to open a previously saved profile, where a profile is a named directory-pair with its settings (e.g. ignored file and directory patterns).
+Starting SmartSynchronize the first time will show the setup wizard.
+There will be an option whether initially to show the dual-pane [File Manager](File-manager.md) or the Welcome dialog.
+
+In the Welcome Dialog you can select what to do: compare files, perform a 3-way merge or compare directories.
+For directory comparison you have the choice between comparing two arbitrary directories or to open a previously saved profile (a named directory-pair with its settings, e.g. for ignored file and directory patterns).
 For more information, see [Welcome dialog](Welcome-dialog.md).
 
 
-## Using Command-Line Parameters
+## Command-Line Parameters
+
+Use one of these parameters to define what to open `--file-manager`, `--file-compare`, `--dir-compare` or `--file-merge`.
+Add further parameters specifying the file or directory paths: `--left=<path>`, `--right=<path>` or `--merge=<file>` (only for `--file-merge`).
+If relative paths are used, you can use the parameter `--root=<dir>` to specify to which directory the paths should be relative.
+If no such parameter is specified, the relative paths will be treated relative to the current directory.
+
+### Examples
+
+```
+smartsynchronize.exe --file-compare --left=C:\path1\left.txt --right=C:\path2\right.txt
+```
+This will open a file compare for the files `C:\path1\left.txt` and `C:\path2\right.txt`.
+
+```
+smartsynchronize.exe --file-manager --left=D:\my-projects
+```
+This will open a file manager window with the directory `D:\my-projects` shown at the left side.
 
 Alternatively, you can pass the file or directory names as command line parameters.
 If you pass three file paths, the 3-Way-Merge opens.
