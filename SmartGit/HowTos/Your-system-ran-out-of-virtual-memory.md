@@ -53,26 +53,25 @@ This is the best and easiest way to diagnose.
 
 # Windows: Diagnosing with our script
 
-To try to diagnose the problem, please download, extract and run this
-script:  
+To try to diagnose the problem, please download, extract all files and
+run `AnalyseMemoryUsage.cmd` :  
 <https://www.syntevo.com/downloads/troubleshoot/AnalyseMemoryUsage.cmd.zip>  
+
+Wait until it completes (usually takes some 10 seconds), scroll the output
+to the top and study it.
   
 These are reasonable values for typical workflows:
 
-1.  "Virtual Memory - Programs total" should be below 6GB.
-2.  "Virtual Memory - Used" should be below 10GB. Value over 30GB is a
-    strong indication of memory leaks.
-3.  "Virtual Memory - Used" should be roughly a sum of "Virtual Memory -
-    Programs total" and "Kernel - Cache", plus any memory you allocated
-    to virtual machines, if you have them. If the value is higher, then
-    it's likely that one of your kernel drivers has a memory leak.
-4.  "Kernel - Pool" both values should be below 300MB.
-
-Script will also provide a list of individual programs with their memory
-usage. Hopefully, one of the programs will have an obviously high memory
-consumption. Otherwise, the memory leak probably happens in kernel
-driver, which is harder to diagnose.
-
+1.  Check `Available`. If it's only a few percent of `Total`, your system
+    is probably going to run out of memory soon.
+2.  If you're already low on memory, check `Usage breakdown`.
+3.  If the majority of memory is spent on running programs, continue to
+    `Programs breakdown` section.
+4.  If the majority of memory falls into `Not explained` category, check
+    if you're running virtual machines (VMWare, VirtualBox, Docker, WSL,
+    etc). Otherwise, a screenshot of RAMMap (see below) will be needed to
+    continue investigation.
+5.  If unsure, please send script output to us and we'll try to help. 
 
 #### Note
 > If you found the program, please let us know! This lets us help other
