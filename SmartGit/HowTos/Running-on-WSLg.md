@@ -4,7 +4,8 @@ This page is dedicated to running SmartGit on Windows Subsystem for Linux with G
 WSLg allows running GUI based Linux applications, such as SmartGit, in emulated Linux environment on Windows.
 This is convenient if you need to mix Windows and Linux development and prefer Windows as main OS.
 
-Note that you need **Win11 or higher**, because WSLg is not supported on Win10 (it only has plain WSL).
+#### Note
+> You'll need **Win11 or higher**, because WSLg is not supported on Win10 (it only has plain WSL).
 
 # WSLg installation
 
@@ -12,10 +13,10 @@ Run this command in administrator commandline:
 ```
 wsl --install -d Ubuntu
 ```
+After a Windows reboot, a console starts automatically to continue installing Ubuntu, especially to create a user account.
+Also, find the new Start menu item `Ubuntu` to launch it.
 
-and reboot when suggested. After the reboot, find new `Ubuntu on Windows` item in Start menu and launch it.
-
-Run these commands in WSL terminal to make sure that WSLg works as intended:
+Run these commands in WSL terminal to make sure that WSLg and the GUI, especially GTK3, works as intended:
 ```
 sudo apt update
 sudo apt install gedit
@@ -27,13 +28,13 @@ You should see `gedit` window open in your Windows. If this doesn't happen, then
 # SmartGit installation
 
 1. Download SmartGit to WSLg
-   * On Windows, navigate to [https://www.syntevo.com/smartgit/download/](https://www.syntevo.com/smartgit/download/)
+   * On Windows, navigate to the [SmartGit download](https://www.syntevo.com/smartgit/download/)
    * Click `Download for Linux`
-   * Start `Ubuntu on Windows` from Windows Start menu. This will open a console, you'll use it later.
+   * Start `Ubuntu` from Windows Start menu. This will open a console, you'll use it later.
    * In your Windows Explorer, notice `Linux` item on side panel.
    * Navigate to location where you want to install SmartGit on Linux, such as<br>
-      `Ubuntu\home\user`<br>
-      (replace `user` with your username)
+      `Linux\Ubuntu\home\user`<br>
+      (replace `user` with your configured Ubuntu username)
    * Copy the `.tar.gz` file you downloaded to this folder in Windows Explorer
 2. In `Ubuntu on Windows`, run these commands:<br>
    * `cd ~`<br>
