@@ -32,8 +32,8 @@ When launching a tool on a set of files which belong to different repositories, 
 
 If **Can be used by the Open command** is selected, SmartGit will consider to use this tool when invoking **Open** (or **Open from Working Tree**) in the **Files** view.
 The **Handles: Files, Directories, Both** and **Handles: Refs, Commits, Both** options determines on what selection the tool should operate, e.g. on file, directory, ref (tags or branches) or commit selection.
-A file or directory name pattern may be specified in **Applies To**.
 
+A file or directory name pattern may be specified in **Applies To**.
 #### Note
 > For repository root directories, the name "" (empty string) is used as name which only is matched by the pattern "*".
 
