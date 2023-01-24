@@ -32,7 +32,11 @@ When launching a tool on a set of files which belong to different repositories, 
 
 If **Can be used by the Open command** is selected, SmartGit will consider to use this tool when invoking **Open** (or **Open from Working Tree**) in the **Files** view.
 The **Handles: Files, Directories, Both** and **Handles: Refs, Commits, Both** options determines on what selection the tool should operate, e.g. on file, directory, ref (tags or branches) or commit selection.
-For files a file name pattern may be specified in **Applies To**.
+A file or directory name pattern may be specified in **Applies To**.
+
+#### Note
+> For repository root directories, the name "" (empty string) is used as name which only is matched by the pattern "*".
+
 
 If **Request confirmation before invoking** is selected and a message is provided, the user needs to confirm this dialog's message before the command is invoked.
 If **Show output and wait until finished** is selected, SmartGit waits until the command is finished and shows the output.
