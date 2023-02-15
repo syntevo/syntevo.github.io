@@ -107,11 +107,12 @@ We plan to investigate and fix what we can.
      ```
    In `gnome-tweaks` that opened, navigate to `Window Titlebars` and enable minimize and maximize buttons there.
 4. SmartGit UI layout is wrong with Windows DPI >= 200%<br>
-   Windows DPI is configured at `Windows > Settings > System > Display > Scale`.<br>
-   As a workaround, add the following line in `~/.config/smartgit/smartgit.vmoptions`:
+   This problem is resolved in SmartGit 23.1 [preview](https://www.syntevo.com/smartgit/preview/)<br>
+   In older versions, you can work around it by adding this line in `~/.config/smartgit/smartgit.vmoptions`:
    ```
    -Dswt.autoScale=100
    ```
+   Windows DPI is configured at `Windows > Settings > System > Display > Scale`.<br>
 5. If you noticed anything else, please send us a mail to `smartgit@syntevo.com`.
 
 # Other WSLg issues
