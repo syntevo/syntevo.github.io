@@ -50,6 +50,7 @@
 -   [Advanced Settings](Advanced-Settings.md)
     -   [System Properties](System-Properties.md)
     -   [VM options](VM-options.md)
+    -   [Theme Customization](Theme-Customization.md)
 -   [Distributed Reviews (add-on)](Distributed-Reviews-add-on-.md)
     -   [Server-side component](Server-side-component.md)
 -   [SVN Integration](SVN-Integration.md)
