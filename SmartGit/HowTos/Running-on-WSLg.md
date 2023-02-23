@@ -76,6 +76,9 @@ Also, find the new Start menu item `Ubuntu` to launch it.
 	     at com.syntevo.smartgit.SmartGit.main(SourceFile:11)
 	     ... 5 more
 	 ```
+   At this point you should be able to run SmartGit from command line and you may skip to step 3.
+   To create a link to SmartGit in your Windows Start menu, proceed with following steps:
+  
    * `sudo apt install xdg-utils`<br>
      A package necessary for next step. Installed by default on most Linux distros. For some reason, not present by default on WSL.
    * `sudo mkdir /usr/share/desktop-directories`<br>
@@ -85,7 +88,13 @@ Also, find the new Start menu item `Ubuntu` to launch it.
      This will let Windows know about SmartGit. Right after running this command, your Windows Start menu will get new entry `SmartGit (Ubuntu)`.
      Note that you need to run it with `sudo`, because Windows only picks up info from system `/usr/share/applications` and ignores user `~/.local/share/applications`.
 3. Run and set up SmartGit
-   * Find `SmartGit (Ubuntu)` in Windows Start menu and run it.
+   * Run `SmartGit (Ubuntu)` in Windows Start menu or directly from WSL command line using `smartgit/bin/smartgit.sh`.
+     #### Note
+     >If you are not able to finish the Setup due to a missing `machine-id` file and `sudo apt update` does not resolve your problem,
+     >you can create the file from command line:
+     >```
+     >sudo systemd-machine-id-setup
+     >```
    * When asked for license, know that you can pick your Windows license from inside WSLg. To do that, navigate to
      `/mnt/c/Users/win-user/AppData/Roaming/syntevo/SmartGit/22.1/license`<br>
      (here, `win-user` is your Windows username, and `22.1` with your SmartGit version. Just use directory browser button)
