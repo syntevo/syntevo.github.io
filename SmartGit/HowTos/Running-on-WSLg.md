@@ -16,14 +16,15 @@ wsl --install -d Ubuntu
 After a Windows reboot, a console starts automatically to continue installing Ubuntu, especially to create a user account.
 Also, find the new Start menu item `Ubuntu` to launch it.
 
-Run these commands in WSL terminal to make sure that WSLg and the GUI, especially GTK3, works as intended:
-```
-sudo apt update
-sudo apt install gedit
-gedit
-```
-
-You should see `gedit` window open in your Windows. If this doesn't happen, then either you don't have WSLg or it's broken in some way.
+#### Tip
+>Run these commands in WSL terminal to make sure that WSLg and the GUI, especially GTK3, works as intended:
+>```
+>sudo apt update
+>sudo apt install gedit
+>gedit
+>```
+>
+>You should see `gedit` window open in your Windows. If this doesn't happen, then either you don't have WSLg or it's broken in some way.
 
 # SmartGit installation
 
