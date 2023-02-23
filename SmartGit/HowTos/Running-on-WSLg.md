@@ -5,7 +5,7 @@ WSLg allows running GUI based Linux applications, such as SmartGit, in emulated 
 This is convenient if you need to mix Windows and Linux development and prefer Windows as main OS.
 
 #### Note
-> You'll need **Win11 or higher**, because WSLg is not supported on Win10 (it only has plain WSL).
+> You'll need **Win10 update 21H2** or a recent **Win11 or higher**, because older versions will only support plain WSL.
 
 # WSLg installation
 
