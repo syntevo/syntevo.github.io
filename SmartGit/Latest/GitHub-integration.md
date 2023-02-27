@@ -261,3 +261,11 @@ Typical Git error messages hinting to this kind of problem:
 (refusing to allow an OAuth App to create or update workflow
 `.github/workflows/some-workflow.yml` without `workflow` scope)
 ```
+
+### Distributed Reviews interference
+
+When using GitHub, be sure to have [Distributed Reviews](Distributed-Reviews-add-on-.md) disabled for your repository, otherwise there may be confusion about GitHub vs. Distributed Reviews pull requests. To be sure to have Distributed Reviews disabled, invoke **Review|Configure**:
+
+* if SmartGit asks you whether to initialize the Review database, Distributed Reviews are not enabled (as it should be). Select **Cancel** to keep it disabled.
+* if SmartGit asks you what to configure, Distributed Reviews are enabled. Select **Dispose Database** to disable it.
+
