@@ -100,34 +100,39 @@ Also, find the new Start menu item `Ubuntu` to launch it.
      (here, `win-user` is your Windows username, and `22.1` with your SmartGit version. Just use directory browser button)
    * From this point, you can use SmartGit as usual.
 
-# Current WSLg issues in SmartGit
+# Workarounds for WSLg issues in SmartGit
 
-We plan to investigate and fix what we can.
+### For SmartGit 23.1 and older:
 
-1. SmartGit fails to check for updates<br>
-   Disabling Windows Firewall seems to help. But see next problem.
-2. SmartGit fails to install updates<br>
-   Current workaround is to re-install new version manually (see `SmartGit installation` chapter above).
-3. SmartGit windows do not have minimize/maximize buttons<br>
-   This is due to how WSLg is configured by default. You can change that:
-   * In WSL commandline, run commands:
-     ```
-     sudo apt install gnome-tweaks
-     gnome-tweaks
-     ```
-   In `gnome-tweaks` that opened, navigate to `Window Titlebars` and enable minimize and maximize buttons there.
-4. SmartGit UI layout is wrong with Windows DPI >= 200%<br>
+1. **On some machines, SmartGit could fail to check for updates**<br>
+   Only happens on some machines. Disabling Windows Firewall seems to help. 
+   More information is needed.
+ 
+### For SmartGit 22.1 and older:
+
+1. **SmartGit fails to install updates<br>**
+   The workaround is to run SmartGit from terminal, not from Windows shortcut.
+   After updates are installed, you can use shortcut again.
+2. **SmartGit windows do not have minimize/maximize buttons<br>**
+   This is due to how WSLg is configured by default. Run these commandline commands to fix for all apps:
+   ```
+   sudo systemd-machine-id-setup
+   gsettings set org.gnome.desktop.wm.preferences button-layout "menu:minimize,maximize,close"
+   ```
+3. **SmartGit UI layout is wrong with Windows DPI >= 200%<br>**
    This problem is resolved in SmartGit 23.1 [preview](https://www.syntevo.com/smartgit/preview/)<br>
    In older versions, you can work around it by adding this line in `~/.config/smartgit/smartgit.vmoptions`:
    ```
    -Dswt.autoScale=100
    ```
    Windows DPI is configured at `Windows > Settings > System > Display > Scale`.<br>
-5. If you noticed anything else, please send us a mail to `smartgit@syntevo.com`.
+
+### If you noticed anything else, please send us a mail to<br>
+   `smartgit@syntevo.com`
 
 # Other WSLg issues
 
-## VirtualBox has a lot of bugs when WSL is installed
+### VirtualBox has a lot of bugs when WSL is installed
 
 Installing WSLg also installs `Windows Hyper-V`, which is required for `WSLg`
 to run. Unfortunately, having `Hyper-V` installed causes `VirtualBox` VMs to
@@ -143,7 +148,7 @@ bcdedit /set {current} hypervisorlaunchtype off
 
 See also: [https://forums.virtualbox.org/viewtopic.php?t=90853](https://forums.virtualbox.org/viewtopic.php?t=90853)
 
-## No internet / network after installing WSL
+### No internet / network after installing WSL
 
 This seems to be happening on some machines, but not the others. For me, the following fixed the problem:
 
