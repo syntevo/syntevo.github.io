@@ -107,6 +107,11 @@ Also, find the new Start menu item `Ubuntu` to launch it.
 1. **On some machines, SmartGit could fail to check for updates**<br>
    Only happens on some machines. Disabling Windows Firewall seems to help. 
    More information is needed.
+2. **SmartGit doesn't show "resize" cursor when trying to resize panes**<br>
+   This is because in WSL, cursors are not installed by default. Fix it with:
+   ```
+   sudo apt install adwaita-icon-theme-full
+   ```
  
 ### For SmartGit 22.1 and older:
 
