@@ -4,6 +4,23 @@ On the **Tools** preferences page you can define external tools which can operat
 
 The configuration is stored in `tools.yml` file in the [settings directory](Installation-and-Files.md), but it might be easier to use the **Export** and **Import** buttons to share your configuration with team members.
 
+## Default Tools
+
+By default, some default tools will be configured on the first application start.
+
+The **Open File** tool will invoke the system's default open command, e.g. to launch a graphic viewer for `.png` files.
+The **Open in Terminal** tool will open the selected directory in the terminal application.
+The **Open Git-Shell** tool will open the repository in the Git shell.
+
+To re-add default tools, click the **Re-Add Defaults** button.
+
+### Note
+
+> With SmartGit 22.1 the default tools have been cleaned up.
+> The Git version is now displayed in the preferences, *Fast-forward Merge* has been implemented as SmartGit command.
+>
+> If you are missing further tools from SmartGit version before 22.1 (e.g. Set Executable Flag, Format Patch, Apply Patch, Verify Database or Git Config), please download this file for [Windows](pre-22.1-tools-win.yml) or [Linux/MacOS](pre-22.1-tools-nix.yml) and *Import* that in SmartGit.
+
 ## Configure a Tool
 
 Use **Add** or **Copy** to create a new tool (using the latter will copy all values from the currently selected tool for easier application of tiny changes).
@@ -41,34 +58,7 @@ A file or directory name pattern may be specified in **Applies To**.
 If **Request confirmation before invoking** is selected and a message is provided, the user needs to confirm this dialog's message before the command is invoked.
 If **Show output and wait until finished** is selected, SmartGit waits until the command is finished and shows the output.
 
-## Default Tools
-
-By default, some default tools will be configured on the first application start.
-
-The **Open File** tool will invoke the system's default open command, e.g. to launch a graphic viewer for `.png` files.
-The **Open in Terminal** tool will open the selected directory in the terminal application.
-The **Open Git-Shell** tool will open the repository in the Git shell.
-
-To re-add default tools, click the **Re-Add Defaults** button.
-
 ## Example Tools
-
-### Format Patch
-
-Save this content to a file `format-patch.yml` and use the *Import* button on the Tools page of the preferences to restore the *Format Patch* feature from SmartGit versions < 22.1.
-``` yml
-tools:
-- name: Format Patch
-  fileStarter: {command: '${git}', parameters: 'format-patch -o "${dirSelect}" -1 ${commit}'}
-  useForOpen: false
-  waitUntilFinished: true
-  filePattern: '*'
-- name: Format Patch
-  fileStarter: {command: '${git}', parameters: 'format-patch -o "${dirSelect}" ${commit}..${commit2}'}
-  useForOpen: false
-  waitUntilFinished: true
-  filePattern: '*'
-```
 
 ### Open top-most Visual Studio solution from current repository
 
