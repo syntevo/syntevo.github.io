@@ -100,7 +100,7 @@ Also, find the new Start menu item `Ubuntu` to launch it.
      (here, `win-user` is your Windows username, and `22.1` with your SmartGit version. Just use directory browser button)
    * From this point, you can use SmartGit as usual.
 
-# Workarounds for WSLg issues in SmartGit
+# <a name="workarounds"></a> Workarounds for WSLg issues in SmartGit
 
 ### For SmartGit 23.1 and older:
 
