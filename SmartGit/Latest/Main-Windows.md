@@ -1,6 +1,6 @@
-# Git Windows
+# Main Windows
 
-SmartGit comes with 3 different Git windows that all can execute Git commands:
+SmartGit comes with 3 different main windows that all can execute Git commands:
 
 - the [Working Tree window](#Working-tree-window) focuses on a file-centric display of changes; it also shows the **Journal**, a tiny log for the latest commits of the current branch and from another branch (e.g. for cherry-picking),
 - the [Log window](#Log-window) focuses on the commit graph history; local changes are displayed as a separate node attached to the HEAD;
@@ -15,7 +15,7 @@ or later using the Preferences:
 
 ![Preferences, user interface](images/Preferences-user-interface-window-selection.png)
 
-You can use all 3 different Git windows at the same time, but the default one you can configure in the preferences.
+You can use all 3 different main windows at the same time, but the default one you can configure in the preferences.
 The default window is used, e.g. if you open a repository using the command line.
 
 

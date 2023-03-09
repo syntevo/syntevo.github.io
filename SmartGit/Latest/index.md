@@ -22,7 +22,7 @@
     -   [Managing Remotes](Managing-Remotes.md)
     -   [Subtrees](Subtrees.md)
     -   [Bisect](Bisect.md)
--   [Git Windows](Git-Windows.md)
+-   [Main Windows](Main-Windows.md)
 -   [Repositories, Directories and Files](Repositories-Directories-and-Files.md)
 -   [Log](Log.md)
     -   [Bugtraq (links to issue trackers)](Bugtraq-links-to-issue-trackers-.md)
