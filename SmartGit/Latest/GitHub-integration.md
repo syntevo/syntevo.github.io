@@ -50,9 +50,9 @@ When [cloning](Clone.md) a repository, you can select your repository from a lis
 entering the URL. SmartGit will display your own (*user*) repositories,
 as well as repositories of your *organization* (*org*).
 
-## Main Window
+## Working Tree window
 
-The main window contains a light-weight GitHub integration which just
+The Working tree window contains a light-weight GitHub integration which just
 indicates incoming pull requests in the title of the **Branches** view.
 
 #### Note

@@ -2,8 +2,8 @@
 
 There are various ways to check out in SmartGit:
 
--   **Main/Log window** Double-click on a branch in the **Branches** view and confirm the **Check Out** dialog that comes up.
--   **Main window** On the project window, invoke **Branch\|Check Out** from the menu.
+-   **Working tree/Log window** Double-click on a branch in the **Branches** view and confirm the **Check Out** dialog that comes up.
+-   **Working tree window** Invoke **Branch\|Check Out** from the menu.
     This will open a dialog containing a Log view, where you can select the commit to check out.
 -   **Log window** On the [Log window](Log.md), select the commit to check out and then select **Check Out** from its context menu.
 

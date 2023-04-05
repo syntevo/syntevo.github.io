@@ -104,7 +104,7 @@ q2a
 In SmartGit, there are several places from which you can initiate a
 rebase:
 
--   **Menu and toolbar** On the main window, select **Branch\|Rebase
+-   **Menu and toolbar** On the Working tree window, select **Branch\|Rebase
     HEAD to** or **Branch\|Rebase to HEAD** to open the **Rebase**
     dialog, where you can select the branch to rebase the HEAD onto, or
     the branch to rebase onto the HEAD, respectively. Depending on your

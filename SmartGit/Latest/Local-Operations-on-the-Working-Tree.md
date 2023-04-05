@@ -140,13 +140,11 @@ have the option to create either a merge commit or a normal commit. See
 
 SmartGit provides several ways to make alterations to local commits:
 
--   **Undo Last Commit** Invoke **Local\|Undo Last Commit** from the
-    main window's menu to undo the last commit. The contents of the last
+-   **Undo Last Commit** Invoke **Local\|Undo Last Commit** to undo the last commit. The contents of the last
     commit will be moved to the
     [Index](The-Index.md), so no changes will
     be lost.
--   **Edit Commit Message** Invoke **Local\|Edit Commit Message** from
-    the main window's menu to edit the commit message of the last
+-   **Edit Commit Message** Invoke **Local\|Edit Commit Message** to edit the commit message of the last
     commit. In the **Journal** view on the working tree window or the
     **Graph** view of the log window, you can edit the commit message of
     any of the local commits by selecting the commit and invoking **Edit

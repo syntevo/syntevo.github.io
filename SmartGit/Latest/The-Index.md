@@ -24,7 +24,7 @@ the Index will be reverted to the HEAD file content.
 
 ## Changes view
 
-The **Changes** view of the SmartGit main window can show the changes
+The **Changes** view of the SmartGit Working Tree window can show the changes
 between the HEAD and the Index, or between the Index and the working
 tree state of the selected file. You can switch between both views
 either by clicking the left *HEAD* button or the right *Working Tree*

@@ -57,7 +57,6 @@ If the path is relative, it will be ignored.
 ## Option "--log"
 
 This option opens SmartGit's Log window for the repository or file in the specified location.
-The main window is not opened.
 
 #### Example
 >`smartgitc.exe --log C:\path\to\repository\path\to\file`

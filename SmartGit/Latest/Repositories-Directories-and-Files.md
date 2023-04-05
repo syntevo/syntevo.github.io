@@ -14,7 +14,7 @@ look at the section [Repository-Related](Repository-Related.md).
 
 ## File Filtering
 
-The **Files** view of the main window can be filtered by file state and
+The **Files** view can be filtered by file state and
 name. The state filters can be set using the small toolbar buttons above
 the table as well as the menu items in the **View** menu. By default, if
 committable files (e.g. *index-only changed* or *untracked*) are hidden,

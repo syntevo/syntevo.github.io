@@ -5,9 +5,9 @@
 You can add, rename and delete branches and tags both from the main
 window and from the [Log](Log.md) window.
 
-### Main Window
+### Working Tree window
 
-The **Branches** view on the main window has various context menu
+The **Branches** view on the working tree window has various context menu
 entries for adding, renaming and deleting selected branches and tags.
 These commands can also be invoked via the entries in the **Branch**
 menu.

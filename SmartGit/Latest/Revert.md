@@ -27,7 +27,7 @@ o                        o
 In SmartGit, there are several places from which you can initiate a
 Revert:
 
--   **Menu and toolbar** On the main window, select **Branch\|Revert**
+-   **Menu and toolbar** On the Working tree window, select **Branch\|Revert**
     to open the **Revert** dialog, where you can select one or more
     commits to revert. Depending on your toolbar settings, you can also
     open this dialog via the **Revert** button on the toolbar.

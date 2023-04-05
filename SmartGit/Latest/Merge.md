@@ -42,13 +42,12 @@ o [> master]                  o
 In SmartGit, there are several places from which you can initiate a
 merge:
 
--   **Menu and toolbar** On the main window, select **Branch**
-    **\|Merge** to open the **Merge** dialog, where you can select the
+-   **Menu and toolbar** On the Working tree window, select **Branch\|Merge** to open the **Merge** dialog, where you can select the
     branch to be merged into the current branch. Depending on your
     toolbar settings, you can also open this dialog via the **Merge**
     button on the toolbar.
 -   **Branches view** In the **Branches** view (available both on the
-    main window and the Log window), you can right-click on a branch and
+    Working tree and the Log window), you can right-click on a branch and
     select **Merge** to merge the selected branch into the current
     branch.
 -   **Log Graph** On the Log graph of the **Log** window, you can

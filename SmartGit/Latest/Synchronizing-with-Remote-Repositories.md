@@ -112,8 +112,7 @@ tracking.
 
 
 
-The Push commands listed above can be invoked from several places in
-SmartGit's main window:
+The Push commands listed above can be invoked from several places:
 
 -   **Menu and toolbar** In the menu, you can invoke the various Pull
     commands with **Remote\|Push**, **Remote\|Push To** and
@@ -178,8 +177,7 @@ simplifies the common workflow of separately invoking [Push](#push) and
 [Pull](#pull) to keep your repository synchronized with the remote
 repository.
 
-In SmartGit's main window, the Synchronize command can be invoked as
-follows:
+The Synchronize command can be invoked as follows:
 
 -   from the menu via **Remote\|Synchronize**,
 -   with the Synchronize toolbar button,
