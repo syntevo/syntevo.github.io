@@ -3,12 +3,9 @@
 The Rebase command allows you to apply commits from one branch to
 another. Rebase can be viewed as more powerful version of
 [Cherry-Pick](Cherry-Pick.md), which is optimized to apply multiple
-commits from one branch to another. In SmartGit, a distinction is made
-between **Rebase HEAD to** and **Rebase to HEAD**:
+commits from one branch to another.
 
-**Rebase HEAD to** rebases ("moves") the commits below the HEAD to the
-selected commit. The HEAD will be moved to the new fork.
-
+**Rebase** "moves" (actually "rewrites") the commits below the HEAD to the selected commit. The HEAD will be moved to the new fork.
 
 
 ``` text
@@ -26,36 +23,6 @@ o   C                         o  C'
 | /                           |
 o   F                         o   F
 ```
-
-
-
-**Rebase to HEAD** duplicates commits from a separate branch to the HEAD
-(similar to what [Cherry-Pick](Cherry-Pick.md) does). The HEAD
-moves forward on its fork.
-
-
-
-``` text
-                             o  [> master] B'
-                             |
-                             o  C'
-                             |
-                             o  D'
-                             |
-o  [> master] A              o  A
-|                            |
-|   o  [a-branch]            |   o  [a-branch]
-|   |                        |   |
-|   o  B (selected)          |   o  B
-|   |                        |   |
-|   o  C               ==>   |   o  C
-|   |                        |   |
-|   o  D                     |   o  D
-|  /                         |  /
-| /                          | /
-o   E                        o   E
-```
-
 
 
 To **Rebase Onto** you may use the **Log** window. Consider following
@@ -104,18 +71,16 @@ q2a
 In SmartGit, there are several places from which you can initiate a
 rebase:
 
--   **Menu and toolbar** On the Working tree window, select **Branch\|Rebase
-    HEAD to** or **Branch\|Rebase to HEAD** to open the **Rebase**
+-   **Menu and toolbar** On the Working tree window, select **Branch\|Rebase** to open the **Rebase**
     dialog, where you can select the branch to rebase the HEAD onto, or
     the branch to rebase onto the HEAD, respectively. Depending on your
-    toolbar settings, you can also open this dialog via the buttons
-    **Rebase HEAD to** and **Rebase to HEAD** on the toolbar.
+    toolbar settings, you can also open this dialog using the **Rebase* toolbar button.
 -   **Branches view** In the **Branches** view, you can right-click on a
-    branch and select **Rebase HEAD to** to rebase your current HEAD
+    branch and select **Rebase** to rebase your current HEAD
     onto the selected branch.
 -   **Log Graph** On the Log graph of the **Log** window, you can
     perform a rebase by right-clicking on a commit and selecting
-    **Rebase HEAD to** or **Rebase to HEAD** from the context-menu.
+    **Rebase** from the context-menu.
 -   **Log Graph** In the Log graph of the **Log** window, you can drag
     and drop commits or refs and then select to rebase in the occurring
     dialog after the drop.
