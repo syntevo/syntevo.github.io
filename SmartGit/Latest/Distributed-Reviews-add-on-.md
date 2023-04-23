@@ -329,7 +329,13 @@ Database** there.
 > 
 > `git update-ref -d refs/meta/smartgit/reviews`
 
+## Disposing all Distributed Reviews data from your project
 
+To get rid of Distributed Reviews data not just for your local clone, but also for the remote repository and all clones from this repository, following steps are required:
+
+- on the server, delete all `refs/meta/smartgit/*`-refs
+  - usually there are no packed refs on the server, hence you can simply delete these refs from the file system
+- on every clone, invoke **Review\|Configure** and select **Dispose Database**
 
 ## Customizing the pull request integration message
 
