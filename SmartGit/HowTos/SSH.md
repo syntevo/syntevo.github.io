@@ -11,6 +11,8 @@ If you have connection problems, try with this command instead:
 
 `$ ssh-keygen -t rsa -b 4096 -m PEM`
 
+Then update/save the public key to `~/.ssh/authorized_keys` on the Git/SSH server.
+
 ### Converting an existing private key to PEM-format
 
 If you have a private key file with an unsupported format, use this command in a Terminal to convert it:
