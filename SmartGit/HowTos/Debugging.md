@@ -55,4 +55,4 @@ log4j.foo.bar=TRACE
 ```
 After that, restart SmartGit and repeat the operation for which debug logging should be collected and shutdown SmartGit again.
 
-Now `logs/log.txt.0` should contain `DEBUG` lines for the specified key.
+Now `logs/log.txt.0` should contain `DEBUG` (or `TRACE`) lines for the specified key.
