@@ -61,3 +61,5 @@
     -   [Company-wide update-server](Company-wide-update-server.md)
 -   [Tips and Tricks](Tips-and-Tricks.md)
 -   [Commercial-only features](Commercial-only-features.md)
+-   [Hobby-Use License](Hobby-Use-License.md)
+
