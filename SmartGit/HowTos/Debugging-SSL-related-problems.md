@@ -6,11 +6,11 @@ Various built-in SmartGit functionality will connect to *https* URLs, for exampl
 - various integrations, like Hosting Providers
 
 When experiencing problems here, it can be helpful to debug Java's networking layer.
-To do that, add the following system property to the [smartgit.properties](../Latest/System-Properties.md) file:
+To do that, add one or more of the following system properties to the [smartgit.properties](../Latest/System-Properties.md) file, each on a separate line:
 
-```
-javax.net.debug=ssl:handshake
-```
+* `javax.net.debug=ssl:trustmanager` to debug problems with server certificates
+* `javax.net.debug=ssl:handshake` to debug problems with the SSL handshake
+
 After that, restart SmartGit from the command line and pipe the output to a file:
 
 - On Windows: execute `<install-dir>\bin\smartgitc.exe > dump.txt` 2>&1
