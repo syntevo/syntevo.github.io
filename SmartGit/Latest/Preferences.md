@@ -211,6 +211,11 @@ an **External Conflict Solver**:
 
 For details on how Git is managing these file versions, refer to the [Git manual](https://git-scm.com/book/en/v2/Git-Tools-Advanced-Merging).
 
+Note, if the launched external conflict solver does not return until it is closed, it will block SmartGit.
+To avoid this (on Windows), use the `bin\open.exe` helper, e.g.:
+- *Command*: `C:\Program Files\SmartGit\bin\open.exe`
+- *Arguments*: `--no-wait "C:\Program Files\MyCompare\mycompare.exe" ${leftFile} ${rightFile} ${mergedFile}`
+
 **Example: VSCode**
 
 To configure VSCode 1.70 or higher as conflict solver, use `--wait --merge ${leftFile} ${rightFile} ${baseFile} ${mergedFile}` as **Arguments**.
