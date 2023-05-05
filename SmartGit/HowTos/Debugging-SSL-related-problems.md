@@ -2,23 +2,21 @@
 
 Various built-in SmartGit functionality will connect to *https* URLs, for example:
 
--   **Check for New Version**
--   **Hosting Provider** integrations
--   the SVN bridge
+- **Check for New Version**
+- various integrations, like Hosting Providers
 
 When experiencing problems here, it can be helpful to debug Java's networking layer.
 To do that, add the following system property to the [smartgit.properties](../Latest/System-Properties.md) file:
 
-```java
+```
 javax.net.debug=ssl:handshake
 ```
-
 After that, restart SmartGit from the command line and pipe the output to a file:
 
--   On Windows: execute `<install-dir>\bin\smartgitc.exe > dump.txt`.
--   On MacOS: execute
-    `<install-dir>/Contents/MacOS/SmartGit > dump.txt`.
--   On Linux: execute `<install-dir>/bin/smartgit.sh > dump.txt`.
+- On Windows: execute `<install-dir>\bin\smartgitc.exe > dump.txt`.
+- On MacOS: execute
+  `<install-dir>/Contents/MacOS/SmartGit > dump.txt`.
+- On Linux: execute `<install-dir>/bin/smartgit.sh > dump.txt`.
 
 Finally, verify that `dump.txt` contains SSL-related output.
 
