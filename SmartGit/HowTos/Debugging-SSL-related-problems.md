@@ -13,9 +13,9 @@ To do that, add one or more of the following system properties to the [smartgit.
 
 After that, restart SmartGit from the command line and pipe the output to a file:
 
-- On Windows: execute `<install-dir>\bin\smartgitc.exe > dump.txt` 2>&1
-- On MacOS: execute `<install-dir>/Contents/MacOS/SmartGit > dump.txt` 2>&1
-- On Linux: execute `<install-dir>/bin/smartgit.sh > dump.txt` 2>&1
+- On Windows: execute `<install-dir>\bin\smartgitc.exe > dump.txt 2>&1`
+- On MacOS: execute `<install-dir>/Contents/MacOS/SmartGit > dump.txt 2>&1`
+- On Linux: execute `<install-dir>/bin/smartgit.sh > dump.txt 2>&1`
 
 Finally, verify that `dump.txt` contains SSL-related output.
 
