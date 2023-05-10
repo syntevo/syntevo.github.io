@@ -29,10 +29,11 @@
     -   [Tracing the modified state of a file](Tracing-the-modified-state-of-a-file.md)
 -   [Internationalization (for developers/authors)](Internationalization-for-developers-authors-.md)
 -   [Performance Tuning](Performance-Tuning.md)
--   [Purchase-Related](Purchase-Related.md)
+-   [Licensing](Licensing.md)
     -   [Purchase Upgrades](Purchase-Upgrades.md)
     -   [Register a SmartGit license](Register-a-SmartGit-license.md)
     -   [Subscription Licenses](Subscription-Licenses.md)
+    -   [Non-commercial Licenses](Non-commercial.md)
 -   [SSH](SSH.md)
 -   Trouble-shooting
     -   [Authentication problems (push/pull fail)](Authentication-problems-push-pull-fail-.md)
