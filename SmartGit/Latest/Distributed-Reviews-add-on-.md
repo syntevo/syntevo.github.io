@@ -335,6 +335,7 @@ To get rid of Distributed Reviews data not just for your local clone, but also f
 
 - on the server, delete all `refs/meta/smartgit/*`-refs
   - usually there are no packed refs on the server, hence you can simply delete these refs from the file system
+  - alternatively, if you do not have access to the server's file system, you may use `git push --delete <remote> <ref>` to delete them remotely
 - on every clone, invoke **Review\|Configure** and select **Dispose Database**
 
 ## Customizing the pull request integration message
