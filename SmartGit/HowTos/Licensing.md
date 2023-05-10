@@ -7,10 +7,11 @@ There exist two types of commercial licenses:
 | |Subscription license | Single payment (perpetual) license|
 |-|:--------------------|:----------------------------------|
 |Quotes            | not offered                                                  | you can [request quotes](https://www.syntevo.com/smartgit/purchase/#single-payment)|
-|Payment methods   | requires automatic payment methods (e.g. credit card, paypal)| all supported payment types, e.g. wire transfer or purchase order |
+|Payment methods   | requires automatic payment methods, e.g. credit card, paypal | all supported payment types, e.g. wire transfer or purchase order |
 |Validity          | during the paid period                                       | perpetual |
-|Offline use       | internet access is strongly recommended to have optimal license renewal | no internet access required |
-|SmartGit versions | any SmartGit version                                         | any SmartGit released before the end of your purchased update period |
+|License file fetch| yes, if internet access is available and proxy configured    | no |
+|Offline use       | internet access is strongly recommended (especially for monthly subscription) to have optimal license file fetch | no internet access required |
+|SmartGit versions | any SmartGit version                                         | any SmartGit version released before the end of your purchased update period |
 |Auto-renewal      | yes (same price and payment method), until cancelled | no, can be [upgraded manually](https://www.syntevo.com/smartgit/purchase/#upgrade)|
 |Email support     | during the paid period                               | during the paid support period (independent of update period) |
 |Additional users  | easy by contacting [sales](mailto:sales@syntevo.com); will not change the payment period | could mean to also renew the update period for existing users ([details](Purchase-Upgrades.md)); update period depends on order date|
