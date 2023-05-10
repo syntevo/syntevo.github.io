@@ -16,5 +16,5 @@ If you want to add additional users to your perpetual SmartGit license, you have
     support and update periods - or
 -   also update your existing SmartGit licenses (their support and
     update period will restart) by uploading your license file at
-    [syntevo.com/smartgit/purchase-update](http://www.syntevo.com/smartgit/purchase-update)
-    and increasing the seat count to the overall required seat count.
+    <https://www.syntevo.com/smartgit/purchase/#upgrade>
+    and increasing the user count to the overall required user count.
