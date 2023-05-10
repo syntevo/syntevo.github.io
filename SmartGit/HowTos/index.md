@@ -32,7 +32,6 @@
 -   [Licensing](Licensing.md)
     -   [Purchase Upgrades](Purchase-Upgrades.md)
     -   [Register a SmartGit license](Register-a-SmartGit-license.md)
-    -   [Non-commercial Licenses](Non-commercial.md)
 -   [SSH](SSH.md)
 -   Trouble-shooting
     -   [Authentication problems (push/pull fail)](Authentication-problems-push-pull-fail-.md)
