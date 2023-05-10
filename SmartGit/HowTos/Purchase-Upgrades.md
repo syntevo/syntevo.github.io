@@ -1,7 +1,6 @@
 # Purchase (Perpetual) Upgrades
 
-If the update period of your perpetual license is expired, you still continue to use SmartGit.
-But you won't be able to use newer versions of SmartGit.
+If the update period of your perpetual license has expired, you can still continue to use SmartGit, but you won't be able to use newer versions of SmartGit.
 To renew the support and update period, you need to purchase upgrade licenses.
 Basically, upgrade licenses are the same as new perpetual SmartGit licenses, but for a discounted price.
 
@@ -10,7 +9,7 @@ Alternatively, you may open <https://www.syntevo.com/smartgit/purchase/#upgrade>
 
 ## Additional Users
 
-If you want to add additional usuers to your perpetual SmartGit license, you have following options:
+If you want to add additional users to your perpetual SmartGit license, you have following options:
 
 -   order the additional licenses independent of the existing ones -
     that way you will have different license files with different
