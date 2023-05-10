@@ -17,15 +17,15 @@ During the support period (90 days, 1, 2 or 3 years) you may contact our email s
 
 ## Comparison
 
-|Subscription license | Single payment (perpetual) license|
-|---------------------|-----------------------------------|
-|quotes are not offered                                       | you can [request quotes](https://www.syntevo.com/smartgit/purchase/#single-payment)|
-|requires automatic payment methods (e.g. credit card, paypal)| can be used with all supported payment types, e.g. wire transfer or purchase order |
-|you can use any SmartGit version (as technically supported)  | you can use any SmartGit released before the end of your purchased update period |
-|is valid during the paid period                              | is valid perpetual |
-|will renew automatically with the same price and payment method (unless cancelled before the renewal) | can be [upgraded manually](https://www.syntevo.com/smartgit/purchase/#upgrade)|
-|you can get email support during the paid period             | you can get email support during the paid support period |
-|easy to add additional users by contacting [sales](mailto:sales@syntevo.com) | increasing user count could mean to also renew the update period for existing users ([details](Purchase-Upgrades.md)|
+||Subscription license | Single payment (perpetual) license|
+||---------------------|-----------------------------------|
+|Quotes            | are not offered                                       | you can [request quotes](https://www.syntevo.com/smartgit/purchase/#single-payment)|
+|Payment methods   | requires automatic payment methods (e.g. credit card, paypal)| all supported payment types, e.g. wire transfer or purchase order |
+|Validity          | during the paid period                                       | perpetual |
+|SmartGit versions | any SmartGit version                                         | any SmartGit released before the end of your purchased update period |
+|Auto-renewal      | yes (same price and payment method), until cancelled | no, can be [upgraded manually](https://www.syntevo.com/smartgit/purchase/#upgrade)|
+|Email support     | during the paid period                              | during the paid support period (independent of update period) |
+|Additional users  | easy by contacting [sales](mailto:sales@syntevo.com); will not change the payment period | could mean to also renew the update period for existing users ([details](Purchase-Upgrades.md)); update period depends on order date|
 
 
 ## Purchase Overview
