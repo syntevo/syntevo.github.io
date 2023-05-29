@@ -35,3 +35,31 @@ using **Add**.
 Instead of an OAuth token, you may alternatively use a personal access token which has to be created manually in your [GitLab User Settings](https://gitlab.com/-/profile/personal_access_tokens).
 Make sure that your personal access token has at least following scopes assigned:
 **api**, **read_user**, **write_repository**.
+
+## Possible Problems & Solutions
+
+### Authenticating with two or more accounts
+
+#### Info
+> SmartGit currently does not support having two **Hosting Providers**
+> configured for "gitlab.com", hence for the extended integration
+> you have to decide for one of your accounts. It's
+> however possible to access repositories of multiple GitLab accounts, as
+> explained below.
+
+If you want to authenticate to your GitLab repositories, using two or
+more accounts, open **Preferences**, section **Hosting Providers**, open
+the GitLab hosting provider there and deselect **Use OAuth token for
+repository authentication**. When pulling/pushing a GitLab repository
+for the next time, SmartGit will ask you for **Username** and
+**Password**. For the **Username**, just enter the appropriate GitLab
+account name, for the **Password** it's recommended to generate a new
+*Personal Access Token* in your GitLab account settings (see above).
+
+Depending on your Git configuration, Git might request credentials only
+*per-domain* instead of *per-repository*. If so, try to reconfigure:
+
+``` java
+git config --global credential.gitlab.com.useHttpPath true
+```
+
