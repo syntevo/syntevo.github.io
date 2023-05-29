@@ -22,7 +22,6 @@ create an *application access token* which will be used to populate the
 **Token** field. Finally, confirm the **Add Hosting Provider** dialog
 using **Add**.
 
-
 #### Info
 > Once you have authorized SmartGit, it will show up in your GitLab
 > **Settings**, section **Applications**. If you need to rerun through the
@@ -30,5 +29,3 @@ using **Add**.
 > there first and start over.
 > 
 > ![](attachments/53215471/53215472.png)
-
-
