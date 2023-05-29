@@ -38,12 +38,12 @@ Finally, confirm the **Add Hosting Provider** dialog using **Add**.
 > 
 > ![](attachments/53215440/53215443.png)
 
-#### Info
-> 
-> Instead of an OAuth token, you may alternatively use a personal access token which has to be created manually in your [GitHub Developer Settings](https://github.com/settings/tokens).
-> When experimenting with tokens, try first with a *Classic Token*.
-> Make sure that your personal access token has at least following scopes assigned:
-> **repo**, **read:org**, **read:user**, **gist**, **workflow**
+#### Personal Access Tokens
+
+Instead of an OAuth token, you may alternatively use a personal access token which has to be created manually in your [GitHub Developer Settings](https://github.com/settings/tokens).
+When experimenting with tokens, try first with a *Classic Token*.
+Make sure that your personal access token has at least following scopes assigned:
+**repo**, **read:org**, **read:user**, **gist**, **workflow**
 
 ## Clone
 
