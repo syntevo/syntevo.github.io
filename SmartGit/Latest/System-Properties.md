@@ -188,53 +188,6 @@ set:
 >
 >
 
-### smartgit.license.serverPing.url
-
-Enables the license user tracking feature and specifies the URL
-(template) which SmartGit will connect to on startup and once per day.
-The template is basically a URL for which following keywords will be
-replaced:
-
--   `${email}` will be replaced by the user's email found in
-    the `~/.gitconfig` file.
--   `${smartgit.version}` will be replaced by SmartGit's version
-    followed by a \# and the build number, e.g. `17.1.1#11176.`
--   `${smartgit.license}` will be replaced by a unique string of the
-    registered SmartGit license file.
--   `${smartgit.license.x}` will be replaced by the value of the
-    corresponding (case-sensitive!) key from the registered SmartGit
-    license file, e.g. `${smartgit.license.SupportUntil}`.
--   `${prop.x}` will be replaced by the Java system property `x`. For
-    instance, `${prop.user.name}` will be replaced by the Java system
-    property `user.name`.
--   `${env.X}` will be replaced by the environment variable `X`. For
-    instance, `${env.USERID}` will be replaced by the environment
-    variable `USERID`.
-
-### smartgit.license.serverPing.method
-
-Specifies the HTTP request method to be used, either `GET` or `HTTP`
-(defaults to `GET`).
-
-
-
-#### Example
->
->
->
->Following configuration will track users on (including a custom `USERID`
->environment variable) at `syntevo.com`.
->
->
->
->``` text
->smartgit.license.serverPing.method=get
->smartgit.license.serverPing.url=http://www.syntevo.com/smartgit/server-ping?email=${email}&name=${prop.user.name}&id=${env.USERID}                  
->```
->
->
->
->
 
 ## Debug Properties
 
