@@ -6,6 +6,9 @@ The Hobby-Use license limits repository access to specific conditions. Every acc
 
 If there is only a single author and committer in the repository (both, names *and* email addresses must be unique), the repository can be accessed without restrictions. There is a certain tolerance for the first couple of commits, i.e. authors for these commits may be different from the main author.
 
+#### Note
+> To see all authors of your repository, you may invoke `git shortlog -sne`.
+
 ## Public repositories
 
 If the repository is publicly accessible, public commits will be *certified* on-the-fly. The local HEAD is restricted to not diverge too far from such certified commits.
