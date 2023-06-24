@@ -47,6 +47,18 @@ Thread dumps are useful to investigate hangs or slow performance.
 -   When investigating a problem, it's usually a good idea to create a
     couple of thread dumps.
 
+#### Taking a heap snapshot
+
+Heap snapshots are useful to investigate memory-related problems and do not contain any sensitive information.
+
+-   Select the VM you want to inspect.
+
+-   Select tab **Sampler**, click **Memory** and then **Snapshot**.
+
+-   Right-click the snapshot, save it using **Save As**, then send it to us.
+
+![Example Image](images/jvisualvm-take-snapshot.gif)
+
 #### Taking a heap dump
 
 Heap dumps are useful to investigate memory-related problems.
