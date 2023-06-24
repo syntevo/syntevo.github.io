@@ -11,6 +11,12 @@
 -   Download VisualVM from [visualvm.github.io](https://visualvm.github.io/download.html)
     and uncompress to e.g. `C:/temp/visualvm`
 
+-   Configure SmartGit to collect performance data (required since version 23.1):
+    -  open bin/smartgit.vmoptions and append:
+    ```
+    -XX:+UsePerfData
+    ```
+
 -   Run VisualVM:
     -  open a terminal
     -  `cd` to `C:/temp/visualvm/bin`
