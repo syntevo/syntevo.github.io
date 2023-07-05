@@ -58,7 +58,7 @@
 -   [Command-Line Options](Command-Line-Options.md)
 -   [Installation and Files](Installation-and-Files.md)
     -   [Company-wide installation](Company-wide-installation.md)
-    -   [Company-wide update-server](Company-wide-update-server.md)
+    -   [On-premise update-server](On-premise-update-server.md)
 -   [Tips and Tricks](Tips-and-Tricks.md)
 -   [Commercial-only features](Commercial-only-features.md)
 -   [Hobby-Use License](Hobby-Use-License.md)

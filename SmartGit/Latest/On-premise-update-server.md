@@ -1,4 +1,4 @@
-# Company-wide update-server
+# On-premise update-server
 
 For a large number of installations, it may be convenient to replicate
 our way of deployment in your company.
