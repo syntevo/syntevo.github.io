@@ -5,15 +5,17 @@ This will be especially important if the SmartGit installations of your users ar
 
 ## Requirements
 
-To run our on-premise server, only Docker is required.
+To run our on-premise server, only Docker is required. This document describes how to setup the *On-premise License Server* in a plain docker environment. Running the *On-premise License Server* in a kubernetes environment will also work, but we cannot provide guidance on how to setup it (as this will vary depending on your environment). Please also note, by default the *On-premise License Server* uses an embedded database that will store data in a volume. Running multiple instances of the *On-premise License Server* in a kubernetes environment is not supported.
 
 ## Server-side installation
 
 1. Contact sales@syntevo.com and provide a short explanation of your environment and SmartGit setup to understand whether an on-premise license server will be appropriate for your company.
   
-2. If appropriate, you will receive a new *on-premise license file* and *GitHub credentials* to access the [GitHub packages](https://github.com/syntdev/license-server/pkgs/container/license-opserver).
+2. If appropriate, you will receive a new *on-premise license file*
+  
+4. You need *GitHub credentials* to access the [GitHub packages](https://github.com/syntdev/license-server/pkgs/container/license-opserver). Please let us know the username so we can grant access.
 
-3. Create a GitHub Personal Access Token to log in with Docker:
+5. Create a GitHub Personal Access Token to log in with Docker:
 
    1. Go to https://github.com/settings/tokens
 
@@ -21,7 +23,7 @@ To run our on-premise server, only Docker is required.
 
    3. Configure only the **read:packages** scope
 
-4. From the command line, log in to the GitHub Docker repository:
+7. From the command line, log in to the GitHub Docker repository:
 
    ```
    docker login ghcr.io -u <username> -p <pat>
@@ -29,13 +31,13 @@ To run our on-premise server, only Docker is required.
 
    For the above command, replace `<username>` with your GitHub username and `<pat>` with the Personal Access Token you have just created.
 
-5. Pull the Docker image:
+8. Pull the Docker image:
 
    ```
    docker pull ghcr.io/syntdev/license-opserver:development
    ```
 
-6. Prepare host directories for the Docker volumes
+9. Prepare host directories for the Docker volumes
 
    1. On the target server where the Docker image will be run, create a top-level directory `<license-server-root>` which will contain the persistent data of the license server, for example, `/var/syntevo-license-server`.
 
@@ -43,10 +45,10 @@ To run our on-premise server, only Docker is required.
 
    3. Put the *on-premise license file* you have received from us into this directory. Use a reasonable name that reflects the product, e.g., `smartgit` in the case of a SmartGit license.
 
-7. Start the license server:
+10. Start the license server:
 
    ```
-   docker run --restart unless-stopped --name syntevo-license-server -d -v <license-server-root>/data:/data -v <license-server-root>/licenses:/licenses -p 8080:8080 ghcr.io/syntdev/license-opserver:development
+   docker run --restart unless-stopped --name syntevo-license-server -d -v <license-server-root>/data:/data -v <license-server-root>/licenses:/licenses -p 8080:8080 ghcr.io/syntdev/license-opserver:latest
    ```
 
    For the above command, replace `<license-server-root>` with the actual top-level directory, for example:
@@ -55,7 +57,7 @@ To run our on-premise server, only Docker is required.
    docker run --restart unless-stopped --name syntevo-license-server -d -v /var/syntevo-license-server/data:/data -v /var/syntevo-license-server/licenses:/licenses -p 8080:8080 ghcr.io/syntdev/license-opserver:development
    ```
 
-8. Confirm that the license server has been properly started:
+11. Confirm that the license server has been properly started:
 
    ```
    docker ps | grep syntevo-license-server
