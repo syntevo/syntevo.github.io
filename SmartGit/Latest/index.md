@@ -59,6 +59,7 @@
 -   [Installation and Files](Installation-and-Files.md)
     -   [Company-wide installation](Company-wide-installation.md)
     -   [On-premise update-server](On-premise-update-server.md)
+    -   [On-premise license-server](On-premise-license-server.md)
 -   [Tips and Tricks](Tips-and-Tricks.md)
 -   [Commercial-only features](Commercial-only-features.md)
 -   [Hobby-Use License](Hobby-Use-License.md)
