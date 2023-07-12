@@ -49,18 +49,6 @@ status detection and Git's status.
 -   ZIP the `log` directory and send to `smartgit@syntevo.com`, together
     with an explanation of the problem.
 
-### Dump traced file contents
-
-On top of tracing the modified state of a file, you can also dump the
-file contents of working tree and index. To enable this functionality,
-add following system property
-to [smartgit.properties](../Latest/System-Properties.md)
-(in the settings directory, see About dialog).
-
-``` java
-smartgit.status.index.dump.level=FINEST
-```
-
 ### Git-LFS Issues
 
 If executing `git status` also shows the files as modified, try invoking `git lfs status`:
