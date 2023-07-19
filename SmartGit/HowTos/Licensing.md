@@ -14,7 +14,7 @@ There exist two types of commercial licenses:
 |Offline use         | internet access is strongly recommended (especially for monthly subscription) to have optimal license file fetch | no internet access required |
 |SmartGit versions   | any SmartGit version                                         | any SmartGit version released before the end of your purchased update period |
 |Auto-renewal        | yes (same price and payment method), until cancelled | no, can be [upgraded manually](https://www.syntevo.com/smartgit/purchase/#upgrade)|
-|Email support       | during the paid period                               | during the paid support period (independent of update period) |
+|Email support       | during the paid period                               | during the paid support period (might be shorter than update period) |
 |Additional users    | easy by contacting [sales](mailto:sales@syntevo.com); will not change the payment period | could mean to also renew the update period for existing users ([details](Purchase-Upgrades.md)); update period depends on order date|
 
 
