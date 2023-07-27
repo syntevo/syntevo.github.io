@@ -1,5 +1,6 @@
 # How Tos
 -   Configuration
+	-   [Configure a dictionary](Configure-Dictionary.md)
     -   [Changing the Folder Watch Limit (Linux)](Changing-the-Folder-Watch-Limit-Linux-.md)
     -   [Enabling the "cherry picked from commit ..." message](Enabling-the-cherry-picked-from-commit-...-message.md)
     -   [External Diff: configuring Microsoft Excel spreadsheet diffs](Microsoft-Excel-spreadsheet-diffs.md)
