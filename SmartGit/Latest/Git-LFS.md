@@ -77,3 +77,7 @@ The following screenshot shows how this display will look like:
 
 #### Note
 > In the **Log** window, lock states will only be displayed for the **Working Tree** node.
+
+## Fix possible problems
+
+If your `git-lfs` executable is not found by SmartGit, try to use absolute paths for the `git-lfs` executable configuration in the `gitconfig` file containing the Git-LFS filter definition.
