@@ -70,6 +70,13 @@ To run our on-premise server, only Docker is required. This document describes h
 > docker run --restart unless-stopped --name syntevo-license-server -d -v /var/syntevo-license-server/data:/data -v /var/syntevo-license-server/licenses:/licenses -p 8080:8080 ghcr.io/syntevo/license-opserver:development
 >  ```
 
+### Logs
+
+Once the Docker container is running, you can check the logs using:
+
+```
+docker logs -f syntevo-license-server
+```
 
 ## SmartGit Setup
 
