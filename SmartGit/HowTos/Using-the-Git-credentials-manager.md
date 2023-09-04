@@ -18,7 +18,7 @@ Use following configuration:
     helper = manager
 ```
 
-# OSX
+# macOS
 
 Use following configuration:
 
