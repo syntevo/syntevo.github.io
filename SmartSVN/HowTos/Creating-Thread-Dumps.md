@@ -78,6 +78,6 @@ the directory `install-dir`.
 
 *How to send the dump.txt file*: Compress the `dump.txt` file as a *zip*
 or *tar/gzip* archive, and also include the file `log.txt` from
-[smartsvn.settings](Installation-and-Files.md#location-of-smartsvns-settings-directory).
+[smartsvn.settings](/SmartSVN/Latest/Installation-and-Files.md#location-of-smartsvns-settings-directory).
 Send this archive, as well as a short description of how to reproduce
 the problem, to <support@smartsvn.com>.
