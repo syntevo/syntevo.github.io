@@ -1,8 +1,8 @@
 # Gerrit
 
-SmartGit provides a **Push to Gerrit** command in the **Branches** view
-if a Gerrit remote has been detected. It will offer a dialog with
-special Gerrit-related Push options.
+SmartGit provides integration with Gerrit in the *Log* and the *Working Tree* windows.
+You can invoke the **Push to Gerrit** command in the **Branches** view if a Gerrit remote has been detected.
+It will offer a dialog with special Gerrit-related Push options.
 
 SmartGit will detect a remote as being connected to Gerrit, if:
 
