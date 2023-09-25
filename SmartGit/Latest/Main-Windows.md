@@ -18,6 +18,14 @@ or later using the Preferences:
 You can use all 3 different main windows at the same time, but the default one you can configure in the preferences.
 The default window is used, e.g. if you open a repository using the command line.
 
+### Rearrange views
+
+For the Working Tree and Log windows you can rearrange the views by dragging their titles.
+To place multiple views into one tab group, drag them onto the center of another view.
+To restore the default layout, use **Window\|Reset Perspective**.
+Each of these windows can remember two different layouts (called *perspectives*).
+You can switch between them using **Window\|Main Perspective** and **Windows\|Review Perspective**.
+
 
 ## Working Tree window
 
