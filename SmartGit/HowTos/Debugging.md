@@ -17,8 +17,8 @@ Always try to investigate problems with a fresh SmartGit setup:
 
 Before investigating a problem, restart SmartGit with clean logs:
 
+- locate the [Settings Path](../Latest/Installation-and-Files.md) in the **Help\|About** dialog
 - shutdown SmartGit
-- locate the [Installation and Files](../Latest/Installation-and-Files.md) in the **Help\|About** dialog
 - from sub-directory `logs/` remove all `log.txt*` files
 - restart SmartGit
 
