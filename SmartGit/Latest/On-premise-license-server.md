@@ -78,6 +78,26 @@ Once the Docker container is running, you can check the logs using:
 docker logs -f syntevo-license-server
 ```
 
+### Offline installation
+
+If you're unable to directly connect to `ghcr.io` from your server, you have the option to create a tarball for offline installation.
+
+1. On a machine that has access to `ghcr.io`, follow the steps mentioned above to pull the image.
+
+1. Use the following command to create the tarball:
+
+```
+docker save -o syntevo-license-opserver.tar ghcr.io/syntevo/license-opserver:latest
+```
+
+1. Transfer the `syntevo-license-opserver.tar` to your server.
+
+1. Import the image on your server using the command:
+
+```
+docker load -i syntevo-license-opserver.tar
+```
+
 ## SmartGit Setup
 
 ### Configuration by system property
