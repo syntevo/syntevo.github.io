@@ -63,13 +63,6 @@ To run our on-premise server, only Docker is required. This document describes h
    docker ps | grep syntevo-license-server
    ```
 
-#### Note
-> Syntevo support may ask you to use the `development` builds instead of the stable, `latest` builds. In this case, the package source is `ghcr.io/syntevo/license-opserver:development`.
-> A full command line would look like the following:
-> ```
-> docker run --restart unless-stopped --name syntevo-license-server -d -v /var/syntevo-license-server/data:/data -v /var/syntevo-license-server/licenses:/licenses -p 8080:8080 ghcr.io/syntevo/license-opserver:development
->  ```
-
 ### Logs
 
 Once the Docker container is running, you can check the logs using:
