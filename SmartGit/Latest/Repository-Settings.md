@@ -47,5 +47,5 @@ For details on how tag-grouping patterns are specified, however over the blue ![
 
 SmartGit supports other options either in `<repository>/.git/config` or `~/.gitconfig`:
 
-- `gui.prefixAddBranch`: this value defines the default prefix in the **Branch \| Add Branch** dialog
-- `gui.prefixStartFeature`: this value defines the default prefix in the **Branch \| Git-Flow \| Start Feature** dialog
+- `smartgit.gui.prefixAddBranch`: this value defines the default prefix in the **Branch \| Add Branch** dialog
+- `smartgit.gui.prefixStartFeature`: this value defines the default prefix in the **Branch \| Git-Flow \| Start Feature** dialog
