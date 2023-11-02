@@ -1,14 +1,5 @@
 # Submodules
 
-
-#### Note
->
->
->This section only applies to submodules of *native* Git repositories,
->but not of *SVN clones*. For SVN repositories, refer to [Externals (Normal Mode Only)](SVN-Integration.md#externals-normal-mode-only).
->
->
-
 Often, software projects are not completely self-contained, but share
 common parts with other software projects. Git offers a feature called
 *submodules*, which allows you to embed one Git repository into another.

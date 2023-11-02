@@ -1,7 +1,6 @@
 # Clone
 
-Use **Repository\|Clone** to create a clone of another Git, Mercurial or
-SVN repository.
+Use **Repository\|Clone** to create a clone of another Git repository.
 
 Specify the repository to clone either as a remote URL (e.g.
 [ssh://user@server:port/path](ssh://user@serverport.md)), or, if the

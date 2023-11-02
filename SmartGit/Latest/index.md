@@ -53,7 +53,6 @@
     -   [Theme Customization](Theme-Customization.md)
 -   [Distributed Reviews (add-on)](Distributed-Reviews-add-on-.md)
     -   [Server-side component](Server-side-component.md)
--   [SVN Integration](SVN-Integration.md)
 -   [Bug Reports](Bug-Reports.md)
 -   [Command-Line Options](Command-Line-Options.md)
 -   [Installation and Files](Installation-and-Files.md)
