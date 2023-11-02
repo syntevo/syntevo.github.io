@@ -12,7 +12,6 @@
 Often, software projects are not completely self-contained, but share
 common parts with other software projects. Git offers a feature called
 *submodules*, which allows you to embed one Git repository into another.
-This is similar to SVN's *externals* feature.
 
 A submodule is a nested repository that is embedded in a dedicated
 subdirectory of the working tree (which belongs to the parent

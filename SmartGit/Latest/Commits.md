@@ -1,6 +1,6 @@
 # Commits
 
-A *commit* is the Git equivalent of an SVN revision, i.e., a set of
+A *commit* is a set of
 changes that is stored in the repository along with a commit message.
 The [Commit command](Local-Operations-on-the-Working-Tree.md#commit) is
 used to store working tree changes in the local repository, thereby

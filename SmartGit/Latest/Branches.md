@@ -15,9 +15,8 @@ remote branches. The local branch is called *tracking branch*, and the
 corresponding remote branch *tracked branch*. Local branches can be
 tracking branches, but they don't have to.
 
-The default local main branch created by Git is named *master*, which is
-analogous to SVN's *trunk*. When cloning a remote repository, the master
-tracks the remote branch *origin/master*.
+The default local main branch created by Git is named *main* (or *master* for older Git versions).
+When cloning a remote repository, `main` tracks the remote branch *origin/master*.
 
 ## Working with Branches
 

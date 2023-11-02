@@ -7,8 +7,7 @@ completely - it's all up to you.
 The **Stage** command allows you to save a file's content from your
 working tree in the Index. If you stage a file that was previously
 version-controlled, but is now missing in the working tree, it will be
-marked for removal. Explicitly using the **Remove** command has the same
-effect, as you may be accustomed to from SVN. If you select a file that
+marked for removal. If you select a file that
 has Index changes, invoking **Commit** will give you the option to
 commit all staged changes.
 
