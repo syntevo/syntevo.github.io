@@ -112,7 +112,7 @@ If this does not solve your problem, take following steps to rerun the *OAuth* s
 1.  In SmartGit:
     1.  get rid of all GitHub-related credentials from **Preferences**, section **Authentication**
     2.  get rid of the GitHub hosting provider from **Preferences**, section **Hosting Providers**
-2.  In GitHub, open the [SmartGit application](https://github.com/settings/connections/applications/d9f33087e985e76e9029) from your profile **Settings**, **Applications**, tab **Authorized OAuth Apps**:
+2.  In GitHub, open the [SmartGit application](https://github.com/settings/connections/applications/99bbba5634b1f1ef3b57) from your profile **Settings**, **Applications**, tab **Authorized OAuth Apps**:
     1.  Select "SmartGit" there:
         ![](attachments/53215440/53215441.png)
     2.  Invoke **Revoke Access**
