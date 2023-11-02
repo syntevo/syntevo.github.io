@@ -219,7 +219,7 @@ Use this command if you have prepared some changes for the new bugfix
 release version and want to make it publicly available. This will create
 a tag for the hotfix, merge it to the `master` and `develop` branch. The
 actual commit which will be tagged when finishing a hotfix depends
-on[System Property](System-Properties.md)
+on [System Property](System-Properties.md)
 `gitflow.tagLastHotfixCommitInsteadOfMaster.`
 
 ### Start Release
@@ -233,7 +233,7 @@ the `develop` branch. This will create a release branch from the
 Use this command if you have prepared changes for the release and want
 to make it publicly available. This will create a tag for the release,
 merge it into the `master` and `develop` branch. The actual commit which
-will be tagged when finishing a hotfix depends on[System Property](System-Properties.md)
+will be tagged when finishing a hotfix depends on [System Property](System-Properties.md)
 `gitflow.tagLastReleaseCommitInsteadOfMaster.`
 
 ### Start Support Branch

@@ -5,6 +5,9 @@
 This page shows options which influence the executed Git (and Hg)
 commands.
 
+With **Detect Renames** enabled, SmartGit will detect renames of
+*added*/*removed* and optionally also *untracked*/*missing* file pairs.
+
 ### Push
 
 Only select the **Allow modifying pushed commits (e.g. forced-push)** if
@@ -14,6 +17,16 @@ forced push.
 ## Log and Working Tree window
 
 Select **Automatically save stash on common commands** to have SmartGit retry the execution of a Git command, if this failed and the working tree contains local changes.
+
+Select **Distinguish between content and EOL-only changes** to have
+SmartGit distinguish between content and EOL-only changes, in addition
+to the plain *modified* state which Git reports (in either case, files
+which Git considers as *modified* will be reported). The EOL-change
+information will be displayed in the **Files** table **State** If you do
+not want Git to care about EOLs at all (that's usually the case if you
+are on Windows), you might want to use
+[core.autocrlf](https://www.kernel.org/pub/software/scm/git/docs/git-config.html)
+or [text and eol attributes](https://www.kernel.org/pub/software/scm/git/docs/gitattributes.html).
 
 #### Info
 > If you encounter problems with auto-stashing, because SmartGit does not ask anymore, you may try to **Restore all confirmation dialogs** in section **User Interface**.
@@ -114,21 +127,6 @@ discarded. Enter the **New Master Password** and **Retype New Master
 Password**. When leaving both fields blank, you will continue to work
 without a master password, i.e. as if having selected the option **Don't
 use a master password** when you were asked to set the master password.
-
-## Refresh
-
-With **Detect Renames** enabled, SmartGit will detect renames of
-*added*/*removed* and optionally also *untracked*/*missing* file pairs.
-
-Select **Distinguish between content and EOL-only changes** to have
-SmartGit distinguish between content and EOL-only changes, in addition
-to the plain *modified* state which Git reports (in either case, files
-which Git considers as *modified* will be reported). The EOL-change
-information will be displayed in the **Files** table **State** If you do
-not want Git to care about EOLs at all (that's usually the case if you
-are on Windows), you might want to use
-[core.autocrlf](https://www.kernel.org/pub/software/scm/git/docs/git-config.html)
-or [text and eol attributes](https://www.kernel.org/pub/software/scm/git/docs/gitattributes.html).
 
 ## Background Commands
 

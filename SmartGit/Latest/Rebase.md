@@ -66,13 +66,6 @@ If that happens, SmartGit will leave the working tree in *rebasing* state, allow
 Core Git rebase conflicts are different to other kinds of merge conflicts, because *left* and *right* files are swapped: when rebasing branch `A` to `B`, Git will first checkout `B`, then applies all commits from `A`.
 If a conflict occurs, `HEAD` still points to `B` and hence the *left* file would be the file as it's present in `B`.
 
-From a user's perspective, the *left* file should always be his/her own file ("ours"), i.e. the file as it's present in `A`.
-For this reason, in case of rebase conflicts, SmartGit will swap *left* and *right* files.
-This gives a more consistent user experience, however may result in following different behavior (compared to normal merge conflicts):
-
--   When staging left lines (**Ours**) in the **Conflict Solver**, these lines will finally show up as staged, because your rebase branch `B` is actually "theirs".
--   When invoking **Resolve** and selecting **Ours**, you will see staged file content, because your rebase branch `B` is actually "theirs".
-
 ## Interactive Rebase
 
 For details on *interactive rebase* refer to [Interactive Rebase](Rebase-Interactive.md).

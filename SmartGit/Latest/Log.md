@@ -40,6 +40,7 @@ actual commit to which the refs points. For filtered Logs, there is no
 such relation between the mapped commit and the actual commit, still you
 will be able to see which of your filtered commits are part of which
 ref's history.
+Mapped refs which are not exactly located at the commit to which they are attached will be denoted by `~`.
 
 The **Graph** can be customized in many ways from the *Options*-menu
 (≡).
@@ -65,9 +66,13 @@ If a commit is selected, it shows details for the selected commit:
 
 -   **branches** and **tags** shows all branch/tag-refs which are
     displayed in the **Graph** for the selected commit
--   **closest tags** shows those tags which are closest to the selected
-    commit and which contain this commit; this functionality depends on
-    the **Tag-Grouping** configuration in the **Repository Settings**
+-   **same state tags** (only File Logs) shows those tags which contain the file with exactly the same content as for the selected commit;
+    this category will only be present if **Tag-Grouping** has been configured in the **Repository Settings** (for details refer there).
+-   **closest tags** shows those tags for a commit:
+    - from which the commit is reachable; and
+    - from which there is no other tag reachable from which the commit is reachable, too.
+
+    In addition, more relevant tags will be added if **Tag-Grouping** has been configured in the **Repository Settings** (for details refer there).
 -   **on branches** shows all branch-refs for which the selected commit
     is an ancestor reachable by following only "primary" parents, i.e.
     is part of the branch's "natural" history

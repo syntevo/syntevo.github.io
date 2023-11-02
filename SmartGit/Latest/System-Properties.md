@@ -10,6 +10,7 @@ line, according to the following syntax:
 `key=value`
 
 If a line starts with`#`, the entire line is treated as a comment and ignored by SmartGit.
+The file encoding is `UTF-8`.
 
 #### Note
 >

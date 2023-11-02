@@ -11,8 +11,7 @@ Be sure to also **Grant Access** to all of your organizations, otherwise the cor
 
 ![](attachments/53215440/53215447.png)
 
-Once you have confirmed this page, you will be redirected to *syntevo.com*, where the generated access code will be displayed.
-Copy&paste this code into SmartGit's **Generate API Token** dialog and invoke **Authenticate**.
+Once you have confirmed this page, you will be redirected to a specific port on `localhost`, where SmartGit is waiting to intercept a one-time authorization code.
 The code will be used to create an *application access token* which will be used to populate the **Token** field.
 
 By default, **Use OAuth token for repository authentication** will be selected.

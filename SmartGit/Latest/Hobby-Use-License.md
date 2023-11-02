@@ -9,6 +9,9 @@ If there is only a single author and committer in the repository (both, names *a
 #### Note
 > To see all authors of your repository, you may invoke `git shortlog -sne`.
 
+#### Note
+> If your repository contains more authors than tolerated *by accident* (e.g. if you have changed your name or email too often), you may consider to convert the repository to a single author using SmartGit's command line option `--convert-repository-to-single-user`. **Use with care! This will rewrite your entire repository.**
+
 ## Public repositories
 
 If the repository is publicly accessible, public commits will be *certified* on-the-fly. The local HEAD is restricted to not diverge too far from such certified commits.
