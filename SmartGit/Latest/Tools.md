@@ -77,6 +77,33 @@ tools:
   filePattern: '*'
 ```
 
+### Apply Authorship
+
+The following tool can be used to apply the authorship information (name, email, and dates) of the selected commit (in the Log graph) to the current HEAD commit.
+
+#### Note
+> The following definition apply for Windows. For Linux/macOS you will have to adjust the escaping/quoting.
+
+Save this content to a file `apply-authorship.yml` and use the *Import* button on the Tools page of the preferences.
+``` yml
+tools:
+- name: Apply Authorship
+  fileStarter: {command: '${gitDir}\bin\bash.exe', parameters: '-c "COMMIT_HASH=$1;
+      AUTHOR_INFO=$(git show -s --format=''%an <%ae>'' $COMMIT_HASH); AUTHOR_DATE=$(git
+      show -s --format=''%ad'' --date=iso-strict $COMMIT_HASH); COMMIT_DATE=$(git
+      show -s --format=''%cd'' --date=iso-strict $COMMIT_HASH); [ -z ''$AUTHOR_INFO''
+      ] && echo ''Failed to extract author information from commit $COMMIT_HASH''
+      && exit 1; GIT_COMMITTER_DATE=""$COMMIT_DATE"" git commit --amend --author=\""$AUTHOR_INFO\""
+      --date=""$AUTHOR_DATE"" --no-edit" -- ${commit}'}
+  useForOpen: false
+  waitUntilFinished: true
+  filePattern: '*'
+  forRefsNotShas: false
+  requiresConfirmation: true
+  confirmationMessage: Do you want to apply the authorship information from the selected
+    commit?
+```
+
 ### Open top-most Visual Studio solution from current repository
 
 This powershell script can be used to open a solution file `.sln` inside a repository, in Visual Studio.
