@@ -17,7 +17,7 @@ have to confirm by **Accept**.
 
 Once you have confirmed this page, you will be redirected to
 *syntevo.com*, where the generated access code will be displayed.
-Copy&paste this code into SmartGit's **Generate API Token** dialog and
+Copy&paste this code into SmartGit's **Generate Token** dialog and
 invoke **Authenticate**. The code will be used to create an *application
 access token* which will be used to populate the **Token** field.
 
@@ -41,8 +41,7 @@ Finally, confirm the **Add Hosting Provider** dialog using **Add**.
 
 If you have multiple Azure DevOps accounts, you can run through the
 above procedure for each of your accounts. This requires to login for
-every account in your web browser before invoking **Generate API
-Token**.
+every account in your web browser before invoking **Generate Token**.
 
 To have the **OAuth** token to work for multiple accounts, Git has to request credentials per-repository. To check if the proper configuration is already set, invoke:
 

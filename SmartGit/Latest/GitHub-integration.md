@@ -5,7 +5,7 @@ SmartGit integrates GitHub workflows in various places, provided that the connec
 ### Setup
 
 To set up the GitHub integration, go to **Preferences**, section **Hosting Providers** and click the **Add** button.
-In the **Add Hosting Provider** dialog, have **GitHub** selected and invoke **Generate API token**.
+In the **Add Hosting Provider** dialog, have **GitHub** selected and invoke **Generate Token**.
 This should open up your default web browser where you will have to confirm by **Authorize Application**.
 Be sure to also **Grant Access** to all of your organizations, otherwise the corresponding organization repositories won't show up/can't be accessed.
 
@@ -106,7 +106,7 @@ More behavior of the GitHub integration can be customized by [Low-Level Properti
 ### Re-setup OAuth
 
 Sometimes you may need to rerun the *OAuth* setup, e.g. if a more recent version of SmartGit will request additional scopes.
-Usually, it's sufficient to just open **Preferences**, section **Authentication**, open the **GitHub** hosting provider and invoke **Generate API token** there.
+Usually, it's sufficient to just open **Preferences**, section **Authentication**, open the **GitHub** hosting provider and invoke **Generate Token** there.
 If this does not solve your problem, take following steps to rerun the *OAuth* setup from scratch:
 
 1.  In SmartGit:
