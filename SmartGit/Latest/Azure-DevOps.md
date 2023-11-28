@@ -35,7 +35,22 @@ Finally, confirm the **Add Hosting Provider** dialog using **Add**.
 > 
 > ![](attachments/53215478/53215479.png)
 
+### Re-setup OAuth
 
+Sometimes you may need to rerun the *OAuth* setup, e.g. if a more recent version of SmartGit will request additional scopes.
+Usually, it's sufficient to just open **Preferences**, section **Authentication**, open the **Azure DevOps** hosting provider and invoke **Generate Token** there.
+If this does not solve your problem, take following steps to rerun the *OAuth* setup from scratch:
+
+1.  In SmartGit:
+    1.  get rid of all Azure DevOps-related credentials from **Preferences**, section **Authentication**
+    2.  get rid of the Azure DevOps hosting provider from **Preferences**, section **Hosting Providers**
+2.  In Azure DevOps, open your [profile](https://aex.dev.azure.com/me?mkt=en-US#) from the top-right corner:
+    1.  Select "Manage Authorizations" there:
+        ![](attachments/azure-app-revoke.png)
+    2.  Invoke **Revoke** for **SmartGit**
+3.  In SmartGit, rerun through the *OAuth* setup again:
+    1.  open **Preferences**, section **Hosting Providers**
+    2.  **Add** a new **Azure DevOps** hosting provider, as described above
 
 ### Setup with Multiple Accounts
 
