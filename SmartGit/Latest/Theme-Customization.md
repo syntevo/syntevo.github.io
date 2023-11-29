@@ -3,10 +3,10 @@
 You can customize certain colors in SmartGit by patching its themes.
 The custom colors are configured in files `light-patch.theme` and `dark-patch.theme` in [SmartGit's Settings Directory](#Company-wideinstallation-settings-dir.default-location).
 Depending on the selected theme from the Preferences, the appropriate file will be used.
-In case of automatic theme selection (which is the default), your system theme will determine that file.
+In case of automatic theme selection (which is the default), your system theme (light or dark) will determine the used file.
 
 #### Note
-> These files only will be read on SmartGit (re)start.
+> These files only will be read on SmartGit start.
 
 ## List of customizable colors
 
@@ -34,8 +34,7 @@ graph.tag
 ```
 
 #### Example
->
->Following `light-patch.theme` will give an almost identical palette as for version 21.2:
+> Following `light-patch.theme` will give an almost identical palette as for version 21.2:
 >
 >``` text
 >graph.connector.1=derive(#80ff00, 0.7, 0.7)
