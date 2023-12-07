@@ -160,3 +160,18 @@ This seems to be happening on some machines, but not the others. For me, the fol
 1. Press Win+R and run `ncpa.cpl`. This will show your network adapters.
 2. Right-click adapter you're using for internet and select `Diagnose`.
 3. Agree to reset adapter and reboot when suggested.
+
+### Performance problems when running remote SmartGit from within WSLg
+
+We have been reported significant UI performance problems when running SmartGit remotely from within WSLg by following setup:
+
+1. In a bash prompt in WSLg (i.e. graphics enabled), `ssh -Y` to a remote computer
+2. Start SmartGit
+
+This can be worked around by following setup:
+
+1. Disable graphics in .wslconf
+2. Install Xlaunch, following [these instructions](https://cs233.github.io/oyom_wsl2_setup.html)
+3. `ssh -Y` to remote computer
+4. Start smartgit
+
