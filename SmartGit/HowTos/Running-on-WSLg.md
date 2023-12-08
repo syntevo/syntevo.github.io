@@ -182,8 +182,8 @@ We have been reported significant UI performance problems when running SmartGit 
 
 This can be worked around by following setup:
 
-1. Disable graphics in .wslconf
-2. Install Xlaunch, following [these instructions](https://cs233.github.io/oyom_wsl2_setup.html)
+1. Disable graphics in `.wslconf`
+2. Install **Xlaunch**, following [these instructions](https://cs233.github.io/oyom_wsl2_setup.html)
 3. `ssh -Y` to remote computer
-4. Start smartgit
+4. Start SmartGit
 
