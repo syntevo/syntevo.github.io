@@ -130,7 +130,19 @@ Also, find the new Start menu item `Ubuntu` to launch it.
    ```
    -Dswt.autoScale=100
    ```
-   Windows DPI is configured at `Windows > Settings > System > Display > Scale`.<br>
+   Windows DPI is configured at `Windows > Settings > System > Display > Scale`.
+4. **Fractional scaling might cause crashes on startup**<br>
+   In the `smartgit.sh` you will find these lines:
+   ```
+   if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+      # comment the next line if you have problems with incorrectly zoomed drawing (see https://bugs.eclipse.org/bugs/show_bug.cgi?id=574182)
+      export GDK_BACKEND=x11
+   fi
+   ```
+   Try changing the first line to
+   ```
+   if [ "$XDG_SESSION_TYPE" = "" ]; then
+   ```
 
 ### If you noticed anything else, please send us a mail to<br>
    `smartgit@syntevo.com`
