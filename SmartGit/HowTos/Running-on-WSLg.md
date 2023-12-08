@@ -115,10 +115,10 @@ Also, find the new Start menu item `Ubuntu` to launch it.
  
 ### For SmartGit 22.1 and older:
 
-1. **SmartGit fails to install updates<br>**
+1. **SmartGit fails to install updates**<br>
    The workaround is to run SmartGit from terminal, not from Windows shortcut.
    After updates are installed, you can use shortcut again.
-2. **SmartGit windows do not have minimize/maximize buttons<br>**
+2. **SmartGit windows do not have minimize/maximize buttons**<br>
    This is due to how WSLg is configured by default. Run these commandline commands to fix for all apps:
    ```
    sudo systemd-machine-id-setup
