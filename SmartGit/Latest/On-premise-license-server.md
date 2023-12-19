@@ -115,6 +115,10 @@ If required, users can configure the license server on-the-fly during setup:
 
 If SmartGit has already been started in evaluation mode and you want to switch to the license server, invoke **Help\|Register** and follow the instructions from the above section.
 
+### Distribution of License Files
+
+Once the license server has been configured properly in SmartGit, SmartGit will request a new license file on every startup and at regular intervals during the program run. A license file is valid for 30 days. To ensure that there are no interruptions, it will be necessary to allow SmartGit to connect to the license server during the current license file's validity to update to a new license file.
+
 ## Reporting
 
 The license server provides a reporting endpoint which is meant to be used by administrators only. It is protected by HTTP basic authentication.
