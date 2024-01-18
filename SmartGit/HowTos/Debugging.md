@@ -8,10 +8,8 @@ Always try to investigate problems with a fresh SmartGit setup:
 -   on macOS and Linux, temporary use a new [smartgit.settings](../Latest/VM-options.md#location-of-the-settings-directory) directory
 
 #### Why?
-> SmartGit has plenty of **Preferences** options and even more **Low-Level
-> Properties** which may sometimes affect the behavior of operations in
-> non-obvious ways. This is especially true if the behavior you are
-> experiencing is unexpected and/or looks like a bug.
+> SmartGit has plenty of **Preferences** options and even more **Low-Level Properties** which may sometimes affect the behavior of operations in non-obvious ways.
+> This is especially true if the behavior you are experiencing is unexpected and/or looks like a bug.
 
 ### Clean Logs
 
@@ -28,11 +26,17 @@ Once SmartGit has been restarted, immediately proceed with reproducing the probl
 
 ### Send results
 
-When sending logs to us, make sure they are **compressed** either with *ZIP* or *7z*. This prevents the logs from becoming inlined into the email. Include the stripped down settings (see above), if the problem isn't reproducible with clean settings.
+When sending logs to us, make sure they are **compressed** either with *ZIP* or *7z*.
+This prevents the logs from becoming inlined into the email.
+Include the stripped down settings (see above), if the problem isn't reproducible with clean settings.
 
 ### Strip down settings
 
-If the problem is not reproducible with fresh settings, try to copy the settings from your main installation over to the new settings area. This should make the problem reproducible again. Now start to strip down the settings as much as necessary (e.g. to get rid of possibly sensitive information, especially the `passwords` file). Most crashes will be preserved as long as `preferences.yml` is left untouched. Once the settings are stripped down enough, compress them and include them with the logs (see below).
+If the problem is not reproducible with fresh settings, try to copy the settings from your main installation over to the new settings area.
+This should make the problem reproducible again.
+Now start to strip down the settings as much as necessary (e.g. to get rid of possibly sensitive information, especially the `passwords` file).
+Most crashes will be preserved as long as `preferences.yml` is left untouched.
+Once the settings are stripped down enough, compress them and include them with the logs (see below).
 
 ## Enabling debug logging for certain keys
 
