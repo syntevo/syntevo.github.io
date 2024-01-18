@@ -40,7 +40,7 @@ Once the settings are stripped down enough, compress them and include them with 
 
 ## Enabling debug logging for certain keys
 
-To enable debug logging for a certain key `log4j.foo.bar`, first decide the log-level – whether it should be fine (`DEBUG`) or as fine as possible `TRACE`.
+To enable debug logging for a certain key `logging.foo.bar`, first decide the log-level – whether it should be fine (`DEBUG`) or as fine as possible `TRACE`.
 Usually SmartGit support will tell you.
 After that add the corresponding line to `smartgit.properties` (in the Settings directory, see [Installation and Files](../Latest/Installation-and-Files.md)).
 Depending on the log-level this will be either:
@@ -48,14 +48,14 @@ Depending on the log-level this will be either:
 **DEBUG logging**
 
 ``` java
-log4j.foo.bar=DEBUG
+logging.foo.bar=DEBUG
 ```
 Or:
 
 **TRACE logging**
 
 ``` java
-log4j.foo.bar=TRACE
+logging.foo.bar=TRACE
 ```
 After that, restart SmartGit and repeat the operation for which debug logging should be collected and shutdown SmartGit again.
 

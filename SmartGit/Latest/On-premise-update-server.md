@@ -422,7 +422,7 @@ to `smartgit.properties` of your test installation:
 
 
 ``` java
-log4j.q.application.update=DEBUG
+logging.q.application.update=DEBUG
 ```
 
 

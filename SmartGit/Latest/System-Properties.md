@@ -134,15 +134,14 @@ To do so, set:
 
 ## Debug Properties
 
-### log4j.\[category\]
+### logging.\[category\]
 
-Use this property to enable debug logging for certain SmartGit modules;
-`[category]` has to be replaced by the appropriate module identifier.
+Use this property to enable debug logging for certain SmartGit modules; `[category]` has to be replaced by the appropriate module identifier.
 
 
 #### Example
 >To enable debug logging for the Refreshing modules, set following properties:
 > ``` text
-> log4j.smartgit.refresh=DEBUG
-> log4j.sc.vcs.model.refresh=DEBUG
+> logging.smartgit.refresh=DEBUG
+> logging.sc.vcs.model.refresh=DEBUG
 > ```
