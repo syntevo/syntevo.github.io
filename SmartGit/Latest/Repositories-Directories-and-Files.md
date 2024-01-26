@@ -22,8 +22,7 @@ the background turns to light-red as a reminder to not forget about
 them. If this annoys you because you permanently have untracked files in
 your working, you should consider to mark them as ignored. If this is no
 option for you, you can deactivate this coloring feature in the
-Preferences (page **User Interface**, option **Use background color for
-the file table to indicate certain states**).
+Preferences (page **Low-level Properties**, option **filteredTable.useBackgroundColor**).
 
 To filter by name, use the input field (or *\<Ctrl/Cmd>+\<F>*-keystroke)
 above the file table. The context menu allows to enable regular
