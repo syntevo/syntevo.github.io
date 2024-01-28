@@ -2,7 +2,15 @@
 
 For company-wide installations, the administrator may install SmartGit on a read-only location or network share or customize the installation process by e.g. using batch files.
 To set up a custom initial configuration for the users, certain settings files can be prepared and put into a directory named `default`.
-For MacOS this `default` directory must be located in `SmartGit.app/Contents/Resources/` (parallel to the `Java` directory), for other operating systems within SmartGit's installation directory (parallel to the `lib` and `bin` directories).
+For MacOS this `default` directory must be located in `SmartGit.app/Contents/Resources/` (parallel to the `Java` directory).
+For other operating systems, the `default` directory must be located within SmartGit's installation directory, and parallel to the `lib` and `bin` directories.
+For example, on a Linux system where the SmartGit installation directory is
+
+    /opt/smartgit/
+
+the canonical path to the `defaults` directory would be
+
+    /opt/smartgit/defaults/
 
 When a user starts SmartGit for the first time, the following files will be copied from the `default` directory (on the network share) to the user's personal SmartGit settings directory (refer to [Default Path of SmartGit's Settings Directory](Installation-and-Files.md#default-path-of-smartgits-settings-directory)):
 -   `smartgit.properties`
