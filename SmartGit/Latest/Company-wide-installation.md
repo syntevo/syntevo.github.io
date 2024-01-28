@@ -12,10 +12,10 @@ For other operating systems, the `default` directory must be located within Smar
 >/opt/smartgit/
 >```
 >
->the canonical path to the `defaults` directory would be
+>the canonical path to the `default` directory would be
 >
 >```
->/opt/smartgit/defaults/
+>/opt/smartgit/default/
 >```
 
 When a user starts SmartGit for the first time, the following files will be copied from the `default` directory (on the network share) to the user's personal SmartGit settings directory (refer to [Default Path of SmartGit's Settings Directory](Installation-and-Files.md#default-path-of-smartgits-settings-directory)):
