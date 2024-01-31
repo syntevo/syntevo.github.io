@@ -63,24 +63,55 @@ From an administrative perspective, it's recommended to configure all system pro
 > This way, when having a read-only installation of SmartGit you can configure SmartGit in a pretty safe way using `smartgit.vmoptions`.
 
 
-### Overriding Defaults
+### Overriding With Defaults
 
 By default, the files from the `default` directory will only be copied during the initial setup of the user's SmartGit installation.
-In certain scenarios, it may be desirable to replace a configuration even after SmartGit has been set up for a user.
-For example, the **Tools** may be managed by the administrator and updated from time to time.
-User should receive these updates regardless whether their SmartGit is already set up or not.
-In this case, you can use the [VM option](VM-options.md) `smartgit.startup.settingsToReplaceFromDefaults` to force overwriting (i.e. to reset) the specified files in the user's settings directory.
+In certain scenarios, it may be desirable to replace a configuration even after SmartGit has been set up and used by a user.
+In this case, you can use the [VM option](VM-options.md) `smartgit.startup.settingsToReplaceFromDefault` to overwrite or patch the specified files in the user's settings directory.
+The file names listed for this VM option must contain the target files (like `preferences.yml` or `tools.yml`). For each of these files, SmartGit will check the `default` directory:
 
+* for `.yml` files, if there exists a corresponding `.yml.patch` (for example `preferences.yml.patch`), the target file will be _patched_ with the contents of the default file
+* otherwise, if there exists a corresponding file (for example `preferences.yml`), the target file will be _replaced_
+
+#### Patching of YML files
+
+Patching of `.yml` files works according to the following rules:
+* new keys from the default-file will be added
+* existing keys will be replaced by the value from the default-file
+* keys prefixed by `-` in the default-file will be removed. You can combine `-` with new values to clear an entire section and then only re-add the specified defaults
+* For lists, the default items will be added first and user items are only kept if they are not equal to a default item. List items that should be removed, need to have a key-value pair of `__merge__: delete`.
 
 #### Example
->To reset `tools.yml` on every start, add following line to `smartgit.vmoptions`:
->```
->-Dsmartgit.startup.settingsToReplaceFromDefaults=tools.yml
->```
+> The **Tools** may be managed by the administrator and updated from time to time.
+> Users should receive these updates regardless whether their SmartGit is already set up or not.
+> To enfore a set of tools, prepare your `default/tools.yml` and add following line to `smartgit.vmoptions`:
+> ```
+> -Dsmartgit.startup.settingsToReplaceFromDefaults=tools.yml
+> ```
 
-You can modify the `.yml` file in the `default` directory to only those values that should be overridden or removed (the key needs to be prefixed with a leading minus sign).
-For lists the default items will be added first and user items are only kept if not equal to a default item.
-List items that should be removed, need to have a key-value paid of `__merge__: delete`.
+#### Example
+> To allow users to modify already pushed history and (re-)configure the Git executable path but otherwise keep their existing configuration intact, add following line to `smartgit.vmoptions`:
+> ```
+> -Dsmartgit.startup.settingsToReplaceFromDefaults=preferences.yml.patch
+> ```
+>
+> and prepare `default/preferences.yml.patch` with a content like:
+>
+> ```
+> actions:
+>   allowModificationOfPushedHistory: true
+> -git:
+>   executable: C:\Program Files\SmartGit\git\bin\git.exe
+>   executable.absolute: C:\Program Files\SmartGit\git\bin\git.exe
+> ```
+>
+> Note the `-` prefix for `git` which will ensure to clean up possible obsolete keys from older SmartGit versions and to result in a clean configuration like:
+>
+> ```
+> git:
+>   executable: C:\Program Files\SmartGit\git\bin\git.exe
+>   executable.absolute: C:\Program Files\SmartGit\git\bin\git.exe
+> ```
 
 ### Hide Preferences
 
