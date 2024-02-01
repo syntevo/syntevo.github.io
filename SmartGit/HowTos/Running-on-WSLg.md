@@ -144,8 +144,8 @@ Also, find the new Start menu item `Ubuntu` to launch it.
    if [ "$XDG_SESSION_TYPE" = "" ]; then
    ```
 
-### If you noticed anything else, please send us a mail to<br>
-   `smartgit@syntevo.com`
+### Other problems
+If you noticed anything else, please send us a mail to `smartgit@syntevo.com`.
 
 # Other WSLg issues
 
