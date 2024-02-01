@@ -149,14 +149,13 @@ If you noticed anything else, please send us a mail to `smartgit@syntevo.com`.
 
 # Other WSLg issues
 
-### VirtualBox has a lot of bugs when WSL is installed
+### VirtualBox
 
-Installing WSLg also installs `Windows Hyper-V`, which is required for `WSLg`
-to run. Unfortunately, having `Hyper-V` installed causes `VirtualBox` VMs to
-fail in various ways: they will crash, hang, etc.
+Installing WSLg also installs `Windows Hyper-V`, which is required for `WSLg` to run.
+Unfortunately, having `Hyper-V` installed might cause `VirtualBox` VMs to fail in various ways: they might crash, hang, etc.
 
-The workaround is to create an additional Windows boot configuration. This way,
-you can select either `Hyper-V` or no `Hyper-V` on every boot.
+The workaround is to create an additional Windows boot configuration.
+This way, you can select either `Hyper-V` or no `Hyper-V` on every boot.
 Run these commands on Windows administrator commandline:
 ```
 bcdedit /copy {current} /d "Win11 + Hyper-V"
