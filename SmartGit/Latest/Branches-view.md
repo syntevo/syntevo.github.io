@@ -26,6 +26,5 @@ That is useful to, e.g., access a previous commit after amending a commit, or af
 
 The **Tags**-part of the **Branches** view will be grouped according to
 a *tag-grouping configuration*. This configuration is stored in your
-repository's `.git/config` and can be edited in the Log using
-**View\|Tag-Grouping**. To disable this grouping feature for the current
-repository, set both **Pattern** fields empty.
+repository's `.git/config` and can be edited in **Repository\|Settings**, section **Tag-Grouping**.
+To disable this grouping feature for the current repository, set both **Pattern** fields empty.
