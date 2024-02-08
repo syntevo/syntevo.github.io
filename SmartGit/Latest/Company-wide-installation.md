@@ -92,7 +92,7 @@ Patching of `.yml` files works according to the following rules:
 #### Example
 > To allow users to modify already pushed history and (re-)configure the Git executable path but otherwise keep their existing configuration intact, add following line to `smartgit.vmoptions`:
 > ```
-> -Dsmartgit.startup.settingsToReplaceFromDefaults=preferences.yml.patch
+> -Dsmartgit.startup.settingsToReplaceFromDefaults=preferences.yml
 > ```
 >
 > and prepare `default/preferences.yml.patch` with a content like:
