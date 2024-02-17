@@ -11,8 +11,13 @@ Be sure to also **Grant Access** to all of your organizations, otherwise the cor
 
 ![](attachments/53215440/53215447.png)
 
-Once you have confirmed this page, you will be redirected to a specific port on `localhost`, where SmartGit is waiting to intercept a one-time authorization code.
+Once you have confirmed this page, you will be redirected to a specific port on `127.0.0.1`, where SmartGit is waiting to intercept a one-time authorization code.
 The code will be used to create an *application access token* which will be used to populate the **Token** field.
+
+#### Note
+> If this redirection does not work, this may be caused by your browser's HSTS configuration.
+> To resolve this problem, remove any entries for `127.0.0.1` and try again.
+> For more details on how to do that for various browser, refer to [this blog posting](https://weblog.west-wind.com/posts/2022/Oct/24/Fix-automatic-rerouting-of-http-to-https-on-localhost-in-Web-Browsers).
 
 By default, **Use OAuth token for repository authentication** will be selected.
 This will return the generated OAuth-token when Git asks for credentials (username + password) when connecting to your GitHub repository.
