@@ -62,4 +62,4 @@
 -   [Tips and Tricks](Tips-and-Tricks.md)
 -   [Commercial-only features](Commercial-only-features.md)
 -   [Hobby-Use License](Hobby-Use-License.md)
-
+-   [How Tos](../HowTos/index.md)
