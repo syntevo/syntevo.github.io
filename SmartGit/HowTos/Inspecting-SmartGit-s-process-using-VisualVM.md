@@ -4,12 +4,12 @@
 This document is written for running VisualVM on Windows.
 For Linux and macOS, paths have to be adjusted accordingly.
 
--   Download *JDK 17 (LTS)*, e.g. from [azul.com](https://www.azul.com/downloads/?package=jdk) (unless you already have a JDK 17 installed) and uncompress to e.g. `C:/temp/jdk`.
+-   Download *JDK 17 (LTS)*, e.g. from [azul.com](https://www.azul.com/downloads/?package=jdk) (unless you already have a JDK 17 installed) and uncompress to e.g. `C:\jdk`.
 
 	#### Warning
 	> Be sure to select the correct platform, architecture (x86/x64 for Windows) and bundle: *.zip* for Windows, *.tar.gz* for Linux and *.deb* for macOS.
 
--   Download VisualVM from [visualvm.github.io](https://visualvm.github.io/download.html) and uncompress to e.g. `C:/temp/visualvm`
+-   Download VisualVM from [visualvm.github.io](https://visualvm.github.io/download.html) and uncompress to e.g. `C:\visualvm`
 
 -   Configure SmartGit to collect performance data (required since version 23.1):
     -  open bin/smartgit.vmoptions and append:
@@ -19,8 +19,8 @@ For Linux and macOS, paths have to be adjusted accordingly.
 
 -   Run VisualVM:
     -  open a terminal
-    -  `cd` to `C:/temp/visualvm/bin`
-    -  start `visualvm --jdkhome c:\temp\jdk`
+    -  `cd` to `C:\visualvm\bin`
+    -  start `visualvm --jdkhome C:\jdk`
 
 -   Once VisualVM has started up, locate the *SmartGit*-related VMs: there will be one *main* VM, if SmartGit is running (on Windows showing up as `SmartGit`, on Mac/Linux showing up as `QBootLoader`).
     If a SmartGit upgrade is in progress, there will be an additional VM (on Windows showing up as `SmartGitUpdater`).
