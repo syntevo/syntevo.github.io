@@ -7,7 +7,7 @@ For Linux and macOS, paths have to be adjusted accordingly.
 -   Download *JDK 17 (LTS)*, e.g. from [azul.com](https://www.azul.com/downloads/?package=jdk) (unless you already have a JDK 17 installed) and uncompress to e.g. `C:\jdk`.
 
 	#### Warning
-	> Be sure to select the correct platform, architecture (x86/x64 for Windows) and bundle: *.zip* for Windows, *.tar.gz* for Linux and *.deb* for macOS.
+	> Be sure to select the correct platform, architecture (x86/x64 for Windows) and bundle: *.zip* for Windows, *.tar.gz* for Linux and *.dmg* for macOS.
 
 -   Download VisualVM from [visualvm.github.io](https://visualvm.github.io/download.html) and uncompress to e.g. `C:\visualvm`
 
