@@ -24,7 +24,7 @@
     -   [Debugging SSL-related problems](Debugging-SSL-related-problems.md)
     -   [Environmental differences between SmartGit and command line Git](Environmental-differences-between-SmartGit-and-command-line-Git.md)
     -   [Finding bugs with Application Verifier](Finding-bugs-with-Application-Verifier.md)
-    -   [Inspecting SmartGit's process using JVisualVM](Inspecting-SmartGit-s-process-using-JVisualVM.md)
+    -   [Inspecting SmartGit's process using VisualVM](Inspecting-SmartGit-s-process-using-VisualVM.md)
     -   [Obfuscating a repository to report a problem](Obfuscating-a-repository-to-report-a-problem.md)
     -   [Running Java snippets](Running-Java-snippets.md)
     -   [Tracing the modified state of a file](Tracing-the-modified-state-of-a-file.md)
