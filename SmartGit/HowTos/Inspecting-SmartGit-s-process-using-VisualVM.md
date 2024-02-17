@@ -17,6 +17,9 @@ For Linux and macOS, paths have to be adjusted accordingly.
     -XX:+UsePerfData
     ```
 
+    #### Warning
+    > Without this step, SmartGit will not occur in the list of local applications in VisualVM.
+
 -   Run VisualVM:
     -  open a terminal
     -  `cd` to `C:\visualvm\bin`
