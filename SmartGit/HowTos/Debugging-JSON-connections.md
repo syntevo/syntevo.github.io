@@ -58,7 +58,7 @@ debug log sent and received JSON objects. To do so:
     -   copy over `logs/log.txt*` from the Settings directory to the temporary debug output directory
     -   compress all files into a single archive using either ZIP, 7z or TAR-GZ
 
-# Replicating problems with curl from command line: example "Debug why Create GitHub Pull Request fails" {:#curl}
+## Replicating problems with curl from command line: example "Debug why Create GitHub Pull Request fails"
 
 1.  On the GitHub website, go to your account **Settings**, **Developer
     settings**, **Personal access tokens** and create a personal access
@@ -110,7 +110,7 @@ debug log sent and received JSON objects. To do so:
 
 10. Check `out.log` and `err.log` to see the results.
 
-# GitHub: replicating problems with the GraphQL explorer {:#graphql}
+## GitHub: replicating problems with the GraphQL explorer
 
 SmartGit (since version 22.1) is using GitHub's GraphQL API to access metadata from GitHub. The JSON `out`-file (see above) will contain the sent GraphQL query. For example:
 
