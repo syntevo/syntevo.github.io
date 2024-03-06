@@ -135,28 +135,39 @@ smartgit.opLicenseServer.url=http://localhost:8080/v1?verify=ldap
 
 You can configure the on-premise server LDAP functionality using environment variables that you set for your container:
 
-* `LDAPACTIVE=true` to enable LDAP query functionality
-* `LDAPQUERY='(&(objectClass=person)(uid={0}))'` to supply an LDAP query with which to query your LDAP. {0} is replaced with the username sent by the client
-* `SPRING_LDAP_URLS=ldap://ldap1:389,ldap://ldap2:389` to set the hostnames you want to connect to; if multiple LDAP servers are available, you can set them comma-separated
-* `SPRING_LDAP_USERNAME='uid=admin'` to set the username which the license server will use to connect to LDAP
-* `SPRING_LDAP_PASSWORD=secret` to set the password (you are advised to use Docker/Kubernetes secrets for this)
-* `SPRING_LDAP_BASE='dc=syntevo,dc=com'` to set the root node to start the search in. We'll always do a subtree search.
+* `LDAPACTIVE=true`: to enable LDAP query functionality
+* `LDAPQUERY`: the LDAP query with which to query your LDAP; you can use `{0}` as part of this query which will by replaced with the username sent by the client
+* `SPRING_LDAP_URLS`: the hostname(s) you want to connect to; if multiple LDAP servers are available, you can set them comma-separated
+* `SPRING_LDAP_USERNAME`: the username which the license server will use to connect to LDAP
+* `SPRING_LDAP_PASSWORD`: the password (you are advised to use Docker/Kubernetes secrets for this)
+* `SPRING_LDAP_BASE`: root node to start the search in; we'll always do a subtree search
 
-You will need to adjust `LDAPQUERY` according to your directory structure. For example, this is a query you could use with an active directory:
+#### Example
+> A Linux/MacOS example for starting the on-premise license server which queries the Active Directory:
+>```
+>docker run --restart unless-stopped --name syntevo-license-server -d -v /var/syntevo-license-server/data:/data -v /var/syntevo-license-server/licenses:/licenses -p 8080:8080 -e LDAPACTIVE=true -e LDAPQUERY='(&(objectClass=user)(userPrincipalName={0}))' -e SPRING_LDAP_URLS=ldap://ad.syntevo.com -e SPRING_LDAP_USERNAME='uid=admin' -e SPRING_LDAP_PASSWORD=secret -e SPRING_LDAP_BASE='dc=syntevo,dc=com' ghcr.io/syntevo/license-opserver:latest
+>```
+>
+> Notes:
+> * Some parameters are enclosed by single-quotes (`'`). On Windows, you will have to use double-quotes (`"`).
+> * The Active Directory server is located at `ldap://ad.syntevo.com` and runs on the default port.
 
-```
-(&(objectClass=user)(userPrincipalName={0}))
-```
+#### Example
+> A Windows example for connecting to a local LDAP server (e.g. for testing):
+> ```
+> docker run --rm --network syntevo-op-server --name syntevo-license-server -v D:\license-server\.op\data:/data -v D:\license-server\.op\licenses:/licenses -p 8080:8080 -e LDAPACTIVE=true -e LDAPQUERY="(&(objectClass=person)(uid={0}))" -e SPRING_LDAP_URLS="ldap://syntevo-license-ldap-server:8389" -e SPRING_LDAP_USERNAME="uid=admin" -e SPRING_LDAP_PASSWORD=secret -e SPRING_LDAP_BASE="dc=springframework,dc=org" ghcr.io/syntevo/license-opserver:latest
+> ```
+>
+> Notes:
+> * We are using double-quotes (`"`). On Windows, you will have to use single-quotes (`'`). 
+> * We are assuming that `D:\license-server\.op` contains both `data` and `licenses`.
+> * Both, the local LDAP server and the on-premise license server run on the same Docker network `syntevo-op-server`.
+> * The image of the LDAP server is `syntevo-license-ldap-server` which results in URL `ldap://syntevo-license-ldap-server:8389`; it serves `dc=springframework,dc=org`.
+> * We are using `--rm` to re-create the container from scratch with every invocation.
 
 We use Spring Boot (currently at version 2.7) with its built-in LDAP functionality. Please refer to the [Spring Boot documentation](https://docs.spring.io/spring-boot/docs/2.7.18/reference/html/application-properties.html#appendix.application-properties) to find additional LDAP properties that the framework supports.
 
 In case you need to connect to your LDAP using SSL, you need to set up keystore and truststore in the container using [standard JVM properties](https://docs.oracle.com/en/java/javase/11/security/java-secure-socket-extension-jsse-reference-guide.html#GUID-460C3E5A-A373-4742-9E84-EB42A7A3C363). This requires modifying the container startup arguments, so it is a more advanced use case. Please get in touch with us should you have this requirement.
-
-A full sample for starting the on-premise license server with LDAP support is this:
-
-```
-   docker run --restart unless-stopped --name syntevo-license-server -d -v /var/syntevo-license-server/data:/data -v /var/syntevo-license-server/licenses:/licenses -p 8080:8080 -e LDAPACTIVE=true -e LDAPQUERY='(&(objectClass=person)(uid={0}))' -e SPRING_LDAP_URLS=ldap://syntevo-license-ldap-server:8389 -e SPRING_LDAP_USERNAME='uid=admin' -e SPRING_LDAP_PASSWORD=secret -e SPRING_LDAP_BASE='dc=syntevo,dc=com'  ghcr.io/syntevo/license-opserver:latest
-```
 
 ## Reporting
 
