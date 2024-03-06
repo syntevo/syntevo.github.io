@@ -119,6 +119,59 @@ If SmartGit has already been started in evaluation mode and you want to switch t
 
 Once the license server has been configured properly in SmartGit, SmartGit will request a new license file on every startup and at regular intervals during the program run. A license file is valid for 30 days. To ensure that there are no interruptions, it will be necessary to allow SmartGit to connect to the license server during the current license file's validity to update to a new license file.
 
+## Checking user permissions against LDAP/Active Directory
+
+You can configure the on-premise license server to check authorization to use SmartGit against an LDAP/Active Directory. **Be advised that this is not an authentication!** SmartGit just reads the name of the currently logged-in user from the system environment and transmits this to the server as a string, without any password checks involved:
+
+* On Windows, this is `USERNAME`
+* On MacOS/Linux, this is `USER`
+
+### Configure SmartGit
+
+Configure SmartGit to read the logged-in user on the client and send it to the license server. For this, just append `?verify=ldap` to the property `smartgit.opLicenseServer.url`, e.g.:
+
+```
+smartgit.opLicenseServer.url=http://localhost:8080/v1?verify=ldap
+```
+
+### Configure License Server
+
+You can configure the on-premise server LDAP functionality using environment variables that you set for your container:
+
+* `LDAPACTIVE=true`: to enable LDAP query functionality
+* `LDAPQUERY`: the LDAP query with which to query your LDAP; you can use `{0}` as part of this query which will by replaced with the username sent by the client
+* `SPRING_LDAP_URLS`: the hostname(s) you want to connect to; if multiple LDAP servers are available, you can set them comma-separated
+* `SPRING_LDAP_USERNAME`: the username which the license server will use to connect to LDAP
+* `SPRING_LDAP_PASSWORD`: the password (you are advised to use Docker/Kubernetes secrets for this)
+* `SPRING_LDAP_BASE`: root node to start the search in; we'll always do a subtree search
+
+#### Example
+> A Linux/MacOS example for starting the on-premise license server which queries the Active Directory:
+>```
+>docker run --restart unless-stopped --name syntevo-license-server -d -v /var/syntevo-license-server/data:/data -v /var/syntevo-license-server/licenses:/licenses -p 8080:8080 -e LDAPACTIVE=true -e LDAPQUERY='(&(objectClass=user)(userPrincipalName={0}))' -e SPRING_LDAP_URLS=ldap://ad.syntevo.com -e SPRING_LDAP_USERNAME='uid=admin' -e SPRING_LDAP_PASSWORD=secret -e SPRING_LDAP_BASE='dc=syntevo,dc=com' ghcr.io/syntevo/license-opserver:latest
+>```
+>
+> Notes:
+> * Some parameters are enclosed by single-quotes (`'`). On Windows, you will have to use double-quotes (`"`).
+> * The Active Directory server is located at `ldap://ad.syntevo.com` and runs on the default port.
+
+#### Example
+> A Windows example for connecting to a local LDAP server (e.g. for testing):
+> ```
+> docker run --rm --network syntevo-op-server --name syntevo-license-server -v D:\license-server\.op\data:/data -v D:\license-server\.op\licenses:/licenses -p 8080:8080 -e LDAPACTIVE=true -e LDAPQUERY="(&(objectClass=person)(uid={0}))" -e SPRING_LDAP_URLS="ldap://syntevo-license-ldap-server:8389" -e SPRING_LDAP_USERNAME="uid=admin" -e SPRING_LDAP_PASSWORD=secret -e SPRING_LDAP_BASE="dc=springframework,dc=org" ghcr.io/syntevo/license-opserver:latest
+> ```
+>
+> Notes:
+> * We are using double-quotes (`"`). On Windows, you will have to use single-quotes (`'`). 
+> * We are assuming that `D:\license-server\.op` contains both `data` and `licenses`.
+> * Both, the local LDAP server and the on-premise license server run on the same Docker network `syntevo-op-server`.
+> * The image of the LDAP server is `syntevo-license-ldap-server` which results in URL `ldap://syntevo-license-ldap-server:8389`; it serves `dc=springframework,dc=org`.
+> * We are using `--rm` to re-create the container from scratch with every invocation.
+
+We use Spring Boot (currently at version 2.7) with its built-in LDAP functionality. Please refer to the [Spring Boot documentation](https://docs.spring.io/spring-boot/docs/2.7.18/reference/html/application-properties.html#appendix.application-properties) to find additional LDAP properties that the framework supports.
+
+In case you need to connect to your LDAP using SSL, you need to set up keystore and truststore in the container using [standard JVM properties](https://docs.oracle.com/en/java/javase/11/security/java-secure-socket-extension-jsse-reference-guide.html#GUID-460C3E5A-A373-4742-9E84-EB42A7A3C363). This requires modifying the container startup arguments, so it is a more advanced use case. Please get in touch with us should you have this requirement.
+
 ## Reporting
 
 The license server provides a reporting endpoint which is meant to be used by administrators only. It is protected by HTTP basic authentication.
