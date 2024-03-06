@@ -121,7 +121,10 @@ Once the license server has been configured properly in SmartGit, SmartGit will 
 
 ## Checking user permissions against LDAP/Active Directory
 
-You can configure the on-premise license server to check authorization to use SmartGit against an LDAP/Active Directory. **Be advised that this is not an authentication!** SmartGit just reads the name of the currently logged-in user from the system environment and transmits this to the server as a string, without any password checks involved.
+You can configure the on-premise license server to check authorization to use SmartGit against an LDAP/Active Directory. **Be advised that this is not an authentication!** SmartGit just reads the name of the currently logged-in user from the system environment and transmits this to the server as a string, without any password checks involved:
+
+* On Windows, this is `USERNAME`
+* On MacOS/Linux, this is `USER`
 
 ### Configure SmartGit
 
