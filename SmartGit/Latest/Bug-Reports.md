@@ -6,7 +6,7 @@ In case of a crash, SmartGit offers to send a detailed bug report
 directly to syntevo.com. If you prefer to have a look at the file first,
 you may locate the given ZIP file in the file system, inspect its
 contents, remove possibly sensitive data and finally send the file by
-email to support@syntevo.com.
+email to redacted@syntevo.com.
 
 ## Crash Footprints
 
