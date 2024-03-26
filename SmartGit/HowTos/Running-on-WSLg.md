@@ -107,31 +107,38 @@ Also, find the new Start menu item `Ubuntu` to launch it.
 1. **On some machines, SmartGit could fail to check for updates**<br>
    Only happens on some machines. Disabling Windows Firewall seems to help. 
    More information is needed.
-2. **SmartGit doesn't show "resize" cursor when trying to resize panes**<br>
+1. **SmartGit UI uses too small font with 150% Windows zoom level<br>**
+   You can workaround this problem by removing the leading `#` from the next line from `smartgit.sh`:
+   ```
+   #export GDK_DPI_SCALE=1.5
+   ```
+
+1. **SmartGit doesn't show "resize" cursor when trying to resize panes**<br>
    This is because in WSL, cursors are not installed by default. Fix it with:
    ```
    sudo apt install adwaita-icon-theme-full
    ```
- 
+
 ### For SmartGit 22.1 and older:
 
 1. **SmartGit fails to install updates**<br>
    The workaround is to run SmartGit from terminal, not from Windows shortcut.
    After updates are installed, you can use shortcut again.
-2. **SmartGit windows do not have minimize/maximize buttons**<br>
-   This is due to how WSLg is configured by default. Run these commandline commands to fix for all apps:
+1. **SmartGit windows do not have minimize/maximize buttons**<br>
+   This is due to how WSLg is configured by default.
+   Run these commandline commands to fix for all apps:
    ```
    sudo systemd-machine-id-setup
    gsettings set org.gnome.desktop.wm.preferences button-layout "menu:minimize,maximize,close"
    ```
-3. **SmartGit UI layout is wrong with Windows DPI >= 200%<br>**
+1. **SmartGit UI layout is wrong with >= 200% Windows zoom level<br>**
    This problem is resolved in SmartGit 23.1 [preview](https://www.syntevo.com/smartgit/preview/)<br>
    In older versions, you can work around it by adding this line in `~/.config/smartgit/smartgit.vmoptions`:
    ```
    -Dswt.autoScale=100
    ```
-   Windows DPI is configured at `Windows > Settings > System > Display > Scale`.
-4. **Fractional scaling might cause crashes on startup**<br>
+   Windows zoom level is configured at `Windows > Settings > System > Display > Scale`.
+1. **Fractional scaling might cause crashes on startup**<br>
    In the `smartgit.sh` you will find these lines:
    ```
    if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
