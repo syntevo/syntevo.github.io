@@ -2,11 +2,11 @@
 
 There exist two types of commercial licenses:
 - subscription licenses and
-- single payment (perpetual) licenses.
+- perpetual (single payment) licenses.
 
-| |Subscription license | Single payment (perpetual) license|
+| |Subscription license | Perpetual (single payment) license|
 |-|:--------------------|:----------------------------------|
-|Quotes              | not offered                                                  | you can [request quotes](https://www.syntevo.com/smartgit/purchase/#single-payment)|
+|Quotes              | not offered                                                  | you can [request quotes](https://www.syntevo.com/smartgit/purchase/#perpetual)|
 |Payment methods     | requires automatic payment methods, e.g. credit card, paypal | all supported payment types, e.g. wire transfer or purchase order |
 |Validity            | during the paid period                                       | perpetual |
 |...after paid period| SmartGit stops working, if renewal fails or has been cancelled | can be used continuesly |
@@ -45,7 +45,7 @@ If you want to decrease the number of subscription licenses, please contact our 
 The reduced user count will apply for the next renewal.
 
 
-## Single-payment (perpetual) licenses
+## Perpetual (single-payment) licenses
 You can purchase 1, 2 or 3 years of updates.
 This means you can use any SmartGit version which we release until the end of your ordered update period, as long as you like (even after the update period ended) on the operating system versions supported by these SmartGit versions.
 After the update period you can [purchase upgrade licenses](https://www.syntevo.com/smartgit/purchase/#upgrade) for a reduced price by uploading your existing (newest) license file.
