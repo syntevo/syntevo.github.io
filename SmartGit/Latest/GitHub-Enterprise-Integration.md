@@ -2,17 +2,9 @@
 
 Authenticating to a GitHub Enterprise instance is slightly different
 than to *github.com* due to the nature of *OAuth*. Basically you have
-two options:
-
--   using **Personal Access Tokens**: this approach can be performed by
-    an individual user without needing administrative rights for the
-    GitHub Enterprise instance. It's recommended if only a small number
-    of your GitHub Enterprise users are using SmartGit
--   configuring a **Developer Application**: this approach requires
-    administrative rights for the GitHub Enterprise instance and changes
-    to the [SmartGit System Properties](System-Properties.md) (which can be
-    done on an administrative level for all users, too). It's
-    recommended if you have a large number of SmartGit users.
+to use **Personal Access Tokens** there. This approach can be performed by
+an individual user without needing administrative rights for the
+GitHub Enterprise instance.
 
 # Personal Access Token
 
