@@ -10,7 +10,7 @@ This document describes how to set up the *On-premise License Server* in a plain
 
 ## Server-side installation
 
-1. Contact sales@syntevo.com and provide a short explanation of your environment and SmartGit setup to understand whether an on-premise license server will be appropriate for your company.
+1. Contact <sales@syntevo.com> and provide a short explanation of your environment and SmartGit setup to understand whether an on-premise license server will be appropriate for your company.
 
 1. If appropriate, you will receive a new *on-premise license file*
 
@@ -18,7 +18,7 @@ This document describes how to set up the *On-premise License Server* in a plain
 
 1. Create a GitHub Personal Access Token to log in with Docker:
 
-   1. Go to https://github.com/settings/tokens
+   1. Go to <https://github.com/settings/tokens>
 
    1. Click on **Generate Token** and select **Generate new token (classic)**
 
@@ -60,7 +60,7 @@ This document describes how to set up the *On-premise License Server* in a plain
    docker run --restart unless-stopped --name syntevo-license-server -d -v /var/syntevo-license-server/data:/data -v /var/syntevo-license-server/licenses:/licenses -p 8080:8080 ghcr.io/syntevo/license-opserver:latest
    ```
    
-   If you don't want to use the random password created on each startup we recommend setting a password with the docker run.
+   If you don't want to use the random password created on each startup we recommend setting a password with the docker run command, see the example below:
 
    ```
    docker run -e 'ADMIN_PASSWORD=admin' --restart unless-stopped --name syntevo-license-server -d -v /var/syntevo-license-server/data:/data -v /var/syntevo-license-server/licenses:/licenses -p 8080:8080 ghcr.io/syntevo/license-opserver:latest
