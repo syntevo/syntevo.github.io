@@ -71,7 +71,7 @@ This document describes how to set up the *On-premise License Server* in a plain
    ```
    docker ps | grep syntevo-license-server
    ```
-2. You can also access the license server with your webbrowser - for the above docker run command the url would be [http://&lt;dockerhost&gt;:8080/](http://<dockerhost>:8080/) User: admin Pwd: either set with docker run or the random password from the docker logs
+2. You can also access the license server with your webbrowser - for the above docker run command the url would be [http://&lt;dockerhost&gt;:8080/](http://<dockerhost>:8080/) User: admin Pwd: either set with docker run or the random password from the docker logs - See [Reporting](#reporting)
    
 
 ### Logs
