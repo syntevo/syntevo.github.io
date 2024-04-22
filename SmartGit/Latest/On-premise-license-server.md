@@ -5,11 +5,12 @@ This will be especially important if the SmartGit installations of your users ar
 
 ## Requirements
 
-To run our on-premise server, only Docker is required. This document describes how to set up the *On-premise License Server* in a plain docker environment. If you need to run the server in a more sophisticated environment, like in Kubernetes, please contact our support. Please also note, by default the *On-premise License Server* uses an embedded database that will store data in a volume. Running multiple instances of the *On-premise License Server* in a Kubernetes environment is not supported.
+To run our on-premise server, only Docker on a Linux host is required. Testing on Docker Desktop on Windows is possible, but not recommended for production environments. 
+This document describes how to set up the *On-premise License Server* in a plain docker environment. If you need to run the server in a more sophisticated environment, like in Kubernetes, please contact our support. Please also note, by default the *On-premise License Server* uses an embedded database that will store data in a volume. Running multiple instances of the *On-premise License Server* in a Kubernetes environment is not supported.
 
 ## Server-side installation
 
-1. Contact sales@syntevo.com and provide a short explanation of your environment and SmartGit setup to understand whether an on-premise license server will be appropriate for your company.
+1. Contact <sales@syntevo.com> and provide a short explanation of your environment and SmartGit setup to understand whether an on-premise license server will be appropriate for your company.
 
 1. If appropriate, you will receive a new *on-premise license file*
 
@@ -17,7 +18,7 @@ To run our on-premise server, only Docker is required. This document describes h
 
 1. Create a GitHub Personal Access Token to log in with Docker:
 
-   1. Go to https://github.com/settings/tokens
+   1. Go to <https://github.com/settings/tokens>
 
    1. Click on **Generate Token** and select **Generate new token (classic)**
 
@@ -40,6 +41,8 @@ To run our on-premise server, only Docker is required. This document describes h
 1. Prepare host directories for the Docker volumes
 
    1. On the target server where the Docker image will be run, create a top-level directory `<license-server-root>` which will contain the persistent data of the license server, for example, `/var/syntevo-license-server`.
+   
+   1. In this directory, create a sub-directory named `data`.
 
    1. In this directory, create a sub-directory named `licenses`.
 
@@ -56,12 +59,20 @@ To run our on-premise server, only Docker is required. This document describes h
    ```
    docker run --restart unless-stopped --name syntevo-license-server -d -v /var/syntevo-license-server/data:/data -v /var/syntevo-license-server/licenses:/licenses -p 8080:8080 ghcr.io/syntevo/license-opserver:latest
    ```
+   
+   If you don't want to use the random password created on each startup we recommend setting a password with the docker run command, see the example below:
+
+   ```
+   docker run -e 'ADMIN_PASSWORD=admin' --restart unless-stopped --name syntevo-license-server -d -v /var/syntevo-license-server/data:/data -v /var/syntevo-license-server/licenses:/licenses -p 8080:8080 ghcr.io/syntevo/license-opserver:latest
+   ```
 
 1. Confirm that the license server has been properly started:
 
    ```
    docker ps | grep syntevo-license-server
    ```
+2. You can also access the license server with your webbrowser - for the above docker run command the url would be [http://&lt;dockerhost&gt;:8080/](http://<dockerhost>:8080/) User: admin Pwd: either set with docker run or the random password from the docker logs - See [Reporting](#reporting)
+   
 
 ### Logs
 
