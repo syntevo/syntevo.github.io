@@ -144,6 +144,23 @@ If so, try to reconfigure:
 git config --global credential.github.com.useHttpPath true
 ```
 
+### Authentication fails with 403: 'Although you appear to have the correct authorization credentials...'
+
+Up to (including) version 23.1, specific organization configurations may result in authorization problems like:
+
+```
+Although you appear to have the correct authorization credentials, the ... organization has enabled OAuth App access restrictions, meaning that data access to third-parties is limited. For more information on these restrictions, including how to enable this app, visit https://docs.github.com/articles/restricting-access-to-your-organization-s-data/
+```
+
+This problem is caused by:
+* being a *public* member of a GitHub organization
+* which has OAuth access restrictions configured (at least for SmartGit)
+
+It may be resolved in two ways:
+* go to SmartGit **Preferences**, **Low-Level Properties** and set `json.graphQL.ignoreErrorsIfDataIsPresent` and `json.graphQL.ignoreNullArrayElements` to `true`; or
+* ask your organization Administrator to change your membership (at https://github.com/orgs/<org>/people) from **Public** to **Private**.
+
+
 ### Private repositories do not show up/403 when trying to access an organization repository
 
 If you are authenticating using *OAuth* and you can't see private repositories of your GitHub *organization* or pushing to your organization's repositories fails with HTTP error code *403*, make sure that your organization allows **Third-party access** and SmartGit is **Approved**.
