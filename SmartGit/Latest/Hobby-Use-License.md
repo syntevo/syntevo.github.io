@@ -10,6 +10,9 @@ If there is only a single author and committer in the repository (both, names *a
 > To see all authors of your repository, you may invoke `git shortlog -sne`.
 
 #### Note
+> Authors registered in the _reflog_ considered, too. Hence, in case of problems, try to run `git gc`.
+
+#### Note
 > If your repository contains more authors than tolerated *by accident* (e.g. if you have changed your name or email too often), you may consider to convert the repository to a single author using SmartGit's command line option `--convert-repository-to-single-user`. **Use with care! This will rewrite your entire repository.**
 
 ## Public repositories
