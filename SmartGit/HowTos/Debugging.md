@@ -16,7 +16,7 @@ Always try to investigate problems with a fresh SmartGit setup:
 ### Clean Logs
 
 #### Note
-> When starting with fresh settings as expained above, this implies clean logs and you won't have to run through the following instructions when investigating a problem for the first time.
+> When starting with fresh settings as explained above, this implies clean logs and you won't have to run through the following instructions when investigating a problem for the first time.
 > Also, the Settings Path will match your `smartgit.settings` from above.
 
 Before investigating a problem, restart SmartGit with clean logs:
