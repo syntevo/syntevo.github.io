@@ -12,3 +12,4 @@
 -   [Silent Installation](Silent-Installation.md)
 -   [SSH](SSH.md)
 -   [Debugging](Debugging.md)
+-   [Fix Problems with Rocky Linux](Rocky-Linux.md)
