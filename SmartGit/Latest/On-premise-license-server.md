@@ -185,19 +185,12 @@ The license server provides a reporting endpoint which is meant to be used by ad
 1. Invoke the `reportOp` endpoint:
 
    ```
-   curl -u admin:<password> <license-server-url>/v1/reportOp?type=<type>[&from=<from>][&to=<to>]
+   curl -u admin:<password> <license-server-url>/v1/reportOp?type=<type>
    ```
 
    1. `<password>` needs to be replaced by the current password.
    1. `<license-server-url>` needs to be replaced by the root URL of your on-premise license server.
-   1. `<type>` specifies the report type. Currently, only `raw` is supported.
-   1. `<from>` and `<to>` specify the time range for the `raw` report.
-
-   Example:
-
-   ```
-   curl -u admin:ebc89b1511c6eaf29921d7f9219b608e383384df3ac161287d80c39911e10eb4 "https://syntevo.com/license-server/v1/reportOp?type=raw&from=2000-01-01&to=2030-12-31"
-   ```
+   1. `<type>` specifies the report type: `raw`, `user` or `masterLicense`
 
 #### Note
 > You can specify a custom admin password, by adding the Docker environment variable `-e ADMIN_PASSWORD=<password>`, for example:
@@ -205,6 +198,37 @@ The license server provides a reporting endpoint which is meant to be used by ad
 > ```
 > docker run -e ADMINPASSWORD=mysecretpassword --restart unless-stopped --name syntevo-license-server -d -v /var/syntevo-license-server/data:/data -v /var/syntevo-license-server/licenses:/licenses -p 8080:8080 ghcr.io/syntevo/license-opserver:latest
 > ```
+
+### Raw Usage Data
+
+The report type `raw` provides detailed, low-level usage information and has the following format:
+
+```
+curl -u admin:<password> <license-server-url>/v1/reportOp?type=raw[&from=<from>&to=<to>]
+```
+
+Optional parameters `<from>` and `<to>` specify the time range for the `raw` report. If either `<from>` or `<to>` is present, the other must also be included.
+
+#### Example
+> ```
+> curl -u admin:ebc89b1511c6eaf29921d7f9219b608e383384df3ac161287d80c39911e10eb4 "https://syntevo.com/license-server/v1/reportOp?type=raw&from=2000-01-01&to=2030-12-31"
+> ```
+
+### User Data
+
+The report type `user` provides a high-level summary of usage, with data aggregated per user:
+
+```
+curl -u admin:<password> <license-server-url>/v1/reportOp?type=user
+```
+
+### Master License
+
+The report type `masterLicense` provides an executive summary, with data aggregated per master license:
+
+```
+curl -u admin:<password> <license-server-url>/v1/reportOp?type=masterLicense
+```
 
 ## Debugging
 
