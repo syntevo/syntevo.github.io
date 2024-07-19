@@ -4,7 +4,7 @@ Certain configuration of SmartGit has to be done by *VM options*, in files calle
 Usually you will want to specify VM options just for your account (current user):
 
 -   **Windows:** `%APPDATA%\syntevo\SmartGit\smartgit.vmoptions` (`%APPDATA%` is the path defined in the environment variable `APPDATA`)
--   **Linux:** `~/.smartgit/smartgit.vmoptions`
+-   **Linux:** `~/.config/smartgit/smartgit.vmoptions`
 -   **MacOS:** `~/Library/Preferences/SmartGit/smartgit.vmoptions`
 
 Alternatively (but **not recommended**), VM options can also be specified system-wide in following files:
