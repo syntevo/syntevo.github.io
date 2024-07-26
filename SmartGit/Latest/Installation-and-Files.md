@@ -216,4 +216,13 @@ settings areas for different versions, so it's only an issue of
         version you want to work with and **additional portable
         bundles** for the other version(s)
 
-  
+## Windows Portable Bundle
+
+The Windows Portable Bundle is set up with the settings directory configured to `.settings` and the updates directory configured to `.updates`. To update the Portable Bundle manually:
+
+- shut down SmartGit
+- move `.settings` and `.updates` to a temporary directory
+- remove all contents from the remaining installation (this step is important!)
+- recreate the installation from the new Portable Bundle
+- move `.settings` and `.updates` back into place
+- start SmartGit
