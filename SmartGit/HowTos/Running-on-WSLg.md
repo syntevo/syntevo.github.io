@@ -193,3 +193,17 @@ This can be worked around by following setup:
 3. `ssh -Y` to remote computer
 4. Start SmartGit
 
+## Known problems when accessing hosted-mounted repositories
+
+Accessing host-mounted repositories, i.e., accessing repositories from within WSL that are stored on the host and accessed by `/mnt/...` is strongly discouraged because it is known to cause several problems:
+
+1. Various Git configuration options from the host may result in confusing behavior in WSL (or vice versa).
+2. File monitoring does not work.
+3. The refresh performance is usually degraded.
+   * This is mainly due to optimizations during `.git/index` processing, for instance, different timestamp precision on different systems.
+
+Note that many of the issues mentioned above affect any Git client and can be reproduced using `git status`.
+
+### Suggested solutions
+
+Maintain a dedicated clone of your repository in WSL's native filesystem. You can add the host-mounted repository as a remote, allowing you to conveniently synchronize commits between both environments.
