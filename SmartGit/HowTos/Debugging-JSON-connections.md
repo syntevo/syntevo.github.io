@@ -31,22 +31,26 @@ debug log sent and received JSON objects. To do so:
     ```
 
 	#### Note
-	> The debug log of *sent* headers will also include `Authorization`
+	> Debug headers are not supported for certain types of integrations, notably
+	> not for GraphQL-related integrations, such as GitHub.
+
+ 	#### Note
+	> If enabled, the debug log of *sent* headers will also include `Authorization`
 	> and similar headers which contain your username/password or similar
 	> credentials. Thus, be sure to remove the debug output files from
 	> your disk as soon as you have finished the debugging.
 
-4.  shutdown SmartGit
+5.  shutdown SmartGit
 
-5.  get rid of `logs/log.txt*` from [SmartGit's Settings](../Latest/System-Properties.md) directory (it's the same directory where `smartgit.properties` is located)
+6.  get rid of `logs/log.txt*` from [SmartGit's Settings](../Latest/System-Properties.md) directory (it's the same directory where `smartgit.properties` is located)
 
-6.  restart SmartGit to have the changes take effect
+7.  restart SmartGit to have the changes take effect
 
-7.  invoke the problematic operation:
+8.  invoke the problematic operation:
     -   in case of parsing problems, SmartGit will report the debug
         output file for the failed operation in the error message
 
-8.  check the debug output directory for sent and received JSON objects:
+9.  check the debug output directory for sent and received JSON objects:
     -   for a single request, there may be `in.pretty` and `in.raw` files containing the received content,
         an `out` file containing the sent content and an `err` file containing the received error;
 	there may also be several `graphql.*`-files
@@ -54,7 +58,7 @@ debug log sent and received JSON objects. To do so:
         unique timestamp  
     -   depending on the server side and error, not all of these files may be present
 	
-9.  if asked so, send all files compressed to smartgit@syntevo.com, be sure to also include SmartGit's log files!
+10.  if asked so, send all files compressed to smartgit@syntevo.com, be sure to also include SmartGit's log files!
     -   copy over `logs/log.txt*` from the Settings directory to the temporary debug output directory
     -   compress all files into a single archive using either ZIP, 7z or TAR-GZ
 
