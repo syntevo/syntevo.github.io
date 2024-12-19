@@ -9,7 +9,7 @@ To run our on-premise server, only Docker is required. This document describes h
 
 ## Server-side installation
 
-1. Contact sales@syntevo.com and provide a short explanation of your environment and SmartGit setup to understand whether an on-premise license server will be appropriate for your company.
+1. Contact sales@syntevo.com and provide a short explanation of your environment and SmartGit setup to understand whether an on-premise license server will be appropriate for your company. You also need to provide GitHub account(s) that we authorize on our end so you can access the docker images.
 
 1. If appropriate, you will receive a new *on-premise license file*
 
